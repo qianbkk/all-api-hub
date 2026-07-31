@@ -2,7 +2,6 @@ import { Storage } from "@plasmohq/storage"
 
 import { DATA_TYPE_BALANCE, DATA_TYPE_CASHFLOW } from "~/constants"
 import { SITE_TYPES, type ManagedSiteType } from "~/constants/siteType"
-import { TEMP_CONTEXT_MODES } from "~/constants/tempContextMode"
 import {
   STORAGE_LOCKS,
   USER_PREFERENCES_STORAGE_KEYS,
