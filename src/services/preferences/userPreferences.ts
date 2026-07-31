@@ -2,10 +2,7 @@ import { Storage } from "@plasmohq/storage"
 
 import { DATA_TYPE_BALANCE, DATA_TYPE_CASHFLOW } from "~/constants"
 import { SITE_TYPES, type ManagedSiteType } from "~/constants/siteType"
-import {
-  TEMP_CONTEXT_MODES,
-  type TempContextMode,
-} from "~/constants/tempContextMode"
+import { TEMP_CONTEXT_MODES } from "~/constants/tempContextMode"
 import {
   STORAGE_LOCKS,
   USER_PREFERENCES_STORAGE_KEYS,
@@ -20,6 +17,10 @@ import {
   migratePreferences,
 } from "~/services/preferences/migrations/preferencesMigration"
 import {
+  normalizeTempWindowFallbackPreferences,
+  type TempWindowFallbackPreferences,
+} from "~/services/preferences/tempWindowFallbackPreferences"
+import {
   createDefaultSortingPriorityConfig,
   DEFAULT_SORTING_PRIORITY_CONFIG,
 } from "~/services/preferences/utils/sortingPriority"
@@ -29,6 +30,10 @@ import {
   patchTouchesSharedPreferences,
   restoreWebdavLocalOnlyPreferences,
 } from "~/services/preferences/webdavSharedPreferences"
+import {
+  PROTECTION_BYPASS_AUTOMATIC_FEATURES,
+  type ProtectionBypassAutomaticFeature,
+} from "~/services/protectionBypass/contracts"
 import {
   ActiveSortField,
   CurrencyType,
@@ -105,21 +110,7 @@ import { normalizeAppLanguage } from "~/utils/i18n/language"
 
 const logger = createLogger("UserPreferences")
 
-export interface TempWindowFallbackPreferences {
-  enabled: boolean
-  useInPopup: boolean
-  useInSidePanel: boolean
-  useInOptions: boolean
-  useForAutoRefresh: boolean
-  useForManualRefresh: boolean
-  /**
-   * Preferred temporary context type for protection bypass.
-   * - "tab": Open a temporary tab (default)
-   * - "window": Open a popup window
-   * - "composite": Open temporary tabs inside a shared window
-   */
-  tempContextMode: TempContextMode
-}
+export type { TempWindowFallbackPreferences } from "~/services/preferences/tempWindowFallbackPreferences"
 
 export interface TempWindowFallbackReminderPreferences {
   dismissed: boolean
@@ -621,14 +612,15 @@ export const DEFAULT_PREFERENCES: UserPreferences = {
   logging: getDefaultLoggingPreferences(),
   preferencesVersion: CURRENT_PREFERENCES_VERSION,
   tempWindowFallback: {
-    // Security challenges require an explicit user-visible browser context.
-    // Automatic background challenge handling stays opt-in in this fork.
+    // Personal fork keeps security challenges on an explicit user-visible
+    // context by default. Automatic feature bypass is opt-in per feature.
     enabled: false,
-    useInPopup: true,
-    useInSidePanel: true,
-    useInOptions: true,
-    useForAutoRefresh: false,
-    useForManualRefresh: true,
+    automaticFeatureBypass: Object.fromEntries(
+      Object.values(PROTECTION_BYPASS_AUTOMATIC_FEATURES).map((feature) => [
+        feature,
+        false,
+      ]),
+    ) as Record<ProtectionBypassAutomaticFeature, boolean>,
     tempContextMode: TEMP_CONTEXT_MODES.Tab,
   },
   tempWindowFallbackReminder: {
@@ -665,7 +657,14 @@ function createReadOnlyDefaultPreferences(): UserPreferences {
 function migrateAndNormalizePreferences(
   preferences: UserPreferences,
 ): UserPreferences {
-  return normalizeSharedPreferencesMetadata(migratePreferences(preferences))
+  const migratedPreferences = migratePreferences(preferences)
+
+  return normalizeSharedPreferencesMetadata({
+    ...migratedPreferences,
+    tempWindowFallback: normalizeTempWindowFallbackPreferences(
+      migratedPreferences.tempWindowFallback,
+    ),
+  })
 }
 
 /**
@@ -699,16 +698,29 @@ class UserPreferencesService {
     return withExtensionStorageWriteLock(STORAGE_LOCKS.USER_PREFERENCES, work)
   }
 
-  private async readPreferencesSnapshot(): Promise<UserPreferences> {
-    const storedPreferences = (await this.storage.get(
+  private async readRawPreferences(): Promise<UserPreferences | undefined> {
+    return (await this.storage.get(
       USER_PREFERENCES_STORAGE_KEYS.USER_PREFERENCES,
     )) as UserPreferences | undefined
+  }
+
+  private createPreferencesSnapshot(
+    storedPreferences: UserPreferences | undefined,
+  ): UserPreferences {
     const defaultPreferences = createReadOnlyDefaultPreferences()
-    const preferences = storedPreferences ?? defaultPreferences
+    if (!storedPreferences) return defaultPreferences
 
-    const migratedPreferences = migrateAndNormalizePreferences(preferences)
+    return deepOverride(
+      defaultPreferences,
+      migrateAndNormalizePreferences(storedPreferences),
+    )
+  }
 
-    return deepOverride(defaultPreferences, migratedPreferences)
+  /**
+   * Reads and normalizes a preference snapshot without mutating storage.
+   */
+  private async readPreferencesSnapshot(): Promise<UserPreferences> {
+    return this.createPreferencesSnapshot(await this.readRawPreferences())
   }
 
   /**
