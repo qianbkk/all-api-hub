@@ -60,6 +60,45 @@
           }
         }
       }
+    },
+    {
+      "id": "manual-verification-tab-mode-focus",
+      "revision": 1,
+      "severity": "info",
+      "priority": 20,
+      "affectedVersions": "*",
+      "startsAt": "2026-08-01T00:00:00.000Z",
+      "expiresAt": "2026-11-01T00:00:00.000Z",
+      "content": {
+        "zh-CN": {
+          "title": "人工验证页面总是打断当前工作？",
+          "message": "如果手动刷新时打开的验证窗口会把浏览器带到前台、打断当前操作，可前往“设置 → 数据刷新”，将临时验证页面的打开方式改为标签页模式。验证页面会作为非活动标签页加入现有浏览器窗口；请在需要时切换到该标签页并由本人完成验证。本版本不会自动破解或绕过安全验证。"
+        },
+        "zh-TW": {
+          "title": "人工驗證頁面總是打斷目前工作？",
+          "message": "如果手動重新整理時開啟的驗證視窗會讓瀏覽器回到前景、打斷目前操作，可前往“設定 → 資料重新整理”，將臨時驗證頁面的開啟方式改為分頁模式。驗證頁面會以非作用中分頁加入現有瀏覽器視窗；需要時請切換到該分頁並由本人完成驗證。本版本不會自動破解或繞過安全驗證。"
+        },
+        "en": {
+          "title": "Do manual verification pages keep interrupting your work?",
+          "message": "If a verification window opened during a manual refresh brings the browser to the foreground, go to Settings → Data Refresh and switch the temporary verification page to tab mode. It will be added to an existing browser window as an inactive tab; switch to it and complete verification yourself when needed. This edition does not automatically solve or bypass security challenges."
+        },
+        "ja": {
+          "title": "手動認証ページに作業を中断されていませんか？",
+          "message": "手動更新時に開く認証ウィンドウがブラウザを前面に出す場合は、「設定 → データ更新」で一時認証ページの開き方をタブモードに変更できます。認証ページは既存のブラウザウィンドウに非アクティブなタブとして追加されます。必要なときにそのタブへ切り替え、ご自身で認証を完了してください。このエディションはセキュリティ認証を自動で解いたり回避したりしません。"
+        },
+        "vi": {
+          "title": "Trang xác minh thủ công thường xuyên làm gián đoạn công việc?",
+          "message": "Nếu cửa sổ xác minh mở khi làm mới thủ công đưa trình duyệt ra phía trước, hãy vào Cài đặt → Làm mới dữ liệu và chuyển trang xác minh tạm thời sang chế độ tab. Trang sẽ được thêm vào cửa sổ trình duyệt hiện có dưới dạng tab không hoạt động; hãy chuyển sang tab đó và tự hoàn tất xác minh khi cần. Phiên bản này không tự động giải hoặc bỏ qua thử thách bảo mật."
+        },
+        "es-419": {
+          "title": "¿Las páginas de verificación manual interrumpen tu trabajo?",
+          "message": "Si una ventana de verificación abierta durante una actualización manual trae el navegador al primer plano, ve a Configuración → Actualización de datos y cambia la página de verificación temporal al modo de pestaña. Se agregará como pestaña inactiva a una ventana existente; ábrela y completa tú mismo la verificación cuando sea necesario. Esta edición no resuelve ni evade automáticamente los desafíos de seguridad."
+        },
+        "pt-BR": {
+          "title": "As páginas de verificação manual interrompem seu trabalho?",
+          "message": "Se uma janela de verificação aberta durante uma atualização manual trouxer o navegador para o primeiro plano, vá para Configurações → Atualização de dados e altere a página de verificação temporária para o modo de guia. Ela será adicionada como uma guia inativa em uma janela existente; acesse-a e conclua a verificação por conta própria quando necessário. Esta edição não resolve nem contorna desafios de segurança automaticamente."
+        }
+      }
     }
   ],
   "_examples": {
