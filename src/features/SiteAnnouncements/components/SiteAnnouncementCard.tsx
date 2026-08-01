@@ -19,7 +19,11 @@ import {
   PRODUCT_ANALYTICS_SURFACE_IDS,
 } from "~/services/productAnalytics/contracts"
 import { buildAnnouncementDisplayText } from "~/services/siteAnnouncements/text"
-import type { SiteAnnouncementRecord } from "~/types/siteAnnouncements"
+import {
+  SITE_ANNOUNCEMENT_INSIGHT_TYPES,
+  type SiteAnnouncementInsight,
+  type SiteAnnouncementRecord,
+} from "~/types/siteAnnouncements"
 
 import { AnnouncementMarkdown } from "../AnnouncementMarkdown"
 import {
@@ -38,6 +42,16 @@ interface SiteAnnouncementCardProps {
 
 const optionsEntrypoint = PRODUCT_ANALYTICS_ENTRYPOINTS.Options
 const cardSurfaceId = PRODUCT_ANALYTICS_SURFACE_IDS.OptionsSiteAnnouncementCard
+
+const insightBadgeVariants: Record<
+  SiteAnnouncementInsight["type"],
+  "default" | "success" | "warning" | "destructive"
+> = {
+  [SITE_ANNOUNCEMENT_INSIGHT_TYPES.ModelLaunch]: "success",
+  [SITE_ANNOUNCEMENT_INSIGHT_TYPES.Promotion]: "warning",
+  [SITE_ANNOUNCEMENT_INSIGHT_TYPES.PricingChange]: "destructive",
+  [SITE_ANNOUNCEMENT_INSIGHT_TYPES.Maintenance]: "default",
+}
 
 /**
  * Renders a single cached announcement with expand/collapse and read actions.
@@ -107,7 +121,17 @@ export function SiteAnnouncementCard({
                     >
                       {display.title}
                     </h3>
-                    <div className="flex shrink-0 gap-1.5">
+                    <div className="flex shrink-0 flex-wrap gap-1.5">
+                      {(record.insights ?? []).map((insight) => (
+                        <Badge
+                          key={insight.type}
+                          variant={insightBadgeVariants[insight.type]}
+                          size="sm"
+                          title={t(`insights.confidence.${insight.confidence}`)}
+                        >
+                          {t(`insights.types.${insight.type}`)}
+                        </Badge>
+                      ))}
                       {!record.read && (
                         <Badge variant="warning" size="sm">
                           {t("badges.unread")}

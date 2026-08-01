@@ -8,9 +8,9 @@ const DOCS_TASK_NOTIFICATIONS_DINGTALK_ANCHOR = "dingtalk"
 const DOCS_TASK_NOTIFICATIONS_WECOM_ANCHOR = "wecom"
 const DOCS_TASK_NOTIFICATIONS_NTFY_ANCHOR = "ntfy"
 const GITHUB_RAW_DOCS_BASE_URL =
-  "https://raw.githubusercontent.com/qixing-jk/all-api-hub/main/docs/docs"
+  "https://raw.githubusercontent.com/qianbkk/all-api-hub/personal-main/docs/docs"
 const GITHUB_PAGES_RAW_BASE_URL =
-  "https://raw.githubusercontent.com/qixing-jk/all-api-hub/gh-pages"
+  "https://raw.githubusercontent.com/qianbkk/all-api-hub/gh-pages"
 
 /**
  * Resolve the documentation homepage URL for a given language.

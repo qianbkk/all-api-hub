@@ -100,6 +100,21 @@ export interface SiteAnnouncementProvider {
   ) => Promise<void>
 }
 
+export const SITE_ANNOUNCEMENT_INSIGHT_TYPES = {
+  ModelLaunch: "model_launch",
+  Promotion: "promotion",
+  PricingChange: "pricing_change",
+  Maintenance: "maintenance",
+} as const
+
+export type SiteAnnouncementInsightType =
+  (typeof SITE_ANNOUNCEMENT_INSIGHT_TYPES)[keyof typeof SITE_ANNOUNCEMENT_INSIGHT_TYPES]
+
+export interface SiteAnnouncementInsight {
+  type: SiteAnnouncementInsightType
+  confidence: "high" | "medium"
+}
+
 export interface SiteAnnouncementRecord {
   id: string
   siteKey: string
@@ -112,6 +127,7 @@ export interface SiteAnnouncementRecord {
   title: string
   content: string
   fingerprint: string
+  insights?: SiteAnnouncementInsight[]
   firstSeenAt: number
   lastSeenAt: number
   createdAt?: number

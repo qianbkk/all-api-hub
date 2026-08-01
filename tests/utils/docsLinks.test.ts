@@ -38,10 +38,10 @@ describe("docsLinks", () => {
       getDocsPageUrl("data/changelog-index.json"),
     )
     expect(getGitHubPagesRawChangelogIndexUrl()).toBe(
-      "https://raw.githubusercontent.com/qixing-jk/all-api-hub/gh-pages/data/changelog-index.json",
+      "https://raw.githubusercontent.com/qianbkk/all-api-hub/gh-pages/data/changelog-index.json",
     )
     expect(getGitHubRawChangelogMarkdownUrl()).toBe(
-      "https://raw.githubusercontent.com/qixing-jk/all-api-hub/main/docs/docs/changelog.md",
+      "https://raw.githubusercontent.com/qianbkk/all-api-hub/personal-main/docs/docs/changelog.md",
     )
   })
 

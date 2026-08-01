@@ -83,11 +83,13 @@ import {
   sendRuntimeMessage,
 } from "~/utils/browser/browserApi"
 import { normalizeTempWindowRequestSource } from "~/utils/browser/tempWindowRequestSource"
+import { sleep } from "~/utils/core/async"
 import { isDevelopmentMode, isTestMode } from "~/utils/core/environment"
 import { getErrorMessage } from "~/utils/core/error"
 import { createLogger } from "~/utils/core/logger"
 import { t } from "~/utils/i18n/core"
 
+import { buildSameOriginCheckinDelays } from "./accountStagger"
 import { resolveAutoCheckinProvider } from "./providers"
 import { AUTO_CHECKIN_STATUS_STORAGE_LOCK, autoCheckinStorage } from "./storage"
 
@@ -1090,11 +1092,25 @@ class AutoCheckinScheduler {
       successful: boolean
     }>
   > {
+    const sameOriginDelays = buildSameOriginCheckinDelays(params.accounts)
+
     return Promise.all(
       params.accounts.map(async (account) => {
         const accountName =
           params.accountDisplayNameById.get(account.id) ?? account.id
         try {
+          const delayMs = sameOriginDelays.get(account.id) ?? 0
+          if (delayMs > 0) {
+            logger.info("Staggering same-origin account check-in", {
+              accountId: account.id,
+              siteName: account.site_name,
+              delayMs,
+            })
+            if (!isTestMode()) {
+              await sleep(delayMs)
+            }
+          }
+
           return await this.runAccountCheckin(
             account,
             accountName,

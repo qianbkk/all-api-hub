@@ -49,7 +49,7 @@ export type ReleaseUpdateStatus = {
 }
 
 export const LATEST_STABLE_RELEASE_URL =
-  "https://github.com/qixing-jk/all-api-hub/releases/latest"
+  "https://github.com/qianbkk/all-api-hub/releases/latest"
 
 export const createDefaultBrowserStoreUpdateState =
   (): BrowserStoreUpdateState => ({

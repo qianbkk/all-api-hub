@@ -42,7 +42,7 @@ const warningNotice = {
   message: "Check configuration.",
   cta: {
     label: "Secure notes",
-    url: "https://github.com/qixing-jk/all-api-hub/releases",
+    url: "https://github.com/qianbkk/all-api-hub/releases",
   },
   seen: false,
   dismissed: false,
@@ -850,10 +850,7 @@ describe("ProductAnnouncementButton", () => {
 
     expect(
       await screen.findByRole("link", { name: /Secure notes/ }),
-    ).toHaveAttribute(
-      "href",
-      "https://github.com/qixing-jk/all-api-hub/releases",
-    )
+    ).toHaveAttribute("href", "https://github.com/qianbkk/all-api-hub/releases")
     expect(screen.queryByRole("link", { name: /Unsafe notes/ })).toBeNull()
   })
 

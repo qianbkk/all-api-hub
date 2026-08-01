@@ -9,6 +9,7 @@ import { STORAGE_KEYS, STORAGE_LOCKS } from "~/services/core/storageKeys"
 import { withExtensionStorageWriteLock } from "~/services/core/storageWriteLock"
 import type {
   SiteAnnouncementIdentityMarker,
+  SiteAnnouncementInsight,
   SiteAnnouncementProviderId,
   SiteAnnouncementRecord,
   SiteAnnouncementRecordInput,
@@ -17,6 +18,7 @@ import type {
   SiteAnnouncementStoreState,
 } from "~/types/siteAnnouncements"
 import {
+  SITE_ANNOUNCEMENT_INSIGHT_TYPES,
   SITE_ANNOUNCEMENT_PROVIDER_IDS,
   SITE_ANNOUNCEMENT_STATUS,
 } from "~/types/siteAnnouncements"
@@ -141,6 +143,32 @@ function sanitizeStatus(value: unknown): SiteAnnouncementStatus {
     : SITE_ANNOUNCEMENT_STATUS.Never
 }
 
+/** Validates locally generated insight metadata from persisted records. */
+function sanitizeInsights(value: unknown): SiteAnnouncementInsight[] {
+  if (!Array.isArray(value)) {
+    return []
+  }
+
+  const supportedTypes = new Set(Object.values(SITE_ANNOUNCEMENT_INSIGHT_TYPES))
+  return value.flatMap((item) => {
+    if (
+      !isPlainObject(item) ||
+      typeof item.type !== "string" ||
+      !supportedTypes.has(item.type as SiteAnnouncementInsight["type"]) ||
+      (item.confidence !== "high" && item.confidence !== "medium")
+    ) {
+      return []
+    }
+
+    return [
+      {
+        type: item.type as SiteAnnouncementInsight["type"],
+        confidence: item.confidence,
+      },
+    ]
+  })
+}
+
 /**
  * Validates and normalizes one persisted announcement record.
  */
@@ -172,6 +200,7 @@ function sanitizeRecord(value: unknown): SiteAnnouncementRecord | null {
     title: typeof value.title === "string" ? value.title : "",
     content,
     fingerprint,
+    insights: sanitizeInsights(value.insights),
     firstSeenAt: isFiniteNumber(value.firstSeenAt)
       ? value.firstSeenAt
       : Date.now(),

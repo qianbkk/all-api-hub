@@ -71,5 +71,17 @@
     "total": "Total",
     "unread": "Sin leer"
   },
-  "title": "Anuncios del sitio"
+  "title": "Anuncios del sitio",
+  "insights": {
+    "confidence": {
+      "high": "Coincidencia local de alta confianza",
+      "medium": "Posible coincidencia local"
+    },
+    "types": {
+      "model_launch": "Modelo nuevo",
+      "promotion": "Promoción",
+      "pricing_change": "Cambio de precio/tarifa",
+      "maintenance": "Mantenimiento"
+    }
+  }
 }

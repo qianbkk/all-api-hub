@@ -149,7 +149,7 @@ describe("RootErrorBoundary", () => {
         screen.getByRole("link", { name: "Report problem" }),
       ).toHaveAttribute(
         "href",
-        "https://github.com/qixing-jk/all-api-hub/issues/new?template=bug_report.yml",
+        "https://github.com/qianbkk/all-api-hub/issues/new?template=bug_report.yml",
       )
 
       await user.click(screen.getByRole("button", { name: "Reload page" }))
@@ -197,7 +197,7 @@ describe("RootErrorBoundary", () => {
         screen.getByRole("link", { name: "Request a language" }),
       ).toHaveAttribute(
         "href",
-        "https://github.com/qixing-jk/all-api-hub/issues/new?template=language_request.yml",
+        "https://github.com/qianbkk/all-api-hub/issues/new?template=language_request.yml",
       )
     } finally {
       consoleError.mockRestore()
@@ -228,7 +228,7 @@ describe("RootErrorBoundary", () => {
         screen.getByRole("link", { name: "Request a language" }),
       ).toHaveAttribute(
         "href",
-        "https://github.com/qixing-jk/all-api-hub/issues/new?template=language_request.yml",
+        "https://github.com/qianbkk/all-api-hub/issues/new?template=language_request.yml",
       )
     } finally {
       consoleError.mockRestore()
@@ -259,7 +259,7 @@ describe("RootErrorBoundary", () => {
         screen.getByRole("link", { name: "Request a language" }),
       ).toHaveAttribute(
         "href",
-        "https://github.com/qixing-jk/all-api-hub/issues/new?template=language_request.yml",
+        "https://github.com/qianbkk/all-api-hub/issues/new?template=language_request.yml",
       )
     } finally {
       consoleError.mockRestore()
@@ -293,7 +293,7 @@ describe("RootErrorBoundary", () => {
         screen.getByRole("link", { name: "Report problem" }),
       ).toHaveAttribute(
         "href",
-        "https://github.com/qixing-jk/all-api-hub/issues/new?template=bug_report.yml",
+        "https://github.com/qianbkk/all-api-hub/issues/new?template=bug_report.yml",
       )
     } finally {
       consoleError.mockRestore()

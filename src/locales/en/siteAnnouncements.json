@@ -68,5 +68,17 @@
     "total": "Total",
     "unread": "Unread"
   },
-  "title": "Site Announcements"
+  "title": "Site Announcements",
+  "insights": {
+    "confidence": {
+      "high": "High-confidence local match",
+      "medium": "Possible local match"
+    },
+    "types": {
+      "model_launch": "New model",
+      "promotion": "Promotion",
+      "pricing_change": "Pricing change",
+      "maintenance": "Maintenance"
+    }
+  }
 }

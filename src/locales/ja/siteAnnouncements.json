@@ -65,5 +65,17 @@
     "total": "公告総数",
     "unread": "未読公告"
   },
-  "title": "サイト公告"
+  "title": "サイト公告",
+  "insights": {
+    "confidence": {
+      "high": "信頼度の高いローカル判定",
+      "medium": "ローカル判定の可能性"
+    },
+    "types": {
+      "model_launch": "新モデル",
+      "promotion": "キャンペーン",
+      "pricing_change": "価格・倍率変更",
+      "maintenance": "メンテナンス"
+    }
+  }
 }

@@ -280,7 +280,7 @@ describe("product analytics privacy filtering", () => {
         product_announcement_title: "Private remote title",
         product_announcement_message: "Remote body",
         product_announcement_url:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.44.1",
+          "https://github.com/qianbkk/all-api-hub/releases/tag/v3.44.1",
       },
     )
 

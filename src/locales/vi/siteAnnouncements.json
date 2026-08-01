@@ -65,5 +65,17 @@
     "total": "Tổng số thông báo",
     "unread": "Thông báo chưa đọc"
   },
-  "title": "Thông báo trang web"
+  "title": "Thông báo trang web",
+  "insights": {
+    "confidence": {
+      "high": "Khớp cục bộ độ tin cậy cao",
+      "medium": "Có thể khớp cục bộ"
+    },
+    "types": {
+      "model_launch": "Mô hình mới",
+      "promotion": "Khuyến mãi",
+      "pricing_change": "Thay đổi giá/tỷ lệ",
+      "maintenance": "Bảo trì"
+    }
+  }
 }

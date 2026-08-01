@@ -30,7 +30,7 @@ function buildStatus(
     currentVersion: "3.31.0",
     latestVersion: null,
     updateAvailable: false,
-    releaseUrl: "https://github.com/qixing-jk/all-api-hub/releases/latest",
+    releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/latest",
     checkedAt: null,
     lastError: null,
     storeUpdate: {
@@ -145,7 +145,7 @@ describe("ReleaseUpdateStatusPanel", () => {
         latestVersion: "3.32.0",
         updateAvailable: true,
         releaseUrl:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.32.0",
+          "https://github.com/qianbkk/all-api-hub/releases/tag/v3.32.0",
       }),
     })
 
@@ -167,7 +167,7 @@ describe("ReleaseUpdateStatusPanel", () => {
         }),
       ).toHaveAttribute(
         "href",
-        "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.32.0",
+        "https://github.com/qianbkk/all-api-hub/releases/tag/v3.32.0",
       )
     })
   })
@@ -238,7 +238,7 @@ describe("ReleaseUpdateStatusPanel", () => {
         latestVersion: "3.32.0",
         updateAvailable: true,
         releaseUrl:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.32.0",
+          "https://github.com/qianbkk/all-api-hub/releases/tag/v3.32.0",
         checkedAt: Date.now(),
       }),
     )
@@ -257,7 +257,7 @@ describe("ReleaseUpdateStatusPanel", () => {
       }),
     ).toHaveAttribute(
       "href",
-      "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.32.0",
+      "https://github.com/qianbkk/all-api-hub/releases/tag/v3.32.0",
     )
   })
 
@@ -270,7 +270,7 @@ describe("ReleaseUpdateStatusPanel", () => {
         latestVersion: "3.51.0",
         updateAvailable: true,
         releaseUrl:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.51.0",
+          "https://github.com/qianbkk/all-api-hub/releases/tag/v3.51.0",
         checkedAt: Date.now(),
         storeUpdate: {
           supported: true,
@@ -297,7 +297,7 @@ describe("ReleaseUpdateStatusPanel", () => {
       }),
     ).toHaveAttribute(
       "href",
-      "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.51.0",
+      "https://github.com/qianbkk/all-api-hub/releases/tag/v3.51.0",
     )
     expect(
       screen.queryByRole("link", {

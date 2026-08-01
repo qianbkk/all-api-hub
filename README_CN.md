@@ -6,7 +6,9 @@
 
 # All API Hub – 你的全能 AI 资产管家
 
-**一站式管理 New API 兼容中转站账号：余额/用量、模型价格、自动签到、API 凭据、网页内测试，以及渠道与模型同步/重定向**
+**All API Hub 个人增强版：合规管理 New API 兼容中转站账号的余额/用量、模型价格、自动签到、API 凭据与公告**
+
+> 本仓库是基于 [上游项目](https://github.com/qixing-jk/all-api-hub) 的个人魔改版。`personal-main` 是本仓库的默认开发与发布分支，`upstream-sync` 仅用于追踪上游更新；详见 [统一改造文档](./MODIFICATION_NOTES.md)。
 
 <p align="center">
 <a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">
@@ -20,7 +22,7 @@
 </a>
 </p>
 
-**[⚡ 快速上手](https://all-api-hub.qixing1217.top/get-started.html) | [🌐 支持站点](https://all-api-hub.qixing1217.top/supported-sites.html) | [🔌 集成工具](https://all-api-hub.qixing1217.top/supported-export-tools.html) | [📜 更新日志](https://all-api-hub.qixing1217.top/changelog.html)**
+**[⚡ 快速上手](https://qianbkk.github.io/all-api-hub/get-started.html) | [🌐 支持站点](https://qianbkk.github.io/all-api-hub/supported-sites.html) | [🔌 集成工具](https://qianbkk.github.io/all-api-hub/supported-export-tools.html) | [📜 更新日志](https://qianbkk.github.io/all-api-hub/changelog.html)**
 
 <p align="center">
   <a href="https://linux.do/t/topic/2395800">
@@ -69,13 +71,13 @@
 - **用量深度统计**：按站点、账号、模型、日期生成报表，包含热力图与慢请求分析。
 
 ### 🚀 极速生态集成
-- **一键快捷导出**：同步到 **CherryStudio, CC Switch, CLIProxyAPI, Claude Code Router, Kilo Code** 等，完整列表见 [支持的工具](https://all-api-hub.qixing1217.top/supported-export-tools.html)。
+- **一键快捷导出**：同步到 **CherryStudio, CC Switch, CLIProxyAPI, Claude Code Router, Kilo Code** 等，完整列表见 [支持的工具](https://qianbkk.github.io/all-api-hub/supported-export-tools.html)。
 - **后台联动工具**：将账号/密钥导入为自建站点渠道，并提供渠道管理、模型重定向、渠道同步等工具。
-- **网页嗅探与快速录入**：在网页上选中 Base URL 或 API Key 即可快速弹出测试窗并保存，详情见 [网页 API 嗅探与验证](https://all-api-hub.qixing1217.top/web-ai-api-check.html)。
+- **网页嗅探与快速录入**：在网页上选中 Base URL 或 API Key 即可快速弹出测试窗并保存，详情见 [网页 API 嗅探与验证](https://qianbkk.github.io/all-api-hub/web-ai-api-check.html)。
 
 ### 🧪 稳定性护航
 - **多维度接口验证**：支持批量测试模型可用性、Token 兼容性及 CLI 代理可用性。
-- **CF 过盾助手**：自动协助通过 Cloudflare 挑战，确保数据刷新与接口调用不中断。
+- **合规验证接力**：遇到滑块、图片点选或 Cloudflare 挑战时暂停自动任务，打开用户可见的独立临时上下文，由用户完成验证后继续；不破解验证码、不伪造指纹或 IP。
 
 ### 🔒 保护隐私与安全
 - **默认本地管理**：Key 和账号信息默认保存在本机，只有启用 WebDAV 备份/同步时才会上传。
@@ -98,15 +100,15 @@
 
 | 渠道 | 下载链接 | 适用场景 |
 |------|----------|----------|
-| GitHub Stable | [下载 Stable](https://github.com/qixing-jk/all-api-hub/releases/latest) | 无法安装商店版，或需要临时手动安装已发布修复 |
-| Nightly 预发布 | [下载 Nightly](https://github.com/qixing-jk/all-api-hub/releases/tag/nightly) | 想抢先体验新功能并协助测试，可能不如商店稳定版稳定 |
+| GitHub Stable | [下载 Stable](https://github.com/qianbkk/all-api-hub/releases/latest) | 无法安装商店版，或需要临时手动安装已发布修复 |
+| Nightly 预发布 | [下载 Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | 想抢先体验新功能并协助测试，可能不如商店稳定版稳定 |
 
-GitHub Stable 和 Nightly 属于手动安装通道，不会自动更新；可 Star / Watch 仓库接收新版本通知。更多说明见 [安装与更新说明](https://all-api-hub.qixing1217.top/extension-update-install.html)。
+GitHub Stable 和 Nightly 属于手动安装通道，不会自动更新；可 Star / Watch 仓库接收新版本通知。更多说明见 [安装与更新说明](https://qianbkk.github.io/all-api-hub/extension-update-install.html)。
 
 **其他环境支持：**
-- **手机端**：支持 Edge 手机版、Firefox Android、Kiwi 等浏览器，详见 [移动端使用指南](https://all-api-hub.qixing1217.top/faq.html#mobile-browser-support)。
-- **QQ / 360 等**：详见 [手动加载指南](https://all-api-hub.qixing1217.top/other-browser-install.html)。
-- **Safari (Mac)**：需要 Xcode 编译，详详见 [Safari 安装指南](https://all-api-hub.qixing1217.top/safari-install.html)。
+- **手机端**：支持 Edge 手机版、Firefox Android、Kiwi 等浏览器，详见 [移动端使用指南](https://qianbkk.github.io/all-api-hub/faq.html#mobile-browser-support)。
+- **QQ / 360 等**：详见 [手动加载指南](https://qianbkk.github.io/all-api-hub/other-browser-install.html)。
+- **Safari (Mac)**：需要 Xcode 编译，详详见 [Safari 安装指南](https://qianbkk.github.io/all-api-hub/safari-install.html)。
 
 </details>
 
@@ -160,7 +162,7 @@ GitHub Stable 和 Nightly 属于手动安装通道，不会自动更新；可 St
   </a>
   <p>
     感谢 PackyCode 赞助了本项目！PackyCode 是一家稳定、高效的API中转服务商，提供 Claude Code、Codex、Gemini 等多种中转服务。PackyCode
-    为本软件的用户提供了特别优惠，使用<a href="https://www.packyapi.com/register?aff=all-api-hub">此链接</a>注册并在充值时填写"all-api-hub"优惠码，首次充值可以享受9折优惠（<a href="https://all-api-hub.qixing1217.top/sponsor-guides/packycode.html">使用教程</a>）！
+    为本软件的用户提供了特别优惠，使用<a href="https://www.packyapi.com/register?aff=all-api-hub">此链接</a>注册并在充值时填写"all-api-hub"优惠码，首次充值可以享受9折优惠（<a href="https://qianbkk.github.io/all-api-hub/sponsor-guides/packycode.html">使用教程</a>）！
   </p>
 </div>
 
@@ -171,7 +173,7 @@ GitHub Stable 和 Nightly 属于手动安装通道，不会自动更新；可 St
     <img src="resources/partners/xingchen.png" alt="星辰AI" width="64" align="left" hspace="10" vspace="4">
   </a>
   <p>
-    感谢星辰AI赞助了本项目！星辰AI是一家稳定、高效的 API 中转服务商，提供 Claude Code、Codex、Gemini 等多种中转服务。充值比例 1:1，可开发票；Claude 低至 4 折。欢迎通过<a href="https://ai.centos.hk">此链接</a>了解和使用（<a href="https://all-api-hub.qixing1217.top/sponsor-guides/xingchen.html">使用教程</a>）。
+    感谢星辰AI赞助了本项目！星辰AI是一家稳定、高效的 API 中转服务商，提供 Claude Code、Codex、Gemini 等多种中转服务。充值比例 1:1，可开发票；Claude 低至 4 折。欢迎通过<a href="https://ai.centos.hk">此链接</a>了解和使用（<a href="https://qianbkk.github.io/all-api-hub/sponsor-guides/xingchen.html">使用教程</a>）。
   </p>
 </div>
 
@@ -207,7 +209,7 @@ GitHub Stable 和 Nightly 属于手动安装通道，不会自动更新；可 St
   </a>
   <p>
     感谢 RunAPI 赞助了本项目！RunAPI 是高效稳定的 API OpenRouter 平替平台，一个 API Key 即可访问 OpenAI、Claude、Gemini、DeepSeek、Grok 等 150+ 主流模型，低至 1 折，极其稳定，可以无缝兼容 Claude Code、OpenClaw 等工具。RunAPI
-    为 All API Hub 的用户提供专属福利：使用<a href="https://runapi.co/register?aff=cvDm">此链接</a>注册并联系 RunAPI 管理员，即可领取 ￥7 的免费额度（<a href="https://all-api-hub.qixing1217.top/sponsor-guides/runapi.html">使用教程</a>）。
+    为 All API Hub 的用户提供专属福利：使用<a href="https://runapi.co/register?aff=cvDm">此链接</a>注册并联系 RunAPI 管理员，即可领取 ￥7 的免费额度（<a href="https://qianbkk.github.io/all-api-hub/sponsor-guides/runapi.html">使用教程</a>）。
   </p>
 </div>
 
@@ -257,7 +259,7 @@ GitHub Stable 和 Nightly 属于手动安装通道，不会自动更新；可 St
 3. **点击识别**：点击插件图标 -> `新增账号` -> 输入网址 -> 点击 `自动识别`。
 4. **开始享受**：查看余额、配置自动签到，或者将账号导出到你的 AI 客户端。
 
-👉 **[点击查看：更详细的图文新手教程](https://all-api-hub.qixing1217.top/get-started.html)**
+👉 **[点击查看：更详细的图文新手教程](https://qianbkk.github.io/all-api-hub/get-started.html)**
 
 <a id="introduction-tech"></a>
 ### 🧩 强大的兼容性
@@ -265,7 +267,7 @@ GitHub Stable 和 Nightly 属于手动安装通道，不会自动更新；可 St
 - **账号站点兼容架构**：[one-api](https://github.com/songquanpeng/one-api)、[new-api](https://github.com/QuantumNous/new-api)、[Veloera](https://github.com/Veloera/Veloera)、[one-hub](https://github.com/MartialBE/one-hub)、[done-hub](https://github.com/deanxv/done-hub)、[Sub2API](https://github.com/Wei-Shaw/sub2api) 等
 - **特色账号平台与兼容实现**：[AIHubMix](https://aihubmix.com/?aff=W3DN)、[AnyRouter](https://anyrouter.top)、Neo-API、Super-API、v-api 等
 - **自建管理后台**：[new-api](https://github.com/QuantumNous/new-api)、[Veloera](https://github.com/Veloera/Veloera)、[done-hub](https://github.com/deanxv/done-hub)、[Octopus](https://github.com/bestruirui/octopus)、[AxonHub](https://github.com/looplj/axonhub)、[Claude Code Hub](https://github.com/ding113/claude-code-hub) 等，用于渠道管理、迁移和部分模型同步
-- **查看完整列表**：👉 [支持的站点](https://all-api-hub.qixing1217.top/supported-sites.html)
+- **查看完整列表**：👉 [支持的站点](https://qianbkk.github.io/all-api-hub/supported-sites.html)
 
 <a id="ui-preview"></a>
 ## 🖼️ 界面预览

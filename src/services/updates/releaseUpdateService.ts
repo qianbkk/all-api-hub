@@ -37,7 +37,7 @@ import { parseReleaseUpdateStatus } from "./statusCodec"
 
 const logger = createLogger("ReleaseUpdateService")
 const GITHUB_LATEST_RELEASE_API_URL =
-  "https://api.github.com/repos/qixing-jk/all-api-hub/releases/latest"
+  "https://api.github.com/repos/qianbkk/all-api-hub/releases/latest"
 const DAILY_CHECK_PERIOD_MINUTES = 24 * 60
 
 type DetectInstallEligibilityResult = {

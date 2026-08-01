@@ -1,0 +1,31 @@
+name: Sync upstream tracking branch
+
+on:
+  schedule:
+    - cron: "20 2 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: sync-upstream-tracking
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout personal repository
+        uses: actions/checkout@v5
+        with:
+          ref: personal-main
+          fetch-depth: 0
+
+      - name: Mirror upstream main to upstream-sync
+        env:
+          UPSTREAM_REPOSITORY: qixing-jk/all-api-hub
+          TRACKING_BRANCH: upstream-sync
+        run: |
+          git fetch --no-tags "https://github.com/${UPSTREAM_REPOSITORY}.git" main
+          git push origin "FETCH_HEAD:refs/heads/${TRACKING_BRANCH}" --force

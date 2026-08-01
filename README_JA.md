@@ -6,7 +6,9 @@
 
 # All API Hub - あなたの万能 AI 資産マネージャー
 
-**New API 互換の中継サイトアカウントを一元管理：残高、使用量、モデル価格、自動チェックイン、API 認証情報、ページ内テスト、チャネル/モデル同期とリダイレクトに対応**
+**All API Hub 個人拡張版：New API 互換中継サイトの残高、使用量、モデル価格、自動チェックイン、API 認証情報、通知を適法に一元管理**
+
+> 本リポジトリは [上流プロジェクト](https://github.com/qixing-jk/all-api-hub) を基にした個人フォークです。`personal-main` は開発・リリース用の既定ブランチで、`upstream-sync` は上流追跡専用です。詳細は [統合変更ノート](./MODIFICATION_NOTES.md) を参照してください。
 
 <p align="center">
 <a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">
@@ -20,7 +22,7 @@
 </a>
 </p>
 
-**[⚡ クイックスタート](https://all-api-hub.qixing1217.top/ja/get-started.html) | [🌐 対応サイト](https://all-api-hub.qixing1217.top/ja/supported-sites.html) | [🔌 連携ツール](https://all-api-hub.qixing1217.top/ja/supported-export-tools.html) | [📜 更新履歴](https://all-api-hub.qixing1217.top/ja/changelog.html)**
+**[⚡ クイックスタート](https://qianbkk.github.io/all-api-hub/ja/get-started.html) | [🌐 対応サイト](https://qianbkk.github.io/all-api-hub/ja/supported-sites.html) | [🔌 連携ツール](https://qianbkk.github.io/all-api-hub/ja/supported-export-tools.html) | [📜 更新履歴](https://qianbkk.github.io/all-api-hub/ja/changelog.html)**
 
 <p align="center">
   <a href="https://linux.do/t/topic/2395800">
@@ -70,13 +72,13 @@
 - **詳細な使用量分析**：サイト、アカウント、モデル、日付ごとのレポートを作成し、ヒートマップや低速リクエスト分析も確認できます。
 
 ### 🚀 すばやいエコシステム連携
-- **ワンクリックのクイックエクスポート**：**CherryStudio, CC Switch, CLIProxyAPI, Claude Code Router, Kilo Code** などへ同期できます。対応一覧は [連携ツール](https://all-api-hub.qixing1217.top/ja/supported-export-tools.html) を参照してください。
+- **ワンクリックのクイックエクスポート**：**CherryStudio, CC Switch, CLIProxyAPI, Claude Code Router, Kilo Code** などへ同期できます。対応一覧は [連携ツール](https://qianbkk.github.io/all-api-hub/ja/supported-export-tools.html) を参照してください。
 - **管理者向けワークフローツール**：アカウントやキーを自社構築サイトのチャネルとしてインポートし、チャネル管理、モデルリダイレクト、チャネル同期を行えます。
-- **Web スニッフィングとクイック保存**：Web ページ上の Base URL や API Key を選択すると、すぐにテストポップアップを開いて保存できます。詳しくは [Web AI API スニッフィングと検証](https://all-api-hub.qixing1217.top/ja/web-ai-api-check.html) を参照してください。
+- **Web スニッフィングとクイック保存**：Web ページ上の Base URL や API Key を選択すると、すぐにテストポップアップを開いて保存できます。詳しくは [Web AI API スニッフィングと検証](https://qianbkk.github.io/all-api-hub/ja/web-ai-api-check.html) を参照してください。
 
 ### 🧪 安定性を支える検証機能
 - **多角的な API 検証**：モデルの可用性、Token 互換性、CLI プロキシの可用性を一括でテストできます。
-- **Cloudflare チャレンジ補助**：Cloudflare チャレンジの通過を自動で支援し、データ更新や API 呼び出しを止めにくくします。
+- **適法な検証引き継ぎ**：スライダー、画像選択、Cloudflare チャレンジが表示された場合は自動処理を停止し、ユーザーが見える一時コンテキストで手動完了します。CAPTCHA の回避、フィンガープリント偽装、IP 回避は行いません。
 
 ### 🔒 プライバシーとセキュリティ
 - **ローカル管理が既定**：WebDAV バックアップ/同期を有効にしない限り、キーとアカウント情報は端末内に保存されます。
@@ -99,15 +101,15 @@
 
 | チャネル | ダウンロードリンク | 向いている用途 |
 |------|----------|----------|
-| GitHub Stable | [Stable をダウンロード](https://github.com/qixing-jk/all-api-hub/releases/latest) | ストア版をインストールできない場合、または公開済み修正を一時的に手動導入したい場合 |
-| Nightly pre-release | [Nightly をダウンロード](https://github.com/qixing-jk/all-api-hub/releases/tag/nightly) | 新機能を早めに試し、テストに協力したい場合。ストア安定版より不安定な可能性があります |
+| GitHub Stable | [Stable をダウンロード](https://github.com/qianbkk/all-api-hub/releases/latest) | ストア版をインストールできない場合、または公開済み修正を一時的に手動導入したい場合 |
+| Nightly pre-release | [Nightly をダウンロード](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | 新機能を早めに試し、テストに協力したい場合。ストア安定版より不安定な可能性があります |
 
-GitHub Stable と Nightly は手動インストール用チャネルで、自動更新されません。新しいバージョン通知を受け取りたい場合は、リポジトリを Star / Watch してください。詳しくは [インストールと更新ガイド](https://all-api-hub.qixing1217.top/ja/extension-update-install.html) を参照してください。
+GitHub Stable と Nightly は手動インストール用チャネルで、自動更新されません。新しいバージョン通知を受け取りたい場合は、リポジトリを Star / Watch してください。詳しくは [インストールと更新ガイド](https://qianbkk.github.io/all-api-hub/ja/extension-update-install.html) を参照してください。
 
 **その他の環境：**
-- **モバイルブラウザ**：Edge モバイル版、Firefox for Android、Kiwi などに対応しています。詳しくは [モバイルブラウザガイド](https://all-api-hub.qixing1217.top/ja/faq.html#mobile-browser-support) を参照してください。
-- **QQ Browser / 360 Browser など**：[手動読み込みガイド](https://all-api-hub.qixing1217.top/ja/other-browser-install.html) を参照してください。
-- **Safari (Mac)**：Xcode でのビルドが必要です。[Safari インストールガイド](https://all-api-hub.qixing1217.top/ja/safari-install.html) を参照してください。
+- **モバイルブラウザ**：Edge モバイル版、Firefox for Android、Kiwi などに対応しています。詳しくは [モバイルブラウザガイド](https://qianbkk.github.io/all-api-hub/ja/faq.html#mobile-browser-support) を参照してください。
+- **QQ Browser / 360 Browser など**：[手動読み込みガイド](https://qianbkk.github.io/all-api-hub/ja/other-browser-install.html) を参照してください。
+- **Safari (Mac)**：Xcode でのビルドが必要です。[Safari インストールガイド](https://qianbkk.github.io/all-api-hub/ja/safari-install.html) を参照してください。
 
 </details>
 
@@ -159,7 +161,7 @@ GitHub Stable と Nightly は手動インストール用チャネルで、自動
   </a>
   <p>
     PackyCode 様、本プロジェクトへのご協賛ありがとうございます。PackyCode は、Claude Code、Codex、Gemini などの中継サービスを提供する、信頼性と効率性に優れた API 中継サービスプロバイダーです。
-    All API Hub ユーザー向けの特別割引として、<a href="https://www.packyapi.com/register?aff=all-api-hub">こちらのリンク</a> から登録し、初回チャージ時にプロモコード "all-api-hub" を入力すると 10% オフになります（<a href="https://all-api-hub.qixing1217.top/ja/sponsor-guides/packycode.html">設定ガイド</a>）。
+    All API Hub ユーザー向けの特別割引として、<a href="https://www.packyapi.com/register?aff=all-api-hub">こちらのリンク</a> から登録し、初回チャージ時にプロモコード "all-api-hub" を入力すると 10% オフになります（<a href="https://qianbkk.github.io/all-api-hub/ja/sponsor-guides/packycode.html">設定ガイド</a>）。
   </p>
 </div>
 
@@ -170,7 +172,7 @@ GitHub Stable と Nightly は手動インストール用チャネルで、自動
     <img src="resources/partners/xingchen.png" alt="Xingchen AI" width="64" align="left" hspace="10" vspace="4">
   </a>
   <p>
-    Xingchen AI 様、本プロジェクトへのご協賛ありがとうございます。Xingchen AI は、Claude Code、Codex、Gemini などの中継サービスを提供する、安定性と効率性に優れた API 中継サービスプロバイダーです。1:1 のチャージ比率と請求書発行に対応し、Claude は通常価格の 40% 程度から利用できます。詳しくは <a href="https://ai.centos.hk">こちらのリンク</a> をご覧ください（<a href="https://all-api-hub.qixing1217.top/ja/sponsor-guides/xingchen.html">設定ガイド</a>）。
+    Xingchen AI 様、本プロジェクトへのご協賛ありがとうございます。Xingchen AI は、Claude Code、Codex、Gemini などの中継サービスを提供する、安定性と効率性に優れた API 中継サービスプロバイダーです。1:1 のチャージ比率と請求書発行に対応し、Claude は通常価格の 40% 程度から利用できます。詳しくは <a href="https://ai.centos.hk">こちらのリンク</a> をご覧ください（<a href="https://qianbkk.github.io/all-api-hub/ja/sponsor-guides/xingchen.html">設定ガイド</a>）。
   </p>
 </div>
 
@@ -205,7 +207,7 @@ GitHub Stable と Nightly は手動インストール用チャネルで、自動
   </a>
   <p>
     RunAPI 様、本プロジェクトへのご協賛ありがとうございます。RunAPI は安定した OpenRouter 代替 API プラットフォームで、1 つの API Key から OpenAI、Claude、Gemini、DeepSeek、Grok など 150 以上の主要モデルにアクセスできます。
-    標準価格の 10% 程度から利用でき、Claude Code や OpenClaw などのツールにも対応しています。RunAPI は All API Hub ユーザー向けの限定特典として、<a href="https://runapi.co/register?aff=cvDm">こちらのリンク</a> から登録して管理者に連絡すると、¥7 の無料クレジットを受け取れます（<a href="https://all-api-hub.qixing1217.top/ja/sponsor-guides/runapi.html">設定ガイド</a>）。
+    標準価格の 10% 程度から利用でき、Claude Code や OpenClaw などのツールにも対応しています。RunAPI は All API Hub ユーザー向けの限定特典として、<a href="https://runapi.co/register?aff=cvDm">こちらのリンク</a> から登録して管理者に連絡すると、¥7 の無料クレジットを受け取れます（<a href="https://qianbkk.github.io/all-api-hub/ja/sponsor-guides/runapi.html">設定ガイド</a>）。
   </p>
 </div>
 
@@ -255,7 +257,7 @@ GitHub Stable と Nightly は手動インストール用チャネルで、自動
 3. **自動検出を実行**：拡張機能アイコン -> `Add Account` -> サイト URL を入力 -> `Auto Detect` をクリックします。
 4. **使い始める**：残高を確認し、自動チェックインを設定するか、アカウントを AI クライアントへエクスポートします。
 
-👉 **[図解付きの詳しい初心者ガイドを見る](https://all-api-hub.qixing1217.top/ja/get-started.html)**
+👉 **[図解付きの詳しい初心者ガイドを見る](https://qianbkk.github.io/all-api-hub/ja/get-started.html)**
 
 <a id="introduction-tech"></a>
 ### 🧩 高い互換性
@@ -263,7 +265,7 @@ GitHub Stable と Nightly は手動インストール用チャネルで、自動
 - **アカウントサイト互換アーキテクチャ**：[one-api](https://github.com/songquanpeng/one-api)、[new-api](https://github.com/QuantumNous/new-api)、[Veloera](https://github.com/Veloera/Veloera)、[one-hub](https://github.com/MartialBE/one-hub)、[done-hub](https://github.com/deanxv/done-hub)、[Sub2API](https://github.com/Wei-Shaw/sub2api) など
 - **特色あるアカウントプラットフォームと互換実装**：[AIHubMix](https://aihubmix.com/?aff=W3DN)、[AnyRouter](https://anyrouter.top)、Neo-API、Super-API、v-api など
 - **セルフホスト型管理バックエンド**：[new-api](https://github.com/QuantumNous/new-api)、[Veloera](https://github.com/Veloera/Veloera)、[done-hub](https://github.com/deanxv/done-hub)、[Octopus](https://github.com/bestruirui/octopus)、[AxonHub](https://github.com/looplj/axonhub)、[Claude Code Hub](https://github.com/ding113/claude-code-hub) など。チャネル管理、移行、一部のモデル同期に利用できます
-- **完全な一覧**：👉 [対応サイト](https://all-api-hub.qixing1217.top/ja/supported-sites.html)
+- **完全な一覧**：👉 [対応サイト](https://qianbkk.github.io/all-api-hub/ja/supported-sites.html)
 
 <a id="ui-preview"></a>
 ## 🖼️ UI プレビュー

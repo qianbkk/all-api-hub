@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "version": "3.53.0",
-  "description": "一站式聚合管理所有AI中转站账号的余额、模型和密钥，告别繁琐登录。",
+  "description": "All API Hub 个人增强版：合规管理中转站账号、余额、签到、模型价格、密钥与公告。",
+  "repository": "https://github.com/qianbkk/all-api-hub",
+  "homepage": "https://qianbkk.github.io/all-api-hub/",
   "engines": {
     "node": ">=24",
     "pnpm": ">=10"

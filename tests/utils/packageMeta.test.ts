@@ -122,29 +122,29 @@ describe("packageMeta", () => {
       homepage.hash = "community"
 
       expect(getFeedbackDestinationUrls()).toEqual({
-        repository: "https://github.com/qixing-jk/all-api-hub",
+        repository: "https://github.com/qianbkk/all-api-hub",
         bugReport:
-          "https://github.com/qixing-jk/all-api-hub/issues/new?template=bug_report.yml",
+          "https://github.com/qianbkk/all-api-hub/issues/new?template=bug_report.yml",
         featureRequest:
-          "https://github.com/qixing-jk/all-api-hub/issues/new?template=feature_request.yml",
+          "https://github.com/qianbkk/all-api-hub/issues/new?template=feature_request.yml",
         languageRequest:
-          "https://github.com/qixing-jk/all-api-hub/issues/new?template=language_request.yml",
+          "https://github.com/qianbkk/all-api-hub/issues/new?template=language_request.yml",
         siteSupportRequest:
-          "https://github.com/qixing-jk/all-api-hub/issues/new?template=site_support_request.yml",
-        discussions: "https://github.com/qixing-jk/all-api-hub/discussions",
+          "https://github.com/qianbkk/all-api-hub/issues/new?template=site_support_request.yml",
+        discussions: "https://github.com/qianbkk/all-api-hub/discussions",
         community: homepage.toString(),
       })
     })
 
     it("builds locale-aware community destinations", () => {
       expect(getFeedbackDestinationUrls("en").community).toBe(
-        "https://all-api-hub.qixing1217.top/en/#community",
+        "https://qianbkk.github.io/all-api-hub/en/#community",
       )
       expect(getFeedbackDestinationUrls("ja").community).toBe(
-        "https://all-api-hub.qixing1217.top/ja/#community",
+        "https://qianbkk.github.io/all-api-hub/ja/#community",
       )
       expect(getFeedbackDestinationUrls("zh-CN").community).toBe(
-        "https://all-api-hub.qixing1217.top/#community",
+        "https://qianbkk.github.io/all-api-hub/#community",
       )
     })
 
@@ -193,7 +193,7 @@ describe("packageMeta", () => {
       const url = new URL(destination)
 
       expect(`${url.origin}${url.pathname}`).toBe(
-        "https://github.com/qixing-jk/all-api-hub/issues/new",
+        "https://github.com/qianbkk/all-api-hub/issues/new",
       )
       expect(url.searchParams.get("template")).toBe("site_support_request.yml")
       expect(url.searchParams.get("title")).toBe(

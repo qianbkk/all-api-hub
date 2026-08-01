@@ -9,7 +9,9 @@
 
 # All API Hub – Your All-in-One AI Asset Manager
 
-**One-stop management for New API-compatible relay accounts: balances, usage, model prices, check-ins, API credentials, in-page testing, and channel/model sync & redirects**
+**All API Hub personal enhancement: compliant management of New API-compatible relay accounts, balances, usage, model prices, check-ins, API credentials, and announcements**
+
+> This repository is a personal fork based on the [upstream project](https://github.com/qixing-jk/all-api-hub). `personal-main` is the default development and release branch; `upstream-sync` only tracks upstream changes. See [the unified modification notes](./MODIFICATION_NOTES.md).
 
 <p align="center">
 <a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">
@@ -23,7 +25,7 @@
 </a>
 </p>
 
-**[⚡ Quick Start](https://all-api-hub.qixing1217.top/en/get-started.html) | [🌐 Supported Sites](https://all-api-hub.qixing1217.top/en/supported-sites.html) | [🔌 Integrations](https://all-api-hub.qixing1217.top/en/supported-export-tools.html) | [📜 Changelog](https://all-api-hub.qixing1217.top/en/changelog.html)**
+**[⚡ Quick Start](https://qianbkk.github.io/all-api-hub/en/get-started.html) | [🌐 Supported Sites](https://qianbkk.github.io/all-api-hub/en/supported-sites.html) | [🔌 Integrations](https://qianbkk.github.io/all-api-hub/en/supported-export-tools.html) | [📜 Changelog](https://qianbkk.github.io/all-api-hub/en/changelog.html)**
 
 <p align="center">
   <a href="https://linux.do/t/topic/2395800">
@@ -73,13 +75,13 @@ But once you have multiple accounts, management quickly becomes painful:
 - **Deep usage analytics**: Generate reports by site, account, model, and date, including heatmaps and slow-request analysis.
 
 ### 🚀 Fast Ecosystem Integration
-- **One-click quick export**: Sync to **CherryStudio, CC Switch, CLIProxyAPI, Claude Code Router, Kilo Code**, and more. See [Supported Tools](https://all-api-hub.qixing1217.top/en/supported-export-tools.html).
+- **One-click quick export**: Sync to **CherryStudio, CC Switch, CLIProxyAPI, Claude Code Router, Kilo Code**, and more. See [Supported Tools](https://qianbkk.github.io/all-api-hub/en/supported-export-tools.html).
 - **Admin workflow tools**: Import accounts/keys as self-hosted site channels, with tools for channel management, model redirection, and channel sync.
-- **Web sniffing and quick capture**: Select a Base URL or API Key on a webpage to instantly open the test popup and save it. See [Web AI API Sniffing & Verification](https://all-api-hub.qixing1217.top/en/web-ai-api-check.html).
+- **Web sniffing and quick capture**: Select a Base URL or API Key on a webpage to instantly open the test popup and save it. See [Web AI API Sniffing & Verification](https://qianbkk.github.io/all-api-hub/en/web-ai-api-check.html).
 
 ### 🧪 Reliability Safeguards
 - **Multi-dimensional API verification**: Batch test model availability, token compatibility, and CLI proxy availability.
-- **Cloudflare challenge assistant**: Automatically helps you get through Cloudflare challenges so data refreshes and API calls stay uninterrupted.
+- **Compliant verification handoff**: When a slider, image-selection, or Cloudflare challenge appears, the task pauses and opens a visible temporary context for the user to complete it. No CAPTCHA bypass, fingerprint spoofing, or IP evasion is performed.
 
 ### 🔒 Privacy and Security
 - **Local by default**: Keys and account data stay on your device unless you enable WebDAV backup or sync.
@@ -102,15 +104,15 @@ But once you have multiple accounts, management quickly becomes painful:
 
 | Channel | Download Link | Best For |
 |------|----------|----------|
-| GitHub Stable | [Download Stable](https://github.com/qixing-jk/all-api-hub/releases/latest) | When you cannot install the store build or need to temporarily install a published fix manually |
-| Nightly pre-release | [Download Nightly](https://github.com/qixing-jk/all-api-hub/releases/tag/nightly) | When you want early access and are willing to help test; it may be less stable than the store build |
+| GitHub Stable | [Download Stable](https://github.com/qianbkk/all-api-hub/releases/latest) | When you cannot install the store build or need to temporarily install a published fix manually |
+| Nightly pre-release | [Download Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | When you want early access and are willing to help test; it may be less stable than the store build |
 
-GitHub Stable and Nightly are manual installation channels and do not auto-update. Star / Watch the repository to receive new version notifications. See the [installation and update guide](https://all-api-hub.qixing1217.top/en/extension-update-install.html) for more details.
+GitHub Stable and Nightly are manual installation channels and do not auto-update. Star / Watch the repository to receive new version notifications. See the [installation and update guide](https://qianbkk.github.io/all-api-hub/en/extension-update-install.html) for more details.
 
 **Other environments:**
-- **Mobile browsers**: Supports mobile Edge, Firefox for Android, Kiwi, and more. See the [mobile browser guide](https://all-api-hub.qixing1217.top/en/faq.html#mobile-browser-support).
-- **QQ Browser / 360 Browser / similar**: See the [manual loading guide](https://all-api-hub.qixing1217.top/en/other-browser-install.html).
-- **Safari (Mac)**: Requires Xcode for compilation. See the [Safari installation guide](https://all-api-hub.qixing1217.top/en/safari-install.html).
+- **Mobile browsers**: Supports mobile Edge, Firefox for Android, Kiwi, and more. See the [mobile browser guide](https://qianbkk.github.io/all-api-hub/en/faq.html#mobile-browser-support).
+- **QQ Browser / 360 Browser / similar**: See the [manual loading guide](https://qianbkk.github.io/all-api-hub/en/other-browser-install.html).
+- **Safari (Mac)**: Requires Xcode for compilation. See the [Safari installation guide](https://qianbkk.github.io/all-api-hub/en/safari-install.html).
 
 </details>
 
@@ -163,7 +165,7 @@ GitHub Stable and Nightly are manual installation channels and do not auto-updat
   <p>
     Thanks to PackyCode for sponsoring this project! PackyCode is a reliable and efficient API relay service provider, offering relay services for Claude Code, Codex,
     Gemini, and more. PackyCode provides special discounts for our software users: register using
-    <a href="https://www.packyapi.com/register?aff=all-api-hub">this link</a> and enter the "all-api-hub" promo code during first recharge to get 10% off (<a href="https://all-api-hub.qixing1217.top/en/sponsor-guides/packycode.html">setup guide</a>).
+    <a href="https://www.packyapi.com/register?aff=all-api-hub">this link</a> and enter the "all-api-hub" promo code during first recharge to get 10% off (<a href="https://qianbkk.github.io/all-api-hub/en/sponsor-guides/packycode.html">setup guide</a>).
   </p>
 </div>
 
@@ -176,7 +178,7 @@ GitHub Stable and Nightly are manual installation channels and do not auto-updat
   <p>
     Thanks to Xingchen AI for sponsoring this project! Xingchen AI is a stable and efficient API relay service provider, offering relay services for Claude Code, Codex,
     Gemini, and more. It offers a 1:1 recharge ratio with invoice support and Claude from 40% pricing. Learn more using
-    <a href="https://ai.centos.hk">this link</a> (<a href="https://all-api-hub.qixing1217.top/en/sponsor-guides/xingchen.html">setup guide</a>).
+    <a href="https://ai.centos.hk">this link</a> (<a href="https://qianbkk.github.io/all-api-hub/en/sponsor-guides/xingchen.html">setup guide</a>).
   </p>
 </div>
 
@@ -216,7 +218,7 @@ GitHub Stable and Nightly are manual installation channels and do not auto-updat
   <p>
     Thanks to RunAPI for sponsoring this project! RunAPI is a stable OpenRouter alternative API platform: one API key gives access to 150+ mainstream models including
     OpenAI, Claude, Gemini, DeepSeek, and Grok, from 10% of standard pricing, with Claude Code and OpenClaw compatibility. RunAPI offers All API Hub users an exclusive
-    benefit: register using <a href="https://runapi.co/register?aff=cvDm">this link</a> and contact the administrator to claim ¥7 in free credits (<a href="https://all-api-hub.qixing1217.top/en/sponsor-guides/runapi.html">setup guide</a>).
+    benefit: register using <a href="https://runapi.co/register?aff=cvDm">this link</a> and contact the administrator to claim ¥7 in free credits (<a href="https://qianbkk.github.io/all-api-hub/en/sponsor-guides/runapi.html">setup guide</a>).
   </p>
 </div>
 
@@ -269,7 +271,7 @@ GitHub Stable and Nightly are manual installation channels and do not auto-updat
 3. **Run auto detection**: Click the extension icon -> `Add Account` -> enter the site URL -> click `Auto Detect`.
 4. **Start using it**: Check balances, configure auto check-in, or export the account to your AI client.
 
-👉 **[Click here for the full illustrated beginner guide](https://all-api-hub.qixing1217.top/en/get-started.html)**
+👉 **[Click here for the full illustrated beginner guide](https://qianbkk.github.io/all-api-hub/en/get-started.html)**
 
 <a id="introduction-tech"></a>
 ### 🧩 Strong Compatibility
@@ -277,7 +279,7 @@ No matter which architecture you use, there is a good chance we support it:
 - **Account-site compatible architectures**: [one-api](https://github.com/songquanpeng/one-api), [new-api](https://github.com/QuantumNous/new-api), [Veloera](https://github.com/Veloera/Veloera), [one-hub](https://github.com/MartialBE/one-hub), [done-hub](https://github.com/deanxv/done-hub), [Sub2API](https://github.com/Wei-Shaw/sub2api), and more
 - **Specialized account platforms and compatible implementations**: [AIHubMix](https://aihubmix.com/?aff=W3DN), [AnyRouter](https://anyrouter.top), Neo-API, Super-API, v-api, and more
 - **Self-hosted admin backends**: [new-api](https://github.com/QuantumNous/new-api), [Veloera](https://github.com/Veloera/Veloera), [done-hub](https://github.com/deanxv/done-hub), [Octopus](https://github.com/bestruirui/octopus), [AxonHub](https://github.com/looplj/axonhub), [Claude Code Hub](https://github.com/ding113/claude-code-hub), and more, for channel management, migration, and partial model sync
-- **Full list**: 👉 [Supported Sites](https://all-api-hub.qixing1217.top/en/supported-sites.html)
+- **Full list**: 👉 [Supported Sites](https://qianbkk.github.io/all-api-hub/en/supported-sites.html)
 
 <a id="ui-preview"></a>
 ## 🖼️ UI Preview

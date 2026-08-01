@@ -30,7 +30,7 @@ describe("release update runtime client", () => {
         latestVersion: "3.32.0",
         updateAvailable: true,
         releaseUrl:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.32.0",
+          "https://github.com/qianbkk/all-api-hub/releases/tag/v3.32.0",
         checkedAt: 1,
         lastError: null,
         storeUpdate: {
@@ -54,7 +54,7 @@ describe("release update runtime client", () => {
         latestVersion: "3.32.0",
         updateAvailable: true,
         releaseUrl:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.32.0",
+          "https://github.com/qianbkk/all-api-hub/releases/tag/v3.32.0",
         checkedAt: 1,
         lastError: null,
         storeUpdate: {

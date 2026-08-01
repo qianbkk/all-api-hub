@@ -47,7 +47,7 @@ describe("public sponsor catalog artifacts", () => {
       SPONSOR_CATALOG_SCHEMA_VERSION,
     )
     expect(new URL(SPONSOR_REMOTE_CATALOG_V5_URL).pathname).toBe(
-      "/qixing-jk/all-api-hub/main/public/sponsor-catalog.v5.json",
+      "/qianbkk/all-api-hub/personal-main/public/sponsor-catalog.v5.json",
     )
 
     const productionResult = normalizeSponsorCatalog(publicSponsorCatalogV5, {

@@ -25,7 +25,7 @@ import { openLanguageRequestPage } from "~/utils/navigation"
  */
 const logger = createLogger("PermissionOnboardingDialog")
 
-const GITHUB_URL = "https://github.com/qixing-jk/all-api-hub"
+const GITHUB_URL = "https://github.com/qianbkk/all-api-hub"
 
 interface PermissionOnboardingDialogProps {
   open: boolean

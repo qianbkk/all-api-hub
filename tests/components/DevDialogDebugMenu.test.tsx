@@ -214,7 +214,7 @@ describe("DevDialogDebugMenu", () => {
         }),
       ).toHaveAttribute(
         "href",
-        "https://github.com/qixing-jk/all-api-hub/issues/new?template=language_request.yml",
+        "https://github.com/qianbkk/all-api-hub/issues/new?template=language_request.yml",
       )
     } finally {
       consoleError.mockRestore()

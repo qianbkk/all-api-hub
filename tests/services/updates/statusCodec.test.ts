@@ -52,15 +52,14 @@ describe("parseReleaseUpdateStatus", () => {
       currentVersion: "3.31.0",
       reason: RELEASE_UPDATE_REASONS.ChromiumDevelopment,
       releaseUrl:
-        " https://github.com/qixing-jk/all-api-hub/releases/tag/v3.31.0 ",
+        " https://github.com/qianbkk/all-api-hub/releases/tag/v3.31.0 ",
       lastError: " network issue ",
     })
 
     expect(parsed).toMatchObject({
       currentVersion: "3.31.0",
       reason: RELEASE_UPDATE_REASONS.ChromiumDevelopment,
-      releaseUrl:
-        "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.31.0",
+      releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.31.0",
       lastError: "network issue",
     })
   })

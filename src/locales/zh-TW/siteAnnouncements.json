@@ -65,5 +65,17 @@
     "total": "公告總數",
     "unread": "未讀公告"
   },
-  "title": "網站公告"
+  "title": "網站公告",
+  "insights": {
+    "confidence": {
+      "high": "高可信度本機識別",
+      "medium": "可能的本機識別結果"
+    },
+    "types": {
+      "model_launch": "模型上新",
+      "promotion": "特價優惠",
+      "pricing_change": "價格/倍率調整",
+      "maintenance": "維護故障"
+    }
+  }
 }

@@ -28,7 +28,7 @@ const baseFeed = {
           message: "请升级到 3.44.1。",
           cta: {
             label: "查看修复说明",
-            url: "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.44.1",
+            url: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.44.1",
           },
         },
         en: {
@@ -221,7 +221,7 @@ describe("product announcement feed normalization", () => {
       message: "请升级到 3.44.1。",
       cta: {
         label: "查看修复说明",
-        url: "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.44.1",
+        url: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.44.1",
       },
       seen: false,
       dismissed: false,

@@ -2,7 +2,7 @@ name: Docs Check
 
 on:
   pull_request:
-    branches: [main, develop]
+    branches: [personal-main]
     paths:
       - "docs/docs/**"
       - "docs/scripts/**"

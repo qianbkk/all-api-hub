@@ -7,21 +7,21 @@ describe("product announcement CTA URL policy", () => {
     expect(
       sanitizeProductAnnouncementCta({
         label: "View release",
-        url: "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.44.1",
+        url: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.44.1",
       }),
     ).toEqual({
       label: "View release",
-      url: "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.44.1",
+      url: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.44.1",
     })
 
     expect(
       sanitizeProductAnnouncementCta({
         label: "Read docs",
-        url: "https://all-api-hub.qixing1217.top/changelog.html",
+        url: "https://qianbkk.github.io/all-api-hub/changelog.html",
       }),
     ).toEqual({
       label: "Read docs",
-      url: "https://all-api-hub.qixing1217.top/changelog.html",
+      url: "https://qianbkk.github.io/all-api-hub/changelog.html",
     })
   })
 
@@ -62,11 +62,11 @@ describe("product announcement CTA URL policy", () => {
     expect(
       sanitizeProductAnnouncementCta({
         label: "  Read changelog  ",
-        url: "  https://all-api-hub.qixing1217.top/changelog.html?version=3.44.1#latest  ",
+        url: "  https://qianbkk.github.io/all-api-hub/changelog.html?version=3.44.1#latest  ",
       }),
     ).toEqual({
       label: "Read changelog",
-      url: "https://all-api-hub.qixing1217.top/changelog.html?version=3.44.1#latest",
+      url: "https://qianbkk.github.io/all-api-hub/changelog.html?version=3.44.1#latest",
     })
   })
 })

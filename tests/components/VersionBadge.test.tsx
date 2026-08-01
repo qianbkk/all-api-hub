@@ -97,7 +97,7 @@ describe("VersionBadge", () => {
         currentVersion: "1.2.3",
         latestVersion: "1.3.0",
         updateAvailable: true,
-        releaseUrl: "https://github.com/qixing-jk/all-api-hub/releases/latest",
+        releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/latest",
         checkedAt: 0,
         lastError: null,
         storeUpdate: {
@@ -120,7 +120,7 @@ describe("VersionBadge", () => {
     })
     expect(link).toHaveAttribute(
       "href",
-      "https://github.com/qixing-jk/all-api-hub/releases/latest",
+      "https://github.com/qianbkk/all-api-hub/releases/latest",
     )
   })
 
@@ -143,7 +143,7 @@ describe("VersionBadge", () => {
         latestVersion: "3.51.0",
         updateAvailable: true,
         releaseUrl:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.51.0",
+          "https://github.com/qianbkk/all-api-hub/releases/tag/v3.51.0",
         checkedAt: 0,
         lastError: null,
         storeUpdate: {

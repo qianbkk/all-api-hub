@@ -621,13 +621,15 @@ export const DEFAULT_PREFERENCES: UserPreferences = {
   logging: getDefaultLoggingPreferences(),
   preferencesVersion: CURRENT_PREFERENCES_VERSION,
   tempWindowFallback: {
-    enabled: true,
+    // Security challenges require an explicit user-visible browser context.
+    // Automatic background challenge handling stays opt-in in this fork.
+    enabled: false,
     useInPopup: true,
     useInSidePanel: true,
     useInOptions: true,
-    useForAutoRefresh: true,
+    useForAutoRefresh: false,
     useForManualRefresh: true,
-    tempContextMode: TEMP_CONTEXT_MODES.Composite,
+    tempContextMode: TEMP_CONTEXT_MODES.Tab,
   },
   tempWindowFallbackReminder: {
     dismissed: false,

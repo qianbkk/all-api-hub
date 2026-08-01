@@ -3,8 +3,7 @@ name: E2E
 on:
   push:
     branches:
-      - main
-      - develop
+      - personal-main
     paths:
       - "src/**"
       - "public/**"

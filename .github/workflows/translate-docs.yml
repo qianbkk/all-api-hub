@@ -3,7 +3,7 @@ name: Auto Translate Documentation
 on:
   push:
     branches:
-      - main
+      - personal-main
     paths:
       - "docs/docs/**/*.md"
       - "!docs/docs/en/**"

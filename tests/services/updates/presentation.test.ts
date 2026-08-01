@@ -17,7 +17,7 @@ function buildStatus(
     currentVersion: "3.31.0",
     latestVersion: null,
     updateAvailable: false,
-    releaseUrl: "https://github.com/qixing-jk/all-api-hub/releases/latest",
+    releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/latest",
     checkedAt: null,
     lastError: null,
     storeUpdate: {

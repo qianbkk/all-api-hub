@@ -108,8 +108,7 @@ describe("releaseUpdateService", () => {
       ok: true,
       json: async () => ({
         tag_name: "v3.40.0",
-        html_url:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.40.0",
+        html_url: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.40.0",
       }),
     } as Response)
 
@@ -125,8 +124,7 @@ describe("releaseUpdateService", () => {
       currentVersion: "3.32.0",
       latestVersion: "3.40.0",
       updateAvailable: true,
-      releaseUrl:
-        "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.40.0",
+      releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.40.0",
       lastError: null,
     })
     expect(status.checkedAt).toEqual(expect.any(Number))
@@ -264,8 +262,7 @@ describe("releaseUpdateService", () => {
       ok: true,
       json: async () => ({
         tag_name: "v3.40.0",
-        html_url:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.40.0",
+        html_url: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.40.0",
       }),
     } as Response)
 
@@ -297,8 +294,7 @@ describe("releaseUpdateService", () => {
       ok: true,
       json: async () => ({
         tag_name: "v3.40.0",
-        html_url:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.40.0",
+        html_url: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.40.0",
       }),
     } as Response)
 
@@ -324,8 +320,7 @@ describe("releaseUpdateService", () => {
       ok: true,
       json: async () => ({
         tag_name: "v3.40.0",
-        html_url:
-          "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.40.0",
+        html_url: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.40.0",
       }),
     } as Response)
 
@@ -355,8 +350,7 @@ describe("releaseUpdateService", () => {
       currentVersion: "3.32.0",
       latestVersion: "3.40.0",
       updateAvailable: true,
-      releaseUrl:
-        "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.40.0",
+      releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.40.0",
       checkedAt: 123,
       lastError: null,
       storeUpdate: {
@@ -459,8 +453,7 @@ describe("releaseUpdateService", () => {
       currentVersion: "3.32.0",
       latestVersion: "3.40.0",
       updateAvailable: true,
-      releaseUrl:
-        "https://github.com/qixing-jk/all-api-hub/releases/tag/v3.40.0",
+      releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/tag/v3.40.0",
       checkedAt: 123,
       lastError: "old error",
     })
@@ -477,7 +470,7 @@ describe("releaseUpdateService", () => {
       currentVersion: "3.32.0",
       latestVersion: null,
       updateAvailable: false,
-      releaseUrl: "https://github.com/qixing-jk/all-api-hub/releases/latest",
+      releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/latest",
       checkedAt: null,
       lastError: null,
     })
@@ -490,7 +483,7 @@ describe("releaseUpdateService", () => {
         eligible: false,
         latestVersion: null,
         updateAvailable: false,
-        releaseUrl: "https://github.com/qixing-jk/all-api-hub/releases/latest",
+        releaseUrl: "https://github.com/qianbkk/all-api-hub/releases/latest",
         checkedAt: null,
         lastError: null,
       }),

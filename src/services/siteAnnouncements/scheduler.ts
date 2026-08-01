@@ -33,6 +33,7 @@ import { getErrorMessage } from "~/utils/core/error"
 import { createLogger } from "~/utils/core/logger"
 
 import { SITE_ANNOUNCEMENTS_ALARM_NAME } from "./constants"
+import { classifySiteAnnouncement } from "./insights"
 import {
   onSiteAnnouncementsMessage,
   type SiteAnnouncementsCheckNowRequest,
@@ -106,6 +107,7 @@ function createRecordInput(params: {
     upstreamId: params.announcement.id,
     title,
     content,
+    insights: classifySiteAnnouncement({ title, content }),
     createdAt: params.announcement.createdAt,
     updatedAt: params.announcement.updatedAt,
     readAt: params.announcement.readAt,
