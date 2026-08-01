@@ -9,7 +9,7 @@
     },
     "community": {
       "button": "コミュニティハブを開く",
-      "description": "WeChat の QR コード、QQ グループ、多言語 Discord コミュニティ、Telegram グループ、そのほかの窓口を確認して、質問やセットアップ相談、トラブルシュートを行えます。"
+      "description": "個人拡張版のサポート案内を確認し、qianbkk/all-api-hub の Issues または Discussions で質問、設定共有、トラブルシュートを行えます。"
     },
     "discussion": {
       "button": "ディスカッションを開く",
@@ -30,7 +30,20 @@
   "homepage": "プロジェクトホームページ",
   "homepageDesc": "詳細なドキュメント、ユーザーガイド、その他の情報を確認できます",
   "implementedFeatures": "実装済み機能",
-  "intro": "All API Hub は、サードパーティーの New API 互換中継サイトと、自分で構築した New API インスタンスの両方を管理するためのブラウザ拡張機能です。アカウントと残高の監視、スマートな並び替え、サイト検出を一元化し、自動更新や一時ウィンドウによるファイアウォール回避などの自動化機能も提供します。セルフホストの New API に対しては、チャネル管理やモデル一覧同期も行え、CLIProxyAPI、WebDAV バックアップ、インポート / エクスポートツールとも連携できます。",
+  "intro": "All API Hub 個人拡張版は、New API 互換中継サイトとセルフホスト環境を適法に管理する個人フォークです。アカウント、残高、使用量、モデル価格、API 認証情報を一元化し、同一サイトのチェックイン分散、公告分類、チャネル管理、暗号化 WebDAV バックアップ、ユーザー本人による可視セキュリティ検証の引き継ぎに対応します。更新、公告、文書、フィードバックは qianbkk/all-api-hub を参照します。",
+  "personalReleases": {
+    "nightly": {
+      "button": "Nightly をダウンロード",
+      "description": "個人リポジトリの最新変更を先行確認できますが、正式版より不安定な場合があります。",
+      "title": "個人拡張版 Nightly"
+    },
+    "stable": {
+      "button": "Stable をダウンロード",
+      "description": "公開済み個人拡張版は qianbkk/all-api-hub からのみダウンロードします。",
+      "title": "個人拡張版 Stable"
+    },
+    "title": "個人拡張版のダウンロード"
+  },
   "privacyText": "アカウント、API キー、Cookie、残高、リクエスト内容、ユーザー入力などの機密データは、既定でローカルにのみ保存されます。任意の匿名プロダクト分析は、よく起きる問題の修正、主要ワークフローと互換性の改善、不要な手間の削減を優先するためだけに使われ、上記の機密データは収集しません。",
   "privacyTitle": "プライバシー保護",
   "projectLinks": "プロジェクトリンク",
@@ -40,23 +53,6 @@
     "title": "バージョン更新"
   },
   "starRepo": "Star を付けに行く",
-  "stores": {
-    "chrome": "Chrome ウェブストア",
-    "edge": "Microsoft Edge アドオン",
-    "firefox": "Firefox Add-ons"
-  },
-  "storesSection": {
-    "download": {
-      "button": "ストアを開く",
-      "description": "{{store}} からダウンロードします。"
-    },
-    "review": {
-      "button": "{{store}} で評価する",
-      "description": "All API Hub が役に立っている場合は、{{store}} での高評価レビューが大きな助けになります。",
-      "title": "高評価レビューをお願いします"
-    },
-    "title": "評価とダウンロード"
-  },
   "techStack": {
     "radix": "アクセシブルな UI プリミティブ",
     "react": "ユーザーインターフェースライブラリ",
@@ -65,7 +61,7 @@
     "typescript": "型安全な JavaScript",
     "wxt": "ブラウザ拡張開発フレームワーク"
   },
-  "thanksDesc": "オープンソースコミュニティに貢献してくださったすべての開発者に感謝します。このプラグインの開発は、これらの優れたオープンソースプロジェクトとツールの恩恵を受けています。",
+  "thanksDesc": "個人拡張版は qianbkk が保守し、上流 All API Hub とその貢献者のオープンソース成果を基盤としています。原作者表示、ライセンス、第三者通知を保持します。",
   "title": "この拡張機能について",
   "upcomingFeatures": "今後の機能",
   "version": "バージョン:",

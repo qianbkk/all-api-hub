@@ -4,22 +4,24 @@
 
 ## 1. プラグインのインストール
 
-最適な体験（自動更新を含む）を得るために、**各ブラウザの公式ストアからのインストールを強くお勧めします**。
+個人強化版は `qianbkk/all-api-hub` からのみ公開されます。アップストリームのブラウザストア版は、個人版の配布チャネルではありません。
 
-| チャネル | ダウンロードリンク | 現在のバージョン | ユーザー数 |
+| チャネル | 用途 | ダウンロード | 更新方法 |
 |---|---|---|---|
-| Chrome ウェブストア | [Chrome ウェブストア](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome version](https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/lapnciffpekdengooeolaienkeoilfeo?label=Chrome%20Users)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) |
-| Edge ウェブストア | [Edge ウェブストア](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge version](https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge Add-ons Users](https://img.shields.io/badge/dynamic/json?label=Edge%20Users&query=$.activeInstallCount&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/pcokpjaffghgipcgjhapgdpeddlhblaa)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) |
-| Firefox ウェブストア | [Firefox ウェブストア](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Firefox version](https://img.shields.io/amo/v/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox&logo=firefoxbrowser&style=flat)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Mozilla Add-on Users](https://img.shields.io/amo/users/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox%20Users)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) |
+| Stable | 日常利用に推奨する個人版の正式リリース | [最新 Stable をダウンロード](https://github.com/qianbkk/all-api-hub/releases/latest) | 手動で再ダウンロードして再インストール |
+| Nightly | Stable 前の個人版変更を先行確認 | [Nightly をダウンロード](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | 手動更新。安定しない場合があります |
+| ソースビルド | 開発、監査、カスタムビルド | [個人リポジトリを開く](https://github.com/qianbkk/all-api-hub) | 自分で取得、ビルド、インストール |
+
+::: warning インストール元について
+Chrome、Edge、Firefox ストアにある同名拡張機能はアップストリームが公開したもので、この個人強化版ではありません。ここで説明する機能、ブランド、更新元、セキュリティ方針を利用するには、上記の個人リポジトリ Release のみをインストールしてください。個人版の手動インストールは自動更新されないため、リポジトリを Star / Watch して公開通知を受け取ってください。
+:::
 
 <details>
-<summary>📦 手動インストール、Safari、またはモバイルデバイスが必要ですか？（クリックして展開）</summary>
+<summary>📦 Safari、その他のブラウザ、またはモバイル端末ですか？（クリックして展開）</summary>
 
-- **GitHub Stable**：ストア版または Chrome ウェブストア互換版をインストールできない場合、または公開済みの修正を一時的に手動インストールしたい場合は、[GitHub Releases](https://github.com/qixing-jk/all-api-hub/releases) から正式版をダウンロードできます。手動インストール版はストア版のように自動更新されません。新しいバージョンの通知を受け取るには、リポジトリを Star / Watch してください。
-- **Nightly プレリリース**：新機能を早く試してテストに協力したいユーザー向けです。ストアの安定版より不安定な場合があります。Nightly も手動インストール経路で、自動更新されません。
 - **Safari (Mac)**：Xcode を介してインストールする必要があります。詳細は [Safari インストールガイド](./safari-install.md) を参照してください。
-- **QQ / 360 / Brave / Vivaldi / Opera など**：Chromium 系ブラウザでもインストール経路は異なります。Brave、Vivaldi、Opera は通常まず Chrome ウェブストアを試せます。ストア経路を使えない場合は手動読み込みを使ってください。詳細は [その他のブラウザへのインストールガイド](./other-browser-install.md) を参照してください。
-- **モバイルデバイス**：Edge モバイル版、Firefox Android、Kiwi などに対応しています。詳細は [モバイル FAQ](./faq.md#mobile-browser-support) を参照してください。
+- **QQ / 360 / Brave / Vivaldi / Opera など**：個人 Stable Release の Chrome パッケージをダウンロードして手動読み込みします。詳細は [その他のブラウザへのインストールガイド](./other-browser-install.md) を参照してください。
+- **モバイル端末**：外部拡張機能を読み込めるかどうかはブラウザによります。詳細は [モバイル FAQ](./faq.md#mobile-browser-support) を参照してください。
 
 </details>
 
@@ -56,7 +58,7 @@
 - [Infistar.ai](https://infistar.ai/register?aff=ALLAPIHUB&ref_source=link)：提供モデルはすべて実際の呼び出しで検証済みです。10,000 本を超える公式 API と公式アカウントプールの供給経路を負荷分散し、テキスト、動画、画像、埋め込み、リランキングなどのフルモーダル機能、透明な料金と利用量、公式価格の 10% からの価格を提供します。
 :::
 
-> **盾越えのヒント**：サイトに Cloudflare 認証（5 秒ルール）がある場合、プラグインは自動的にウィンドウを表示して盾越えを支援します。認証が完了すると、自動的に認識を続行します。
+> **手動確認のヒント**：サイトが Cloudflare などの安全確認を要求した場合、手動認識操作から一時ページを開けます。そのページへ切り替え、ユーザー本人が確認を完了してください。確認後に処理が続行されます。拡張機能が CAPTCHA を自動解除または回避することはありません。
 
 <a id="manual-addition"></a>
 ### 2.2 手動追加（代替）
@@ -108,7 +110,7 @@
 - **[ブックマーク整理](./bookmark-management.md)**：コンソール、ドキュメント、チャージ入口を一元管理。
 
 ### 🛡️ 安定性とセキュリティ保護
-- **[Cloudflare 盾越えアシスタント](./cloudflare-helper.md)**：検証を支援し、リフレッシュやチェックインの中断を防ぎます。
+- **[サイト手動確認リレー](./cloudflare-helper.md)**：手動操作でサイト確認が必要になった場合、一時ページを開き、ユーザー本人の確認後に処理を続行します。
 - **[WebDAV 同期と暗号化](./webdav-sync.md)**：クロスデバイスでの暗号化バックアップをサポートし、データを失わないようにします。
 
 ### 🔔 通知チャネル

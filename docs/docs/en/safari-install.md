@@ -24,7 +24,7 @@ There are two installation methods:
 
 The Safari bundle will be uploaded to the latest version's Release page:
 
-- [Latest Release](https://github.com/qixing-jk/all-api-hub/releases/latest)
+- [Latest Release](https://github.com/qianbkk/all-api-hub/releases/latest)
 
 #### 1. Open the Release Page for the Corresponding Version
 
@@ -77,7 +77,7 @@ The bundle already contains the files needed to run. You can usually open the pr
 
 ```bash
 # Clone or download the project source code
-git clone https://github.com/qixing-jk/all-api-hub.git
+git clone https://github.com/qianbkk/all-api-hub.git
 cd all-api-hub
 
 # Install dependencies
@@ -101,7 +101,7 @@ If you want to customize the output directory, app name, and bundle identifier, 
 xcrun safari-web-extension-converter .output/safari-mv2/ \
   --project-location /path/to/all-api-hub-safari-project \
   --app-name "All API Hub" \
-  --bundle-identifier "io.github.qixingjk.allapihub"
+  --bundle-identifier "io.github.qianbkk.allapihub"
 ```
 
 This step will generate an Xcode project to host the Safari extension.
@@ -209,4 +209,4 @@ The basic functionalities are identical. However, due to some limitations in Saf
 
 ---
 
-If you have any issues, please report them in [GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues).
+If you have any issues, please report them in [GitHub Issues](https://github.com/qianbkk/all-api-hub/issues).

@@ -9,7 +9,7 @@
     },
     "community": {
       "button": "Open community hub",
-      "description": "See the WeChat QR code, QQ group, multilingual Discord community, Telegram group, and other channels for questions, setup discussions, and troubleshooting."
+      "description": "Review the personal edition's support guidance and use qianbkk/all-api-hub Issues or Discussions for questions, setup notes, and troubleshooting."
     },
     "discussion": {
       "button": "Open discussions",
@@ -30,7 +30,20 @@
   "homepage": "Project Homepage",
   "homepageDesc": "View detailed documentation, user guides and more information",
   "implementedFeatures": "Implemented Features",
-  "intro": "All API Hub is a browser extension for managing both third-party New API-compatible relay sites and your own New API instance. It centralizes account and balance monitoring, smart sorting, and site detection, and provides automation features such as auto-refresh and temp-window firewall bypass. For self-hosted New API, it also offers channel management and model list synchronization, and integrates with CLIProxyAPI, WebDAV backup, and import/export tools.",
+  "intro": "All API Hub Personal Enhancement is a compliance-focused fork for New API-compatible relay sites and self-hosted instances. It centralizes accounts, balances, usage, model prices, and API credentials; adds staggered same-site check-ins and local announcement insights; supports channel tools and encrypted WebDAV backup; and hands visible security challenges to the user instead of bypassing them. Runtime updates, announcements, docs, and feedback point to qianbkk/all-api-hub.",
+  "personalReleases": {
+    "nightly": {
+      "button": "Download Nightly",
+      "description": "Validate the latest personal-repository changes early; it may be less stable.",
+      "title": "Personal-fork Nightly"
+    },
+    "stable": {
+      "button": "Download Stable",
+      "description": "Download the published personal enhancement only from qianbkk/all-api-hub.",
+      "title": "Personal-fork Stable"
+    },
+    "title": "Personal-fork downloads"
+  },
   "privacyText": "Sensitive data such as accounts, API keys, cookies, balances, request content, and user input stays local by default. Optional anonymous product analytics are used only to prioritize fixes for common issues, improve core workflows and compatibility, and reduce unnecessary friction, and they do not collect that sensitive data.",
   "privacyTitle": "Privacy Protection",
   "projectLinks": "Project Links",
@@ -40,23 +53,6 @@
     "title": "Version Updates"
   },
   "starRepo": "Go star it",
-  "stores": {
-    "chrome": "Chrome Web Store",
-    "edge": "Microsoft Edge Add-ons",
-    "firefox": "Firefox Add-ons"
-  },
-  "storesSection": {
-    "download": {
-      "button": "Open store",
-      "description": "Download from {{store}}."
-    },
-    "review": {
-      "button": "Rate on {{store}}",
-      "description": "If All API Hub helps you, a positive review on {{store}} really helps.",
-      "title": "Leave a positive review"
-    },
-    "title": "Rate & Download"
-  },
   "techStack": {
     "radix": "Accessible UI primitives",
     "react": "User interface library",
@@ -65,7 +61,7 @@
     "typescript": "Type-safe JavaScript",
     "wxt": "Browser extension development framework"
   },
-  "thanksDesc": "Thanks to all developers who have contributed to the open source community, the development of this plugin benefits from these excellent open source projects and tools",
+  "thanksDesc": "The personal enhancement is maintained by qianbkk and built on the open-source work of upstream All API Hub and its contributors. Original attribution, licenses, and third-party notices are preserved.",
   "title": "About",
   "upcomingFeatures": "Upcoming Features",
   "version": "Version:",

@@ -85,4 +85,4 @@
 - [自动识别排查指南](./auto-detect.md)
 - [自动刷新与实时数据](./auto-refresh.md)
 - [WebDAV 备份与自动同步](./webdav-sync.md)
-- [Cloudflare 过盾助手](./cloudflare-helper.md)
+- [站点人工验证接力](./cloudflare-helper.md)

@@ -4,22 +4,24 @@
 
 ## 1. 安装插件
 
-为了获得最佳体验（包括自动更新），我们**强烈推荐从各浏览器官方商店安装**。
+个人增强版只通过 `qianbkk/all-api-hub` 发布，不使用上游浏览器商店包作为个人版安装渠道。
 
-| 渠道 | 下载链接 | 当前版本 | 用户数 |
-|------|----------|----------|--------|
-| Chrome 商店 | [Chrome 商店](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome version](https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/lapnciffpekdengooeolaienkeoilfeo?label=Chrome%20Users)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) |
-| Edge 商店 | [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge version](https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge Add-ons Users](https://img.shields.io/badge/dynamic/json?label=Edge%20Users&query=$.activeInstallCount&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/pcokpjaffghgipcgjhapgdpeddlhblaa)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) |
-| Firefox 商店 | [Firefox 商店](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Firefox version](https://img.shields.io/amo/v/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox&logo=firefoxbrowser&style=flat)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Mozilla Add-on Users](https://img.shields.io/amo/users/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox%20Users)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) |
+| 渠道 | 适用场景 | 下载入口 | 更新方式 |
+|------|----------|----------|----------|
+| Stable | 推荐日常使用的个人版正式发布 | [下载最新 Stable](https://github.com/qianbkk/all-api-hub/releases/latest) | 手动下载并重新安装 |
+| Nightly | 提前验证尚未进入 Stable 的个人版变更 | [下载 Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | 手动下载并重新安装，可能不稳定 |
+| 源码构建 | 开发、审查或自定义构建 | [查看个人仓库](https://github.com/qianbkk/all-api-hub) | 自行拉取、构建和安装 |
+
+::: warning 安装来源说明
+Chrome、Edge 和 Firefox 商店中现有的同名扩展由上游项目发布，不是本个人增强版。若要获得本文所述功能、品牌、更新源和安全策略，请仅使用上表中的个人仓库 Release。个人版手动安装不会自动升级，请 Star / Watch 仓库接收发布通知。
+:::
 
 <details>
-<summary>📦 需要手动安装、Safari 或手机端？（点击展开）</summary>
+<summary>📦 Safari、其他浏览器或手机端？（点击展开）</summary>
 
-- **GitHub Stable**：无法安装商店版或 Chrome Web Store 兼容版本，或需要临时手动安装已发布修复时，可前往 [GitHub Releases](https://github.com/qixing-jk/all-api-hub/releases) 下载正式版。手动安装版本不会像商店版一样自动更新，你可以 Star / Watch 仓库来接收新版本通知。
-- **Nightly 预发布**：适合想抢先体验并协助测试的用户，可能不如商店稳定版稳定。Nightly 也属于手动安装通道，不会自动更新。
 - **Safari (Mac)**：需要通过 Xcode 安装，详见 [Safari 安装指南](./safari-install.md)。
-- **QQ / 360 / Brave / Vivaldi / Opera 等**：不同 Chromium 浏览器的商店入口不同，Brave、Vivaldi、Opera 可优先尝试 Chrome Web Store；无法使用商店时再手动加载，详见 [其他浏览器安装指南](./other-browser-install.md)。
-- **移动端**：支持 Edge 手机版、Firefox Android、Kiwi 等，详见 [移动端 FAQ](./faq.md#mobile-browser-support)。
+- **QQ / 360 / Brave / Vivaldi / Opera 等**：从个人 Stable Release 下载 Chrome 包并手动加载，详见 [其他浏览器安装指南](./other-browser-install.md)。
+- **移动端**：支持情况取决于浏览器能否加载外部扩展，详见 [移动端 FAQ](./faq.md#mobile-browser-support)。
 
 </details>
 
@@ -56,7 +58,7 @@
 - [Infistar.ai](https://infistar.ai/register?aff=ALLAPIHUB&ref_source=link)：在售模型均经真实调用验真，通过超 10000 条官方 API 与官方号池供应链路负载均衡，覆盖文本、视频、图片、嵌入、重排等全模态能力，价格与用量透明，模型低至官方价的 10%。
 :::
 
-> **过盾提示**：如果站点有 Cloudflare 验证（五秒盾），插件会自动弹出窗口协助过盾，验证通过后会自动继续识别。
+> **人工验证提示**：如果站点要求 Cloudflare 等安全验证，手动识别时插件可打开临时页面。请切换到该页面并由本人完成验证；验证成功后流程会继续。插件不会破解或自动绕过验证码。
 
 <a id="manual-addition"></a>
 ### 2.2 手动添加（备选）
@@ -108,7 +110,7 @@
 - **[书签收纳管理](./bookmark-management.md)**：集中收藏控制台、文档、充值入口。
 
 ### 🛡️ 稳定性与安全防护
-- **[Cloudflare 过盾助手](./cloudflare-helper.md)**：协助通过验证，确保刷新、签到不中断。
+- **[站点人工验证接力](./cloudflare-helper.md)**：在手动操作遇到站点验证时打开临时页面，由用户本人完成验证后继续。
 - **[WebDAV 同步与加密](./webdav-sync.md)**：支持跨设备加密备份，数据永不丢失。
 
 ### 🔔 通知渠道

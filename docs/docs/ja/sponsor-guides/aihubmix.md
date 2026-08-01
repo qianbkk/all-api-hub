@@ -10,7 +10,7 @@
 
 ## 1. All API Hub でできること
 
-複数の AI モデルや API プラットフォームを使うと、残高、キー、価格情報が分散しがちです。**All API Hub**（[GitHub で公開](https://github.com/qixing-jk/all-api-hub)）は、これらの情報をローカルで一元管理する入口を提供します。
+複数の AI モデルや API プラットフォームを使うと、残高、キー、価格情報が分散しがちです。**All API Hub**（[GitHub で公開](https://github.com/qianbkk/all-api-hub)）は、これらの情報をローカルで一元管理する入口を提供します。
 
 AIHubMix ユーザーには、次の用途があります。
 
@@ -23,15 +23,15 @@ AIHubMix ユーザーには、次の用途があります。
 
 ## 2. All API Hub をインストールする
 
-自動更新と安定した利用のため、可能であれば利用中のブラウザに対応した公式ストアからインストールしてください。
+個人強化版は `qianbkk/all-api-hub` からのみ公開されます。
 
-- **Chrome**：[Chrome ウェブストア](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo)
-- **Edge**：[Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa)
-- **Firefox**：[Firefox Add-ons](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24})
-- **QQ / 360 / Brave / Vivaldi / Opera など**：Brave、Vivaldi、Opera は通常まず Chrome ウェブストアを試せます。QQ、360、チーターブラウザなどは利用可能なストア経路がない場合、Chromium の手動読み込みを使えます。詳しくは [その他のブラウザへのインストールガイド](../other-browser-install.md) を参照してください。
+- **日常利用**：[個人 Stable](https://github.com/qianbkk/all-api-hub/releases/latest) から対応パッケージをダウンロードします。
+- **先行テスト**：[個人 Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) を利用できますが、不安定な場合があります。
+- **QQ / 360 / Brave / Vivaldi / Opera など**：個人 Stable の Chrome パッケージを手動読み込みします。[その他のブラウザへのインストールガイド](../other-browser-install.md) を参照してください。
 - **Mac の Safari**：[Safari インストールガイド](../safari-install.md) を参照してください。
 - **モバイルブラウザ**：[モバイルブラウザ FAQ](../faq.md#mobile-browser-support) を参照してください。
-- **代替手段**：ブラウザがストア版または Chrome ウェブストア互換版を利用できず、上記ガイドでも解決しない場合は、[GitHub Releases](https://github.com/qixing-jk/all-api-hub/releases/latest) から Stable パッケージをダウンロードできます。手動インストール版は自動更新されません。
+
+> Chrome、Edge、Firefox ストアにある同名拡張機能はアップストリーム版で、この個人強化版ではありません。個人版は手動更新が必要です。
 
 ---
 
@@ -143,5 +143,5 @@ A: いいえ。チャージ、アカウント設定、公式キー作成など�
 ## リンク
 
 - [AIHubMix](https://aihubmix.com/?aff=W3DN)
-- [All API Hub GitHub リポジトリ](https://github.com/qixing-jk/all-api-hub)
-- [All API Hub ドキュメント](https://all-api-hub.qixing1217.top/ja/)
+- [All API Hub GitHub リポジトリ](https://github.com/qianbkk/all-api-hub)
+- [All API Hub ドキュメント](https://qianbkk.github.io/all-api-hub/ja/)

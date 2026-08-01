@@ -1,7 +1,7 @@
 {
   "app": {
-    "description": "统一管理第三方中转站与自建站点的账号与余额",
-    "name": "All API Hub"
+    "description": "合规管理中转站与自建站点的账号、余额和 API 资产",
+    "name": "All API Hub 个人增强版"
   },
   "billing": {
     "notProvided": "未提供",

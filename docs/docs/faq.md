@@ -115,15 +115,15 @@ Sub2API 站点常见特征：控制台接口在 `/api/v1/*`，并使用 **短期
 
 ### 遇到功能问题或Bug怎么办？
 
-1. **查询Issue**：前往 [GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues) 搜索是否有相同问题
-2. **使用最新版本**：
-   - 大多数用户建议优先使用商店版，等待浏览器商店自动更新
-   - 如果修复尚未上架商店、你的浏览器无法安装商店版或 Chrome Web Store 兼容版本，可临时从 GitHub Releases 手动安装
-   - GitHub Stable、Nightly 或 main 分支开发版适合临时验证和协助测试，手动安装后不会自动更新；你可以 Star / Watch 仓库来接收新版本通知，更多区别请查看 [安装渠道与更新说明](./extension-update-install.md)
+1. **查询Issue**：前往 [GitHub Issues](https://github.com/qianbkk/all-api-hub/issues) 搜索是否有相同问题
+2. **使用最新个人版**：
+   - 日常使用请从 [个人仓库最新 Stable](https://github.com/qianbkk/all-api-hub/releases/latest) 下载
+   - 需要提前验证修复时，可使用 [Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly)，但它可能不稳定
+   - 个人版均为手动安装，不会通过浏览器商店自动升级；你可以 Star / Watch 仓库接收新版本通知，更多区别请查看 [安装渠道与更新说明](./extension-update-install.md)
 
 ### 如何获取最新版本？
 
-插件在多个平台发布，Chrome、Edge、Firefox 用户建议优先使用对应商店版本；Brave、Vivaldi、Opera 等 Chromium 浏览器通常也可以先尝试 Chrome Web Store。如果你想确认当前是否有新版本、为什么商店版可能晚于 GitHub Release、或需要手动安装 GitHub 包，请查看 [安装渠道与更新说明](./extension-update-install.md)。
+个人增强版只从 `qianbkk/all-api-hub` 发布。Chrome、Edge、Firefox 商店中的同名扩展属于上游发行版，不包含本个人版的品牌、更新源和增强功能。请从 [个人 Stable](https://github.com/qianbkk/all-api-hub/releases/latest) 或 [Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) 下载，并按照 [安装渠道与更新说明](./extension-update-install.md) 手动更新。
 
 ## ⚙️ 功能使用问题
 
@@ -282,8 +282,8 @@ WebDAV 备份可以帮你在多设备间同步数据：
 
 ### 移动端使用建议
 
-1. **关闭自动刷新**：移动端资源有限，建议关闭自动刷新功能，改为手动刷新。且因为过盾助手的原因会刷新时会创建临时tab影响日常使用体验。
-2. **调整过盾助手设置**：如果站点经常触发过盾，可以在"设置" → "过盾助手"中调整触发条件，例如增加触发阈值或关闭某些触发条件，以减少过盾弹窗的频率。
+1. **关闭自动刷新**：移动端资源有限，建议关闭自动刷新功能，改为手动刷新。
+2. **按需使用人工验证接力**：如果手动刷新经常遇到站点验证，可在“设置 → 数据刷新”中选择标签页模式，减少临时页面对日常操作的干扰。后台自动任务默认不会打开验证页面。
 3. **配置 WebDAV 同步**：在电脑和手机间同步数据
 
 ## 🛠️ 进阶与开发者工具
@@ -354,7 +354,7 @@ WebDAV 备份可以帮你在多设备间同步数据：
 3. 提交代码
 4. 发起 Pull Request
 
-详见：[CONTRIBUTING.md](https://github.com/qixing-jk/all-api-hub/blob/main/CONTRIBUTING.md)
+详见：[CONTRIBUTING.md](https://github.com/qianbkk/all-api-hub/blob/main/CONTRIBUTING.md)
 
 ---
 
@@ -362,10 +362,10 @@ WebDAV 备份可以帮你在多设备间同步数据：
 
 - [使用教程](./get-started.md)
 - [其他浏览器安装指南](./other-browser-install.md)
-- [GitHub 仓库](https://github.com/qixing-jk/all-api-hub)
-- [问题反馈](https://github.com/qixing-jk/all-api-hub/issues)
+- [GitHub 仓库](https://github.com/qianbkk/all-api-hub)
+- [问题反馈](https://github.com/qianbkk/all-api-hub/issues)
 - [更新日志](./changelog.md)
 
 ::: tip 找不到答案？
-如果以上内容没有解决你的问题，欢迎在 [GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues) 提问。
+如果以上内容没有解决你的问题，欢迎在 [GitHub Issues](https://github.com/qianbkk/all-api-hub/issues) 提问。
 :::

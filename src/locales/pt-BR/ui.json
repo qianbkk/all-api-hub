@@ -1,7 +1,7 @@
 {
   "app": {
-    "description": "Gerencie relays de IA, contas e saldos em um só lugar",
-    "name": "All API Hub"
+    "description": "Gestão compatível de contas, saldos e ativos de API relay e auto-hospedados",
+    "name": "All API Hub Personal Enhancement"
   },
   "billing": {
     "notProvided": "Não fornecido",

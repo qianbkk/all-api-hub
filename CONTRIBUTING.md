@@ -349,8 +349,8 @@ Dependency direction should stay one-way: `src/entrypoints/**` → `src/features
 
 If you have questions or need help:
 
-- Check the [documentation](https://all-api-hub.qixing1217.top/)
-- Review [existing issues](https://github.com/qixing-jk/all-api-hub/issues)
-- Open a new issue with your question
+- Check the [personal-edition documentation](https://qianbkk.github.io/all-api-hub/)
+- Review [existing issues](https://github.com/qianbkk/all-api-hub/issues)
+- Open a new issue in `qianbkk/all-api-hub` with your question
 
 Thank you for contributing! 🎉

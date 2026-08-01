@@ -11,35 +11,13 @@
 > 本リポジトリは [上流プロジェクト](https://github.com/qixing-jk/all-api-hub) を基にした個人フォークです。`main` は開発・リリース用の既定ブランチで、`upstream-sync` は上流追跡専用です。詳細は [統合変更ノート](./MODIFICATION_NOTES.md) を参照してください。
 
 <p align="center">
-<a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">
-  <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat">
-</a>
-<a href="https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa">
-  <img alt="Microsoft Edge" src="https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat">
-</a>
-<a href="https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}">
-  <img alt="Firefox Add-on" src="https://img.shields.io/amo/v/{bc73541a-133d-4b50-b261-36ea20df0d24}?label=Firefox&logo=firefoxbrowser&style=flat">
-</a>
+  [個人拡張版の最新リリース](https://github.com/qianbkk/all-api-hub/releases/latest) · [個人拡張版ドキュメント](https://qianbkk.github.io/all-api-hub/ja/) · [Source](https://github.com/qianbkk/all-api-hub)
 </p>
 
 **[⚡ クイックスタート](https://qianbkk.github.io/all-api-hub/ja/get-started.html) | [🌐 対応サイト](https://qianbkk.github.io/all-api-hub/ja/supported-sites.html) | [🔌 連携ツール](https://qianbkk.github.io/all-api-hub/ja/supported-export-tools.html) | [📜 更新履歴](https://qianbkk.github.io/all-api-hub/ja/changelog.html)**
 
 <p align="center">
-  <a href="https://linux.do/t/topic/2395800">
-    <img alt="Linux.do discussion thread" src="https://img.shields.io/badge/Discussion-Linux.do-faa511?logo=linux&logoColor=white" />
-  </a>
-  <a href="./resources/wechat_group.png">
-    <img alt="WeChat Chinese group" src="https://img.shields.io/badge/WeChat-Chinese%20Group-green?logo=wechat&logoColor=white" />
-  </a>
-  <a href="https://qm.qq.com/q/ebSCy31Phe">
-    <img alt="QQ Chinese group" src="https://img.shields.io/badge/QQ-Chinese%20Group-12B7F5?logo=qq&logoColor=white" />
-  </a>
-  <a href="https://discord.gg/RmFXZ577ZQ">
-    <img alt="Discord multilingual community" src="https://img.shields.io/badge/Discord-Multilingual%20Community-5865F2?logo=discord&logoColor=white">
-  </a>
-  <a href="https://t.me/qixing_chat">
-    <img alt="Telegram multilingual group" src="https://img.shields.io/badge/Telegram-Multilingual%20Group-blue?logo=telegram&logoColor=white">
-  </a>
+  [Personal fork](https://github.com/qianbkk/all-api-hub) · [Issues](https://github.com/qianbkk/all-api-hub/issues) · [上流プロジェクト](https://github.com/qixing-jk/all-api-hub)
 </p>
 
 </div>
@@ -88,35 +66,20 @@
 ## 🚀 クイックインストール
 
 > [!IMPORTANT]
-> **ほとんどのユーザーにはストア版を推奨します。** インストールが簡単で、自動更新にも対応しています。
+> **個人拡張版は、このリポジトリの Releases からのみ公開します。** 上流のストア掲載版は、この個人フォークと同じビルドではありません。
 
-| チャネル | インストールリンク | 現在のバージョン | ユーザー数 |
-|------|----------|----------|-------|
-| Chrome ウェブストア | [Chrome ウェブストア](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome version](https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/lapnciffpekdengooeolaienkeoilfeo?label=Chrome%20Users)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) |
-| Edge アドオン | [Edge アドオン](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge version](https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge Add-ons Users](https://img.shields.io/badge/dynamic/json?label=Edge%20Users&query=$.activeInstallCount&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/pcokpjaffghgipcgjhapgdpeddlhblaa)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) |
-| Firefox Add-ons | [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Firefox version](https://img.shields.io/amo/v/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox&logo=firefoxbrowser&style=flat)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Mozilla Add-on Users](https://img.shields.io/amo/users/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox%20Users)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) |
+| チャネル | リンク | 用途 |
+|---|---|---|
+| GitHub Stable | [個人拡張版 Stable をダウンロード](https://github.com/qianbkk/all-api-hub/releases/latest) | 日常利用。ブラウザ別パッケージを手動インストール |
+| Nightly | [個人拡張版 Nightly をダウンロード](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | 最新変更の先行確認。正式版より不安定な場合あり |
+| ソースビルド | [個人版セットアップガイド](https://qianbkk.github.io/all-api-hub/ja/get-started.html) | ソース監査または未公開版の自己ビルド |
 
-<details>
-<summary>📦 手動インストールや Nightly ビルドが必要ですか？（クリックして展開）</summary>
-
-| チャネル | ダウンロードリンク | 向いている用途 |
-|------|----------|----------|
-| GitHub Stable | [Stable をダウンロード](https://github.com/qianbkk/all-api-hub/releases/latest) | ストア版をインストールできない場合、または公開済み修正を一時的に手動導入したい場合 |
-| Nightly pre-release | [Nightly をダウンロード](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | 新機能を早めに試し、テストに協力したい場合。ストア安定版より不安定な可能性があります |
-
-GitHub Stable と Nightly は手動インストール用チャネルで、自動更新されません。新しいバージョン通知を受け取りたい場合は、リポジトリを Star / Watch してください。詳しくは [インストールと更新ガイド](https://qianbkk.github.io/all-api-hub/ja/extension-update-install.html) を参照してください。
-
-**その他の環境：**
-- **モバイルブラウザ**：Edge モバイル版、Firefox for Android、Kiwi などに対応しています。詳しくは [モバイルブラウザガイド](https://qianbkk.github.io/all-api-hub/ja/faq.html#mobile-browser-support) を参照してください。
-- **QQ Browser / 360 Browser など**：[手動読み込みガイド](https://qianbkk.github.io/all-api-hub/ja/other-browser-install.html) を参照してください。
-- **Safari (Mac)**：Xcode でのビルドが必要です。[Safari インストールガイド](https://qianbkk.github.io/all-api-hub/ja/safari-install.html) を参照してください。
-
-</details>
+Stable と Nightly は手動インストール用で、ブラウザストアの自動更新対象ではありません。拡張機能内の更新確認も `qianbkk/all-api-hub` のみを追跡します。
 
 <a id="sponsors"></a>
 ## ❤️ スポンサー
 
-> [ここに掲載したい場合はこちら](mailto:street-anime-olive@duck.com)
+> 以下のスポンサー情報は上流の履歴から引き継いだものであり、個人フォークのメンテナーによる独自の推奨や商業窓口を意味しません。
 
 <div>
   <p>
@@ -325,7 +288,7 @@ All API Hub は GNU Affero General Public License v3.0 (AGPL-3.0) のもとで�
 
 AGPL-3.0 では対応できない条件が必要な組織または個人向けに、商用ライセンスを提供しています。対象には、プロプライエタリ配布、クローズドソースでの変更、ホワイトラベル再配布、その他の非公開商用統合などが含まれます。
 
-商用ライセンスの問い合わせ先：<street-anime-olive@duck.com>
+この個人フォークは独自の商用ライセンスを提供しません。上流作者が権利を持つ部分の商用条件については、[上流リポジトリ](https://github.com/qixing-jk/all-api-hub)の現行方針を確認してください。
 
 商用ライセンスは、All API Hub のメンテナーが商用条件を付与する権利を持つコードとアセットにのみ適用されます。第三者依存関係、および過去に [One API Hub](https://github.com/fxaxg/one-api-hub) から派生した MIT ライセンス部分は、それぞれの著作権表示とライセンス条件に従います。詳しくは [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) を参照してください。
 
@@ -341,6 +304,7 @@ AGPL-3.0 では対応できない条件が必要な組織または個人向け�
 <a id="acknowledgements"></a>
 ## 🙏 謝辞
 
+- プロジェクトの基盤を提供した[上流プロジェクト](https://github.com/qixing-jk/all-api-hub)と貢献者に感謝し、原作者表示とライセンス通知を保持します
 - プロジェクトロゴをデザインしてくれた [@AngleNaris](https://github.com/AngleNaris) に感謝します 🎨
 - フィードバック、テスト、周知に協力してくれた [Linux.do コミュニティ](https://linux.do)、特に [Linux.do の All API Hub スレッド](https://linux.do/t/topic/2395800) で継続的に議論と提案を寄せてくれた皆さんに感謝します
 - [WXT](https://wxt.dev) - モダンなブラウザ拡張機能開発フレームワーク

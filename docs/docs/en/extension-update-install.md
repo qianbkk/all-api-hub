@@ -1,122 +1,73 @@
-# Installation Channels and Updates
+# Personal Edition Installation and Updates
 
-All API Hub has two common installation channels: the **browser store version** and the **GitHub manual installation version**. If you are not sure which one to choose, use the browser store version first.
+The All API Hub personal enhanced edition is published only through `qianbkk/all-api-hub`. Similarly named browser-store listings are maintained by the upstream project and are not this personal edition.
 
 ::: tip Simple answer
-Chrome, Edge, and Firefox users should install the matching store version first. Store versions are updated automatically by the browser and are the easiest to maintain. Only consider manual installation from GitHub when the store has not received an update yet, your browser cannot install a store or Chrome Web Store compatible version, or you need to temporarily verify a fix.
+Use [Personal Stable](https://github.com/qianbkk/all-api-hub/releases/latest) for daily use. Use [Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) only to test changes early. Both channels require manual installation and upgrades.
 :::
 
-## Which Version Should I Install?
+## Which version should I install?
 
-| Your Situation | Recommended Version | Update Method |
+| Situation | Recommended channel | Update method |
 |---|---|---|
-| You use Chrome | Chrome Web Store version | Updated automatically by the browser, and you can also check manually inside the extension |
-| You use Edge | Edge Add-ons version | Updated automatically by the browser, and you can also check manually inside the extension |
-| You use Firefox | Firefox Add-ons version | Updated automatically by Firefox |
-| You use Brave / Vivaldi / Opera | Try Chrome Web Store first; use the GitHub Chrome package only if it is unavailable | Store builds update automatically; manual builds require re-download |
-| You use QQ Browser / 360 Browser / Cheetah Browser or a similar browser | Use the built-in extension center first if available; otherwise use the GitHub Chrome package | Depends on the installation source; manual builds require re-download |
-| The store version has not received an urgent fix yet | Temporarily use GitHub Stable | You need to download new versions manually later |
-| You want to try features that are still in development | Nightly / development build | It may be unstable and is only recommended for testing |
+| Stable daily use | [Personal Stable](https://github.com/qianbkk/all-api-hub/releases/latest) | Download the new package and reinstall manually |
+| Early testing of fixes or features | [Personal Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | Download and reinstall manually; it may be unstable |
+| Development, review, or customization | [Personal repository source](https://github.com/qianbkk/all-api-hub) | Pull, build, and load it yourself |
+| Safari | Safari artifact from a personal Release or a source build | See the [Safari Installation Guide](./safari-install.md) |
+| QQ / 360 / Cheetah / Brave / Vivaldi / Opera | Chrome package from Personal Stable | See the [Other Browser Installation Guide](./other-browser-install.md) |
 
-If you use QQ Browser, 360 Browser, Cheetah Browser, Brave, Vivaldi, Opera, or a similar browser, see the [Other Browser Installation Guide](./other-browser-install.md). Brave, Vivaldi, and Opera can usually try Chrome Web Store first; download the GitHub Chrome package only when manual loading is needed.
-
-## Why Does GitHub Have a Newer Version Before the Store?
-
-This is normal. The project usually publishes a new version to GitHub first, then submits it to each browser store. Stores still need to review and roll out the update, so they may be behind for a while.
-
-Common reasons include:
-
-- The store is still reviewing the new version.
-- The store has approved the version, but has not pushed it to your browser yet.
-- Your browser has not checked extension updates yet.
-- A company device, browser policy, or network environment is limiting extension updates.
-
-If you use the store version, usually you only need to wait for the browser to update it automatically. If you urgently need a fix, you can try the manual check steps below.
-
-## Check for Updates Inside the Extension
-
-Open the All API Hub settings page, then click **Check now** in the version and update area.
-
-The extension checks two things for you:
-
-1. Whether the project has published a newer stable version on GitHub.
-2. Whether your browser store version can already be updated.
-
-You may see these results:
-
-- **Already on the latest stable version**: no action is needed.
-- **A newer version is available**: GitHub already has a newer version. If you use the store version, you may still need to wait for store review or rollout.
-- **Store update is ready**: your browser has already downloaded the new version. Click **Reload to update** to apply it.
-- **Check failed**: the network, GitHub access, or the browser update check may be temporarily unavailable. Try again later.
-
-::: warning Note
-The in-extension check cannot skip browser store review. In other words, if GitHub has published a version but the store has not listed it yet, the extension cannot directly update the store version to that release.
+::: warning Do not confuse upstream store builds with the personal edition
+The existing similarly named listings in Chrome Web Store, Edge Add-ons, and Firefox Add-ons are upstream distribution channels. Installing them gives you the upstream edition, not the personal enhanced edition documented here. Their updates, branding, and features are not controlled by `qianbkk/all-api-hub`.
 :::
 
-## Manually Check Store Updates in the Browser
+## Check for updates inside the extension
 
-If you use the Chrome or Edge store version, you can also ask the browser to check extension updates once.
+Open the All API Hub settings page and click **Check now** in the version and update section.
 
-### Chrome
+The personal edition reads:
 
-1. Open `chrome://extensions/` in the address bar.
-2. Turn on **Developer mode** in the top-right corner.
-3. Click **Update** on the page.
-4. Wait for the browser to check extension updates.
+1. The latest stable Release from `qianbkk/all-api-hub`.
+2. The difference between the installed version and Personal Stable.
 
-### Edge
+Possible results include:
 
-1. Open `edge://extensions/` in the address bar.
-2. Turn on **Developer mode**.
-3. Click **Update** on the page.
-4. Wait for the browser to check extension updates.
+- **Already on the latest stable release**: no action is needed.
+- **A newer release is available**: open the personal Release page and download the correct browser package.
+- **Check failed**: GitHub or the network may be temporarily unavailable; retry later.
 
-This method can only update to a version that the store already provides. If the store is still reviewing the new version, it still will not appear.
+The personal edition never silently downloads or replaces the extension and never labels an upstream store build as a personal-edition release.
 
-### Firefox
+## Manual installation and updates
 
-Firefox usually updates extensions automatically. You can also open `about:addons`, go to the extensions management page, and check whether updates are available. The button position may vary slightly between Firefox versions.
+1. Export a backup from Settings before switching installation sources.
+2. Open the [Personal Stable Release](https://github.com/qianbkk/all-api-hub/releases/latest).
+3. Download the package for your browser, such as the Chrome, Firefox, or Safari artifact.
+4. Extract and load it as required by the browser, or follow the platform-specific installation flow.
+5. For future updates, download the new package and replace the loaded directory, or remove the old build and reinstall.
 
-## When Should I Install Manually from GitHub?
+::: warning Manual builds do not auto-update
+The personal edition is not currently distributed through browser stores, so the browser cannot automatically deliver personal-edition updates. Star / Watch the personal repository and use the in-extension check periodically.
+:::
 
-Manual installation from GitHub is best used temporarily:
+## Frequently asked questions
 
-- The store version has not received a fix that you urgently need.
-- Your current browser does not have an available store version and cannot use a compatible store path such as Chrome Web Store.
-- You need to help confirm whether a new version fixes an issue.
+### Does “Check now” download the package automatically?
 
-Before installing manually, note that:
+No. It only compares the installed version with Personal Stable and provides the personal Release link.
 
-- Manually installed versions usually do not update automatically.
-- Future upgrades require downloading the new package again. You can Star / Watch the GitHub repository so it is easier to notice new releases.
-- Before switching from the store version to a manually installed version, it is recommended to export a backup of your data.
-- It is not recommended to keep multiple All API Hub installations from different sources for long-term use, unless you are intentionally testing.
+### Is Nightly suitable for long-term use?
 
-For manual installation and update steps, see the [Other Browser Installation Guide](./other-browser-install.md).
+No. Nightly is for early testing and may contain incomplete changes or regressions.
 
-## Frequently Asked Questions
+### Can I install the upstream store build and the personal edition together?
 
-### Do I Need to Keep Clicking "Check now"?
+Only when intentionally testing. Different installation sources may use different extension IDs, storage, and update behavior. Export a backup first and verify which edition you have opened.
 
-No. Store versions are updated automatically by the browser. Only check manually when you see that GitHub has published a newer version, or when you want to confirm whether the store version can already be updated.
+### How do I update a manually installed build?
 
-### Does "Check now" Automatically Download the GitHub Package?
+Download the new package and load the new directory. For Chromium-family browsers, see [Other Browser Installation Guide](./other-browser-install.md#update-extension).
 
-No. It only shows the version status and asks the browser to check whether the store version can be updated. GitHub packages still need to be downloaded manually from the Releases page.
-
-### Will "Reload to update" Delete My Data?
-
-No. It only applies a store update that has already been downloaded. Accounts, keys, settings, and other data remain in the browser extension storage.
-
-### GitHub Has a New Version, but the Extension Still Says the Store Has No Update. What Should I Do?
-
-If you use the store version, wait for store review and rollout first. If you urgently need the fix, you can temporarily install GitHub Stable manually. It is recommended to export a backup before doing so.
-
-### How Do I Update a Manually Installed Version?
-
-Download the new package and load the new extension directory again. For details, see the [Other Browser Installation Guide](./other-browser-install.md#update-extension).
-
-## Related Documentation
+## Related documentation
 
 - [Get Started](./get-started.md)
 - [Other Browser Installation Guide](./other-browser-install.md)

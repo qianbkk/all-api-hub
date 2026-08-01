@@ -1,9 +1,9 @@
 {
   "manifest_name": {
-    "message": "All API Hub - Tu gestor integral de activos de IA"
+    "message": "All API Hub Personal Enhancement - Gestor de activos de IA"
   },
   "manifest_description": {
-    "message": "saldo/uso, check-in automático, exportación de claves con un clic a clientes populares, comprobaciones de API en la página, sincronización de canales/modelos y redirección"
+    "message": "Gestión conforme de cuentas relay, saldos, uso, check-ins, precios, credenciales y avisos; actualizaciones y docs solo del fork qianbkk"
   },
   "manifest_commands_sidebar_action": {
     "message": "Abrir All API Hub en la barra lateral"

@@ -271,7 +271,7 @@ export default function AccountForm({
 
         <FormField label={t("form.userId")} required={sitePolicy.requireUserId}>
           <Input
-            // Compatible account sites may expose alphanumeric user IDs. Reference: https://github.com/qixing-jk/all-api-hub/issues/964
+            // Compatible account sites may expose alphanumeric user IDs. Upstream reference: https://github.com/qixing-jk/all-api-hub/issues/964
             type="text"
             autoComplete="off"
             value={userId}

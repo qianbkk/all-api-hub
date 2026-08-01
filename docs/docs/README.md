@@ -1,28 +1,24 @@
 ---
 home: true
 title: "首页"
-heroImage: "/512.png"
-heroText: "All API Hub - 你的全能 AI 资产管家"
-tagline: "开源浏览器插件，统一管理第三方 AI 聚合中转站与自建 New API：自动识别账号、比对模型价格、验证 API/CLI 兼容性、同步模型与渠道，并支持跨平台与加密 WebDAV 备份"
+heroImage: "./512.png"
+heroText: "All API Hub 个人增强版 - 你的全能 AI 资产管家"
+tagline: "qianbkk 维护的个人魔改版：合规管理中转站与自建 New API 的账号、余额、用量、错峰签到、模型价格、API 凭据和公告；更新、文档与反馈均独立追踪个人仓库"
 actions:
   - text: "🚀 开始使用"
     link: "./get-started.html"
     type: "primary"
 
-  - text: "Chrome 商店"
-    link: "https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo"
+  - text: "个人版 Stable"
+    link: "https://github.com/qianbkk/all-api-hub/releases/latest"
     type: "secondary"
 
-  - text: "Edge 商店"
-    link: "https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa"
+  - text: "个人版 Nightly"
+    link: "https://github.com/qianbkk/all-api-hub/releases/tag/nightly"
     type: "secondary"
 
-  - text: "FireFox 商店"
-    link: "https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}"
-    type: "secondary"
-    
-  - text: "Safari 安装"
-    link: "./safari-install.html"
+  - text: "查看源码"
+    link: "https://github.com/qianbkk/all-api-hub"
     type: "secondary"
 
 features:
@@ -43,7 +39,7 @@ features:
   - title: "🛠️ 自建站点联动"
     details: "深度适配 New API、AxonHub、Claude Code Hub 等，实现渠道管理、模型同步与重定向。"
   - title: "🔒 隐私与安全同步"
-    details: "默认本地存储，支持加密 WebDAV 自动同步与备份，遇到 Cloudflare 挑战时可自动协助过盾。"
+    details: "默认本地存储，支持加密 WebDAV 自动同步与备份；站点要求安全验证时，可打开临时页面并由用户本人完成验证后继续。"
 
 footer: "AGPL-3.0 Licensed | Copyright 2025-present All API Hub"
 ---
@@ -88,16 +84,9 @@ footer: "AGPL-3.0 Licensed | Copyright 2025-present All API Hub"
 遇到问题？想分享好用的站点？加入我们的社区：
 
 - [GitHub Discussions](https://github.com/qianbkk/all-api-hub/discussions)
-- [Discord 社区](https://discord.gg/RmFXZ577ZQ)
-- [Telegram 群](https://t.me/qixing_chat)
-- [QQ 群](https://qm.qq.com/q/ebSCy31Phe)
-- **微信群**：扫描下方二维码加入中文群。
-
-<img
-  src="../../resources/wechat_group.png"
-  alt="All API Hub 微信群二维码"
-  style="width: min(280px, 100%);"
-/>
+- [个人增强版仓库](https://github.com/qianbkk/all-api-hub)
+- [个人增强版 Issues](https://github.com/qianbkk/all-api-hub/issues)
+- 上游社群入口不代表个人增强版官方支持渠道，因此本页不展示或引导加入上游群组。
 
 <a id="sponsors"></a>
 ## ❤️ 赞助商

@@ -2,14 +2,13 @@
 
 本文档介绍如何在 QQ 浏览器、360 安全浏览器、360 极速浏览器、猎豹浏览器、Brave、Vivaldi、Opera 等浏览器中安装 All API Hub 扩展。
 
-这些浏览器大多基于 Chromium 内核，但可用安装方式并不完全一样。能从浏览器商店或 Chrome Web Store 安装时，优先使用商店版本；只有商店入口不可用、组织策略限制，或需要临时验证 GitHub 版本时，再使用 GitHub Release 中的 Chrome 版本压缩包手动加载。
+这些浏览器大多基于 Chromium 内核，但手动安装入口并不完全一样。个人增强版没有独立的浏览器商店上架渠道，所有浏览器都应从 `qianbkk/all-api-hub` 的 Stable 或 Nightly Release 获取安装包。
 
 ## 先看区别
 
-- Chrome / Edge / Firefox 用户：优先使用对应商店版本，更新更省心。
-- Brave / Vivaldi 用户：优先尝试从 Chrome Web Store 安装；这些浏览器官方说明支持 Chrome Web Store 扩展。
-- Opera 用户：Opera 有自己的 Opera Add-ons 商店，但 All API Hub 当前没有单独上架到 Opera Add-ons；可优先尝试 Chrome Web Store，如果你的 Opera 版本或策略不允许，再使用 GitHub 手动加载。
-- QQ 浏览器、360 系浏览器、猎豹浏览器等用户：如果浏览器自带扩展中心没有 All API Hub，通常使用 GitHub Chrome 压缩包，通过“加载已解压的扩展程序”安装。
+- Chrome / Edge / Firefox 用户：从 [个人 Stable Release](https://github.com/qianbkk/all-api-hub/releases/latest) 下载对应浏览器包并手动安装。
+- Brave / Vivaldi / Opera 用户：下载个人版 Chrome 包，通过各自的扩展管理页加载解压目录。
+- QQ 浏览器、360 系浏览器、猎豹浏览器等用户：同样使用个人版 Chrome 压缩包，通过“加载已解压的扩展程序”安装。
 - Safari 用户：安装方式不同，需要通过 Xcode 或 Safari 专用包处理，请查看 [Safari 扩展安装指南](./safari-install.md)。
 - 移动端浏览器：不同浏览器对扩展能力支持差异较大，移动端说明请查看 [常见问题中的移动端使用](./faq.md#mobile-browser-support)。
 
@@ -19,28 +18,28 @@
 
 ## 适用浏览器
 
-| 浏览器 | 优先安装方式 | 备选安装方式 | 更新方式 |
-|--------|--------------|--------------|----------|
-| Brave | [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | GitHub Chrome 压缩包，进入 `brave://extensions/` 手动加载 | 商店版自动更新；手动版需重新下载 |
-| Vivaldi | [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | GitHub Chrome 压缩包，进入 `vivaldi://extensions/` 手动加载 | 商店版自动更新；手动版需重新下载 |
-| Opera | [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo)；Opera Add-ons 当前没有本项目上架入口 | GitHub Chrome 压缩包，进入 `opera://extensions/` 手动加载 | Chrome Web Store 版本通常由浏览器 / 商店机制更新；手动版需重新下载 |
-| QQ 浏览器 | 浏览器内置扩展中心若能找到本项目则优先使用 | `qqbrowser://extensions`，不可用时尝试 `chrome://extensions/`，开启开发者模式后加载解压目录 | 取决于安装来源；手动版需重新下载 |
-| 360 安全浏览器 / 360 极速浏览器 | 浏览器内置扩展 / 应用中心若能找到本项目则优先使用 | `chrome://extensions/`，或菜单中的扩展 / 插件管理，开启开发者模式后加载解压目录 | 取决于安装来源；手动版需重新下载 |
-| 猎豹浏览器 | 浏览器内置扩展中心若能找到本项目则优先使用 | `liebao://extensions/`，开启开发者模式后加载解压目录 | 取决于安装来源；手动版需重新下载 |
-| 星愿 / 百分 / Cent Browser 等 | 如果浏览器支持 Chrome Web Store，可先尝试商店安装 | 优先尝试 `chrome://extensions/` 手动加载解压目录 | 取决于安装来源；手动版需重新下载 |
-| 移动端 Kiwi / Edge 等 | 以浏览器实际扩展入口为准 | 参考 [移动端 FAQ](./faq.md#mobile-browser-support) | 取决于浏览器支持情况 |
+| 浏览器 | 个人版安装包 | 加载入口 | 更新方式 |
+|--------|--------------|----------|----------|
+| Brave | 个人 Stable 的 Chrome 包 | `brave://extensions/` | 重新下载并加载新版目录 |
+| Vivaldi | 个人 Stable 的 Chrome 包 | `vivaldi://extensions/` | 重新下载并加载新版目录 |
+| Opera | 个人 Stable 的 Chrome 包 | `opera://extensions/` | 重新下载并加载新版目录 |
+| QQ 浏览器 | 个人 Stable 的 Chrome 包 | `qqbrowser://extensions`，不可用时尝试 `chrome://extensions/` | 重新下载并加载新版目录 |
+| 360 安全浏览器 / 360 极速浏览器 | 个人 Stable 的 Chrome 包 | `chrome://extensions/` 或菜单中的扩展 / 插件管理 | 重新下载并加载新版目录 |
+| 猎豹浏览器 | 个人 Stable 的 Chrome 包 | `liebao://extensions/` | 重新下载并加载新版目录 |
+| 星愿 / 百分 / Cent Browser 等 | 个人 Stable 的 Chrome 包 | 优先尝试 `chrome://extensions/` | 重新下载并加载新版目录 |
+| 移动端 Kiwi / Edge 等 | 以浏览器是否允许外部包为准 | 参考 [移动端 FAQ](./faq.md#mobile-browser-support) | 取决于浏览器支持情况 |
 
-如果某个浏览器既不能使用商店安装，也没有“开发者模式”或“加载已解压的扩展程序”，说明当前版本可能不支持安装外部扩展。此时建议换用 Chrome、Edge、Firefox，或安装对应浏览器的完整版 / 桌面版后再试。
+如果浏览器没有“开发者模式”或“加载已解压的扩展程序”，当前版本可能不支持安装个人版外部扩展。此时建议换用支持手动加载的桌面浏览器。
 
-::: tip 商店入口和本项目上架状态不是一回事
-某个浏览器有自己的扩展商店，不代表 All API Hub 已经在该商店上架。例如 Opera 有 Opera Add-ons，但当前请优先使用 Chrome Web Store 或 GitHub 手动包。
+::: warning 上游商店包不是个人版
+即使浏览器支持 Chrome Web Store，也不要把同名上游商店包误认为个人增强版。本文档只支持从个人仓库 Release 获取的安装包。
 :::
 
-## 准备 GitHub 手动安装包
+## 准备个人版手动安装包
 
-如果你可以直接从 Chrome Web Store、Edge Add-ons 或 Firefox Add-ons 安装，不需要执行本节步骤。下面只适用于需要手动加载的浏览器。
+下面步骤适用于所有需要安装个人增强版的 Chromium 系浏览器。
 
-1. 打开 [最新版本 Release](https://github.com/qixing-jk/all-api-hub/releases/latest)。
+1. 打开 [最新版本 Release](https://github.com/qianbkk/all-api-hub/releases/latest)。
 2. 在附件中下载 Chrome 版本压缩包：
 
 ```text
@@ -173,13 +172,7 @@ liebao://extensions/
 
 ## Brave / Vivaldi / Opera 安装
 
-这些浏览器通常可以使用 Chrome Web Store。建议先在对应浏览器中打开 [All API Hub 的 Chrome Web Store 页面](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) 并尝试安装。
-
-- Brave 官方支持从 Chrome Web Store 安装扩展。
-- Vivaldi 官方支持安装 Chrome Web Store 扩展；如果按钮没有出现，请检查 Vivaldi 的 Google Extensions / Web Store 相关设置。
-- Opera 有自己的 Opera Add-ons，也支持安装 Chrome 扩展；All API Hub 当前没有单独上架 Opera Add-ons，因此优先使用 Chrome Web Store。
-
-如果商店安装失败，再使用下面的扩展管理页手动加载 GitHub Chrome 压缩包：
+这些浏览器都可以加载 Chromium 扩展目录。请从 [个人 Stable Release](https://github.com/qianbkk/all-api-hub/releases/latest) 下载 Chrome 包并解压，然后使用下面的扩展管理页手动加载：
 
 | 浏览器 | 扩展管理页 |
 |--------|------------|
@@ -194,9 +187,9 @@ liebao://extensions/
 
 ## 更新扩展
 
-手动加载版本不会自动更新。关于商店版、GitHub Stable 和 Nightly 的区别，请先查看 [安装渠道与更新说明](./extension-update-install.md)。手动加载版本更新时请按下面流程处理：
+个人版手动加载版本不会自动更新。关于 Stable 和 Nightly 的区别，请先查看 [个人版安装渠道与更新说明](./extension-update-install.md)。更新时请按下面流程处理：
 
-1. 打开 [最新版本 Release](https://github.com/qixing-jk/all-api-hub/releases/latest)。
+1. 打开 [最新版本 Release](https://github.com/qianbkk/all-api-hub/releases/latest)。
 2. 下载新的 `all-api-hub-<version>-chrome.zip`。
 3. 解压到原来的固定目录，或解压到一个新的版本目录。
 4. 打开扩展管理页。
@@ -261,4 +254,4 @@ all-api-hub-<version>-chrome.zip
 
 ---
 
-如有问题，请在 [GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues) 中反馈。
+如有问题，请在 [GitHub Issues](https://github.com/qianbkk/all-api-hub/issues) 中反馈。

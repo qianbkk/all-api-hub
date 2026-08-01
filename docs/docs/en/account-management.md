@@ -95,7 +95,7 @@ The extension monitors account connectivity in real-time. If an account card sho
 
 - **401 Unauthorized**: Login is invalid or the Access Token has expired.
 - **429 Too Many Requests**: Triggered site rate limits; the extension will automatically queue and retry.
-- **403 Forbidden**: Usually indicates Cloudflare protection has been triggered; please refer to [Cloudflare Bypass Assistant](./cloudflare-helper.md).
+- **403 Forbidden**: Usually indicates Cloudflare protection has been triggered; please refer to [Manual Site Verification Relay](./cloudflare-helper.md).
 
 You can click the health status icon on the card to view detailed error messages. For more common error handling, please refer to the [FAQ](./faq.md).
 

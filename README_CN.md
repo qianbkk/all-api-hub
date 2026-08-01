@@ -11,34 +11,28 @@
 > 本仓库是基于 [上游项目](https://github.com/qixing-jk/all-api-hub) 的个人魔改版。`main` 是本仓库的默认开发与发布分支，`upstream-sync` 仅用于追踪上游更新；详见 [统一改造文档](./MODIFICATION_NOTES.md)。
 
 <p align="center">
-<a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">
-  <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat">
+<a href="https://github.com/qianbkk/all-api-hub/releases/latest">
+  <img alt="个人增强版最新发布" src="https://img.shields.io/github/v/release/qianbkk/all-api-hub?label=个人增强版&logo=github&style=flat">
 </a>
-<a href="https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa">
-  <img alt="Microsoft Edge" src="https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat">
+<a href="https://github.com/qianbkk/all-api-hub/releases/tag/nightly">
+  <img alt="个人增强版 Nightly" src="https://img.shields.io/badge/Nightly-个人增强版-blue?logo=githubactions&style=flat">
 </a>
-<a href="https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}">
-  <img alt="Firefox Add-on" src="https://img.shields.io/amo/v/{bc73541a-133d-4b50-b261-36ea20df0d24}?label=Firefox&logo=firefoxbrowser&style=flat">
+<a href="https://qianbkk.github.io/all-api-hub/">
+  <img alt="个人增强版文档" src="https://img.shields.io/badge/文档-个人增强版-2ea44f?logo=readthedocs&style=flat">
 </a>
 </p>
 
 **[⚡ 快速上手](https://qianbkk.github.io/all-api-hub/get-started.html) | [🌐 支持站点](https://qianbkk.github.io/all-api-hub/supported-sites.html) | [🔌 集成工具](https://qianbkk.github.io/all-api-hub/supported-export-tools.html) | [📜 更新日志](https://qianbkk.github.io/all-api-hub/changelog.html)**
 
 <p align="center">
-  <a href="https://linux.do/t/topic/2395800">
-    <img alt="Linux.do 主题帖" src="https://img.shields.io/badge/Linux.do-主题帖-faa511?logo=linux&logoColor=white" />
+  <a href="https://github.com/qianbkk/all-api-hub">
+    <img alt="个人增强版仓库" src="https://img.shields.io/badge/GitHub-qianbkk%2Fall--api--hub-181717?logo=github&logoColor=white" />
   </a>
-  <a href="./resources/wechat_group.png">
-    <img alt="微信中文群" src="https://img.shields.io/badge/微信-中文群-green?logo=wechat&logoColor=white" />
+  <a href="https://github.com/qianbkk/all-api-hub/issues">
+    <img alt="个人增强版问题反馈" src="https://img.shields.io/badge/Issues-个人增强版-d73a49?logo=github&logoColor=white" />
   </a>
-  <a href="https://qm.qq.com/q/ebSCy31Phe">
-    <img alt="QQ 中文群" src="https://img.shields.io/badge/QQ-中文群-12B7F5?logo=qq&logoColor=white" />
-  </a>
-  <a href="https://discord.gg/RmFXZ577ZQ">
-    <img alt="Discord 多语言社区" src="https://img.shields.io/badge/Discord-多语言社区-5865F2?logo=discord&logoColor=white">
-  </a>
-  <a href="https://t.me/qixing_chat">
-    <img alt="Telegram 多语言群" src="https://img.shields.io/badge/Telegram-多语言群-blue?logo=telegram&logoColor=white">
+  <a href="https://github.com/qixing-jk/all-api-hub">
+    <img alt="上游项目" src="https://img.shields.io/badge/Upstream-qixing--jk%2Fall--api--hub-6f42c1?logo=github&logoColor=white" />
   </a>
 </p>
 
@@ -87,35 +81,25 @@
 ## 🚀 快速安装
 
 > [!IMPORTANT]
-> **绝大多数用户建议优先选择商店安装**。商店版安装简单、支持自动更新。
-
-| 渠道 | 安装链接                                                                                          | 当前版本 | 用户数                                                                                                                                                                                                                     |
-|------|-----------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Chrome 商店 | [Chrome 商店](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo)        | [![Chrome version](https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/lapnciffpekdengooeolaienkeoilfeo?label=Chrome%20Users)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) |
-| Edge 商店 | [Edge 商店](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge version](https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge Add-ons Users](https://img.shields.io/badge/dynamic/json?label=Edge%20Users&query=$.activeInstallCount&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/pcokpjaffghgipcgjhapgdpeddlhblaa)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) |
-| Firefox 商店 | [Firefox 商店](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Firefox version](https://img.shields.io/amo/v/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox&logo=firefoxbrowser&style=flat)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Mozilla Add-on Users](https://img.shields.io/amo/users/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox%20Users)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) |
-
-<details>
-<summary>📦 需要手动安装或测试版？（点击展开）</summary>
+> **个人增强版只从本仓库 Releases 发布。** 上游商店版与个人增强版不是同一发布渠道；请勿把上游商店安装包当作本仓库魔改版。
 
 | 渠道 | 下载链接 | 适用场景 |
 |------|----------|----------|
-| GitHub Stable | [下载 Stable](https://github.com/qianbkk/all-api-hub/releases/latest) | 无法安装商店版，或需要临时手动安装已发布修复 |
-| Nightly 预发布 | [下载 Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | 想抢先体验新功能并协助测试，可能不如商店稳定版稳定 |
+| GitHub Stable | [下载个人增强版 Stable](https://github.com/qianbkk/all-api-hub/releases/latest) | 日常使用，选择对应浏览器的发布包手动安装 |
+| Nightly 预发布 | [下载个人增强版 Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | 抢先验证最新改动，稳定性可能低于正式版 |
+| 源码构建 | [查看个人版构建说明](https://qianbkk.github.io/all-api-hub/get-started.html) | 需要自行审查源码或构建未发布版本 |
 
-GitHub Stable 和 Nightly 属于手动安装通道，不会自动更新；可 Star / Watch 仓库接收新版本通知。更多说明见 [安装与更新说明](https://qianbkk.github.io/all-api-hub/extension-update-install.html)。
+Stable 和 Nightly 均属于手动安装通道，不会像浏览器商店版一样自动更新；可 Star / Watch [个人增强版仓库](https://github.com/qianbkk/all-api-hub) 接收通知，扩展内版本检查也只追踪个人仓库 Release。
 
 **其他环境支持：**
 - **手机端**：支持 Edge 手机版、Firefox Android、Kiwi 等浏览器，详见 [移动端使用指南](https://qianbkk.github.io/all-api-hub/faq.html#mobile-browser-support)。
 - **QQ / 360 等**：详见 [手动加载指南](https://qianbkk.github.io/all-api-hub/other-browser-install.html)。
-- **Safari (Mac)**：需要 Xcode 编译，详详见 [Safari 安装指南](https://qianbkk.github.io/all-api-hub/safari-install.html)。
-
-</details>
+- **Safari (Mac)**：需要 Xcode 编译，详见 [Safari 安装指南](https://qianbkk.github.io/all-api-hub/safari-install.html)。
 
 <a id="sponsors"></a>
 ## ❤️ 赞助商
 
-> [想出现在这里？](mailto:street-anime-olive@duck.com)
+> 以下赞助信息继承自上游历史内容，不代表个人增强版维护者单独背书或提供商业合作。
 
 <div>
   <p>
@@ -327,7 +311,7 @@ All API Hub 基于 GNU Affero General Public License v3.0（AGPL-3.0）开源。
 
 如果你需要 AGPL-3.0 之外的授权条款，例如闭源分发、私有修改、白标再分发，或其他闭源商业集成场景，可以联系项目维护者获取商业授权。
 
-商业授权联系：<street-anime-olive@duck.com>
+个人增强版不单独提供商业授权；如涉及上游原作者拥有权利的商业授权，请前往[上游仓库](https://github.com/qixing-jk/all-api-hub)核实。
 
 商业授权仅覆盖 All API Hub 维护者有权授权的代码和资源。第三方依赖以及历史上源自 [One API Hub](https://github.com/fxaxg/one-api-hub) 的 MIT 许可部分，仍需保留对应版权与许可声明，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
@@ -344,6 +328,7 @@ All API Hub 基于 GNU Affero General Public License v3.0（AGPL-3.0）开源。
 <a id="acknowledgements"></a>
 ## 🙏 致谢
 
+- 感谢[上游项目](https://github.com/qixing-jk/all-api-hub)及其贡献者提供项目基础，并保留原作者归属与许可证声明
 - 感谢 [@AngleNaris](https://github.com/AngleNaris) 设计了项目 Logo 🎨
 - 感谢 [Linux.do 社区](https://linux.do) 提供的反馈、测试和传播支持，尤其是 [All-API-Hub 主题帖](https://linux.do/t/topic/2395800) 中持续的讨论与建议
 - [WXT](https://wxt.dev) - 现代化的浏览器扩展开发框架

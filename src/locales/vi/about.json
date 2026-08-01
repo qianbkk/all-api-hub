@@ -9,7 +9,7 @@
     },
     "community": {
       "button": "Xem các kênh giao tiếp",
-      "description": "Xem mã QR nhóm WeChat, nhóm QQ, cộng đồng đa ngôn ngữ Discord, nhóm Telegram và các cổng giao tiếp khác, phù hợp để đặt câu hỏi, chia sẻ kinh nghiệm sử dụng và khắc phục sự cố."
+      "description": "Xem hướng dẫn hỗ trợ của bản cá nhân và sử dụng Issues hoặc Discussions tại qianbkk/all-api-hub để đặt câu hỏi, chia sẻ cấu hình và khắc phục sự cố."
     },
     "discussion": {
       "button": "Mở khu vực thảo luận",
@@ -30,7 +30,20 @@
   "homepage": "Trang web chính thức của dự án",
   "homepageDesc": "Xem tài liệu chi tiết, hướng dẫn sử dụng và thông tin khác",
   "implementedFeatures": "Tính năng đã triển khai",
-  "intro": "All API Hub là một tiện ích mở rộng trình duyệt dành cho cả các trạm trung chuyển thuộc sê-ri New API của bên thứ ba và các phiên bản New API tự xây dựng. Nó hiển thị tập trung tài khoản và số dư, phân loại thông minh và nhận biết trang web hiện tại, đồng thời cung cấp các khả năng tự động hóa như tự động làm mới và vượt tường lửa bằng cửa sổ tạm thời; đối với New API tự xây dựng, nó cũng hỗ trợ quản lý kênh và đồng bộ hóa danh sách mô hình, cũng như tích hợp CLIProxyAPI, sao lưu WebDAV và các công cụ xuất/nhập dữ liệu.",
+  "intro": "All API Hub Personal Enhancement is the qianbkk-maintained personal fork for compliant relay-account management. It centralizes accounts, balances, usage, model prices and credentials, staggers same-site check-ins, classifies announcements locally, supports encrypted WebDAV backup, and requires visible user handoff for security challenges instead of bypassing them. Updates, announcements, documentation and feedback use qianbkk/all-api-hub.",
+  "personalReleases": {
+    "nightly": {
+      "button": "Download Nightly",
+      "description": "Validate the latest personal-repository changes early; it may be less stable.",
+      "title": "Personal-fork Nightly"
+    },
+    "stable": {
+      "button": "Download Stable",
+      "description": "Download the published personal enhancement only from qianbkk/all-api-hub.",
+      "title": "Personal-fork Stable"
+    },
+    "title": "Personal-fork downloads"
+  },
   "privacyText": "Các dữ liệu nhạy cảm như tài khoản, API Key, Cookie, số dư, nội dung yêu cầu và thông tin người dùng nhập mặc định chỉ được lưu trữ cục bộ. Số liệu thống kê sản phẩm ẩn danh có thể tắt được chỉ được sử dụng để ưu tiên khắc phục các sự cố phổ biến, cải thiện các luồng công việc thường dùng và tính tương thích, đồng thời giảm bớt sự can thiệp không cần thiết, và sẽ không thu thập các dữ liệu nhạy cảm nêu trên.",
   "privacyTitle": "Bảo vệ quyền riêng tư",
   "projectLinks": "Liên kết dự án",
@@ -40,23 +53,6 @@
     "title": "Cập nhật phiên bản"
   },
   "starRepo": "Cho một Star",
-  "stores": {
-    "chrome": "Cửa hàng Chrome trực tuyến",
-    "edge": "Cửa hàng tiện ích mở rộng Edge",
-    "firefox": "Tiện ích bổ sung Firefox"
-  },
-  "storesSection": {
-    "download": {
-      "button": "Mở cửa hàng",
-      "description": "Tải xuống/cài đặt từ {{store}}."
-    },
-    "review": {
-      "button": "Truy cập {{store}} để đánh giá",
-      "description": "Nếu All API Hub hữu ích với bạn, vui lòng để lại đánh giá tích cực trên {{store}} để hỗ trợ chúng tôi tiếp tục cập nhật.",
-      "title": "Cho chúng tôi một đánh giá tốt"
-    },
-    "title": "Đánh giá và tải xuống"
-  },
   "techStack": {
     "radix": "Primitive UI hỗ trợ truy cập",
     "react": "Thư viện giao diện người dùng",
@@ -65,7 +61,7 @@
     "typescript": "JavaScript kiểu an toàn",
     "wxt": "Framework phát triển tiện ích mở rộng trình duyệt"
   },
-  "thanksDesc": "Cảm ơn tất cả các nhà phát triển đã đóng góp cho cộng đồng nguồn mở, việc phát triển tiện ích mở rộng này được hưởng lợi từ các dự án và công cụ nguồn mở tuyệt vời này",
+  "thanksDesc": "Maintained by qianbkk and built on upstream All API Hub and its contributors. Original attribution, licenses and third-party notices are preserved.",
   "title": "Giới thiệu",
   "upcomingFeatures": "Tính năng sắp ra mắt",
   "version": "Phiên bản:",

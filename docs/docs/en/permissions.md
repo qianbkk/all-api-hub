@@ -1,88 +1,64 @@
 # Permission Management (Optional Permissions)
 
-> These optional permissions only need to be granted when a temporary window is required for shield bypass, automatic refresh, or background supplementation of Cookies/request headers; for daily use, they can remain fully disabled.
+> Optional Cookie and Web Request permissions are used only for manual verification relay or authenticated requests to connected sites. They are not granted by default, and core offline features do not depend on them.
 
-## Feature Overview
+## Overview
 
--   **Centralized Management of Optional Permissions**
-    -   View, grant, or revoke the optional permission status of the extension uniformly on the "Permission Management" page.
--   **Integration with Cloudflare Shield Bypass**
-    -   Some permissions are used to support temporary window shield bypass (e.g., Cloudflare 5-second challenge), ensuring data can still be refreshed normally even when the site has a firewall.
--   **Revocable at Any Time**
-    -   All optional permissions can be disabled at any time in browser settings or on the plugin's "Permission Management" page, without affecting core offline functionality.
+- **Centralized management**: Review, grant, or revoke optional permissions on the Permissions page.
+- **Manual verification relay**: When a user-initiated identification or refresh action encounters a site check, the user can complete it on a temporary page and then continue the original action.
+- **No automatic bypass**: These permissions are not used to solve CAPTCHAs, spoof device signals, rotate IP addresses, or evade site security controls.
+- **Revocable at any time**: Disabling optional permissions does not affect core offline management features.
 
-## Accessing Settings
+## Accessing the settings
 
-1.  Open the plugin → Go to the **Settings** page.
-2.  When the browser supports optional permissions, the **"Permission Management / Permissions"** tab will appear.
-3.  Click to enter and view the list and status of optional permissions available for the current extension.
+1. Open the extension and go to **Settings**.
+2. If the browser supports optional permissions, open **Permission Management / Permissions**.
+3. Review the purpose and current state of each permission before allowing it.
 
-> Tip: If your browser does not support or has not enabled relevant permissions, this tab may not appear.
+## Common permissions
 
-## Supported Permission Types
+- **Cookies**: Read necessary session cookies on connected site domains so a request can continue in the same session after the user completes verification.
+- **Web Request**: Determine whether a request was blocked and whether the user should be prompted to open a temporary verification page.
+- **Web Request Blocking**: When supported by the browser and required by the selected workflow, attach necessary authentication information to requests for authorized sites.
 
-Specific permission names may vary slightly depending on the browser, but typically include:
+The extension does not use these permissions to scan unrelated sites. Their scope is limited to connected sites and workflows that you initiate or explicitly enable.
 
--   **Cookies (Cookie Permission)**
-    -   Purpose: Allows the extension to read necessary cookies within a controlled scope, in order to attach authentication information to background requests.
-    -   Typical Scenarios:
-        -   After a temporary window shield bypass is complete, carry the same session cookie to background refresh requests.
+## Safe defaults
 
--   **Web Request (Network Request Observation)**
-    -   Purpose: Allows the extension to observe outgoing requests in specific scenarios (e.g., supplementing necessary request headers for the shield bypass process).
-    -   Typical Scenarios:
-        -   Determining if a request is blocked by a firewall, or if a temporary window retry needs to be triggered.
+- The user must explicitly confirm permissions in the browser dialog.
+- Temporary verification pages are disabled for background automation by default.
+- Automatic refresh does not use manual verification relay by default.
+- Manual refresh, settings-page, side-panel, and popup entry points can be configured separately.
+- Sliders, image selection, Turnstile, and other interactive checks must be completed by the user.
 
--   **Web Request Blocking (Network Request Blocking/Modification)**
-    -   Purpose: Synchronously modify requests before they are sent (e.g., attach Cookies, Headers) to ensure correct authentication information is carried before firewalls/Cloudflare.
-    -   Typical Scenarios:
-        -   Ensuring Cloudflare shield bypass or refresh requests with cookies can reliably pass site protection.
+## When should I grant them?
 
-> The extension will not use these permissions to scan sites unrelated to you; they are only used on the relay station domains you have connected to, and only within necessary workflows.
+Consider granting them only when needed:
 
-## Status and Operations
+- Manual identification or refresh often requires site verification in the same browser session.
+- Browsers such as Firefox require extra permissions to preserve necessary session state after verification.
 
-On the permission management page, you can see:
+They can remain disabled when:
 
--   **Status Indicators**
-    -   "检测中 / Checking…": Synchronizing permission status with the browser.
-    -   "已授予 / Granted": Currently allowed by the browser.
-    -   "未授予 / Not granted": Currently not allowed.
--   **Action Buttons**
-    -   **允许 (推荐) / Allow (Recommended)**: Initiates a permission request pop-up to the browser.
-    -   **撤销 / Revoke**: Actively withdraws the current permission.
-    -   **刷新状态 / Refresh Status**: If you have manually modified permissions in your browser settings, click refresh to synchronize the status.
+- You only use offline management, price viewing, or manual data entry.
+- Your sites do not require additional security verification.
+- You do not want the extension to read site cookies or observe related requests.
 
-## When Are These Permissions Needed?
+## Privacy and revocation
 
--   It is recommended to consider enabling them in the following scenarios:
-    -   Frequently accessing relay stations protected by Cloudflare or other firewalls, and wishing to automatically complete shield bypass and refresh data.
-    -   Needing to automatically refresh a large amount of account data in the background, and wishing to minimize failures due to protection.
--   In the following scenarios, they can remain disabled:
-    -   Only occasionally manually refreshing a small number of accounts.
-    -   The relay station used has no additional firewalls or 5-second challenges, etc.
-
-## Privacy and Security Statement
-
--   Account and site configurations are stored locally in the browser by default; features such as balance refresh, site API access, WebDAV backup or sync, and anonymous product analytics make the necessary network requests according to your settings.
--   Optional permissions are only enabled under the following conditions:
-    -   You explicitly click "Allow" on the permission management page;
-    -   The browser displays a permission request dialog and you confirm it.
--   You can always:
-    -   Click "Revoke" on the "Permission Management" page;
-    -   Or remove relevant permissions from the browser's own extension management interface.
+- Account and site settings are stored locally by default; network requests are made only for features you enable.
+- Revoke permissions on the Permissions page or in the browser's extension manager.
+- After revocation, workflows that depend on manual verification relay may be unavailable, while other core features remain usable.
 
 ## Troubleshooting
 
--   **Nothing happens after clicking "Allow"?**
-    -   The browser might not have displayed the permission dialog, or it might have been blocked by the system;
-    -   Check for a permission icon or prompt near the address bar.
--   **Shield bypass/refresh still failing?**
-    -   Confirm that Cloudflare shield bypass related settings are enabled, and refer to the [Cloudflare Shield Bypass Helper](./cloudflare-helper.md) documentation;
-    -   Check your network environment (proxy, firewall, IP quality, etc.).
+- **Nothing happens after Allow**: Check for a blocked permission prompt near the address bar.
+- **The temporary page does not open**: Check popup settings and whether the current page entry point is allowed to use manual verification relay.
+- **The request still fails after verification**: Sign in again, confirm the account or token is valid, and reduce the request rate.
+- **An automated task does not open a page**: This is the safe default; background automation does not ask the user to complete verification.
 
-## Related Documentation
+## Related documentation
 
--   [Cloudflare Shield Bypass Helper](./cloudflare-helper.md)
--   [Automatic Refresh and Real-time Data](./auto-refresh.md)
--   [WebDAV Backup and Automatic Synchronization](./webdav-sync.md)
+- [Manual Site Verification Relay](./cloudflare-helper.md)
+- [Automatic Refresh and Real-time Data](./auto-refresh.md)
+- [WebDAV Backup and Automatic Synchronization](./webdav-sync.md)

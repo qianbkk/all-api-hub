@@ -10,7 +10,7 @@
 
 ## 1. What All API Hub Does
 
-When you use several AI models or API platforms, balance, keys, and pricing information can become scattered. **All API Hub** ([open source on GitHub](https://github.com/qixing-jk/all-api-hub)) provides one local management entry point for these details.
+When you use several AI models or API platforms, balance, keys, and pricing information can become scattered. **All API Hub** ([open source on GitHub](https://github.com/qianbkk/all-api-hub)) provides one local management entry point for these details.
 
 For AIHubMix users, it helps with:
 
@@ -23,15 +23,15 @@ For AIHubMix users, it helps with:
 
 ## 2. Install All API Hub
 
-For automatic updates and the most stable experience, install from the official store for your browser when possible.
+The personal enhanced edition is published only through `qianbkk/all-api-hub`:
 
-- **Chrome**: [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo)
-- **Edge**: [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa)
-- **Firefox**: [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24})
-- **QQ / 360 / Brave / Vivaldi / Opera, etc.**: Brave, Vivaldi, and Opera can usually try Chrome Web Store first; QQ Browser, 360 Browser, Cheetah Browser, and similar browsers can use manual Chromium loading when no usable store path is available. See the [Other Browser Installation Guide](../other-browser-install.md).
+- **Daily use**: download the matching package from [Personal Stable](https://github.com/qianbkk/all-api-hub/releases/latest).
+- **Early testing**: use [Personal Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly), which may be unstable.
+- **QQ / 360 / Brave / Vivaldi / Opera, etc.**: download the Chrome package from Personal Stable and load it manually. See the [Other Browser Installation Guide](../other-browser-install.md).
 - **Safari on Mac**: see the [Safari installation guide](../safari-install.md).
 - **Mobile browsers**: see the [mobile browser FAQ](../faq.md#mobile-browser-support).
-- **Fallback option**: if your browser cannot use a store build or Chrome Web Store compatible build, and the guide above does not work, download the Stable package from [GitHub Releases](https://github.com/qixing-jk/all-api-hub/releases/latest). Manually installed builds do not update automatically.
+
+> The similarly named Chrome, Edge, and Firefox store listings are upstream releases, not the personal enhanced edition documented here. Personal-edition packages require manual updates.
 
 ---
 
@@ -143,5 +143,5 @@ A: No. Recharge, account settings, and official key creation still belong to the
 ## Links
 
 - [AIHubMix](https://aihubmix.com/?aff=W3DN)
-- [All API Hub GitHub repository](https://github.com/qixing-jk/all-api-hub)
-- [All API Hub documentation](https://all-api-hub.qixing1217.top/en/)
+- [All API Hub GitHub repository](https://github.com/qianbkk/all-api-hub)
+- [All API Hub documentation](https://qianbkk.github.io/all-api-hub/en/)

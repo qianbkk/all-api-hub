@@ -10,7 +10,7 @@
 
 ## 一、All API Hub 是什么？
 
-在同时使用多个 AI 模型或 API 平台时，开发者常面临“余额分散、密钥易丢、价格难查”的问题。**All API Hub**（[GitHub 开源](https://github.com/qixing-jk/all-api-hub)）提供了一个统一的管理入口，方便集中查看和整理这些信息。
+在同时使用多个 AI 模型或 API 平台时，开发者常面临“余额分散、密钥易丢、价格难查”的问题。**All API Hub**（[GitHub 开源](https://github.com/qianbkk/all-api-hub)）提供了一个统一的管理入口，方便集中查看和整理这些信息。
 
 对于 AIHubMix 用户，它主要提供以下价值：
 *   **余额查看**：无需频繁打开控制台，即可在扩展面板内查看 AIHubMix 账户余额。
@@ -24,18 +24,15 @@
 
 ## 二、安装 All API Hub
 
-为了获得自动更新和最稳定的体验，建议优先通过与你的浏览器匹配的官方商店安装：
+个人增强版只通过 `qianbkk/all-api-hub` 发布：
 
-### 1. 桌面端浏览器
-*   **Chrome 浏览器**：[Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo)
-*   **Edge 浏览器**：[Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa)
-*   **Firefox 浏览器**：[Firefox Add-ons](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24})
+*   **日常使用**：从 [个人 Stable Release](https://github.com/qianbkk/all-api-hub/releases/latest) 下载对应浏览器安装包。
+*   **提前测试**：可使用 [个人 Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly)，但可能不稳定。
+*   **QQ / 360 / Brave / Vivaldi / Opera 等浏览器**：下载个人 Stable 中的 Chrome 包并手动加载，详见 [其他浏览器安装指南](https://qianbkk.github.io/all-api-hub/other-browser-install.html)。
+*   **Safari (Mac)**：详见 [Safari 安装指南](https://qianbkk.github.io/all-api-hub/safari-install.html)。
+*   **手机端**：详见 [移动端使用指南](https://qianbkk.github.io/all-api-hub/faq.html#mobile-browser-support)。
 
-### 2. 其他环境
-*   **QQ / 360 / Brave / Vivaldi / Opera 等浏览器**：Brave、Vivaldi、Opera 可优先尝试 Chrome Web Store；QQ、360、猎豹等浏览器如果找不到可用商店入口，再使用 Chromium 手动加载方式，详见 [其他浏览器安装指南](https://all-api-hub.qixing1217.top/other-browser-install.html)。
-*   **Safari (Mac)**：需要通过 Xcode 或 Safari 专用包安装，详见 [Safari 安装指南](https://all-api-hub.qixing1217.top/safari-install.html)。
-*   **手机端**：支持 Edge 手机版、Firefox Android、Kiwi 等，详见 [移动端使用指南](https://all-api-hub.qixing1217.top/faq.html#mobile-browser-support)。
-*   **最后备选方案**：如果你的浏览器无法使用商店版或 Chrome Web Store 兼容版本，也无法通过上面的安装指南完成安装，可从 [GitHub Releases](https://github.com/qixing-jk/all-api-hub/releases/latest) 下载 Stable 包手动安装。手动安装版本不会像商店版一样自动更新，后续升级需要重新下载并安装。
+> Chrome、Edge、Firefox 商店中的同名扩展属于上游发行版，不是本文所述个人增强版。个人版需要手动更新。
 
 ---
 
@@ -145,5 +142,5 @@ A: 不能完全替代。充值、账号设置、官方密钥创建等操作仍�
 All API Hub 为 AIHubMix 用户提供了一个更集中的账号与密钥管理入口。通过它，你可以更方便地查看余额、保存密钥、比较模型价格，并把已保存的凭据继续用于其他 AI 工具。
 
 *   [AIHubMix 官网](https://aihubmix.com/?aff=W3DN)
-*   [All API Hub GitHub 仓库](https://github.com/qixing-jk/all-api-hub)
-*   [All API Hub 文档](https://all-api-hub.qixing1217.top)
+*   [All API Hub GitHub 仓库](https://github.com/qianbkk/all-api-hub)
+*   [All API Hub 文档](https://qianbkk.github.io/all-api-hub)

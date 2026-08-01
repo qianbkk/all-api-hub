@@ -1,7 +1,7 @@
 {
   "app": {
-    "description": "AI 中継サービスとアカウント、残高をひとつの場所で管理",
-    "name": "All API Hub"
+    "description": "中継サイトとセルフホスト環境のアカウント、残高、API 資産を適法に管理",
+    "name": "All API Hub 個人拡張版"
   },
   "billing": {
     "notProvided": "未提供",

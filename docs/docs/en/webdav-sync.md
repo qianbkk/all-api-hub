@@ -69,4 +69,4 @@ Enable "Automatic Synchronization" on the same page for scheduled background syn
 
 - [Auto-Refresh and Real-time Data](./auto-refresh.md)
 - [Auto-Check-in](./auto-checkin.md)
-- [Cloudflare Bypass Helper](./cloudflare-helper.md)
+- [Manual Site Verification Relay](./cloudflare-helper.md)

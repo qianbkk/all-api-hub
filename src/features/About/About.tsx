@@ -6,10 +6,8 @@ import {
   GlobeAltIcon,
   LanguageIcon,
   LightBulbIcon,
-  StarIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline"
-import type { TFunction } from "i18next"
 import { Info } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
@@ -18,11 +16,13 @@ import LinkCard from "~/components/LinkCard"
 import { PageHeader } from "~/components/PageHeader"
 import { ReleaseUpdateStatusPanel } from "~/components/ReleaseUpdateStatusPanel"
 import { Heading4 } from "~/components/ui"
-import { FEATURES, FUTURE_FEATURES } from "~/constants/about"
-import { EXTENSION_STORE_LISTING_URLS } from "~/constants/extensionStores"
+import {
+  FEATURES,
+  FUTURE_FEATURES,
+  LATEST_RELEASE_URL,
+  NIGHTLY_RELEASE_URL,
+} from "~/constants/about"
 import { isNotEmptyArray } from "~/utils"
-import type { ExtensionStoreId } from "~/utils/browser"
-import { detectExtensionStore } from "~/utils/browser"
 import { getDocsHomepageUrl } from "~/utils/navigation/docsLinks"
 import { getFeedbackDestinationUrls } from "~/utils/navigation/feedbackLinks"
 import { getPkgVersion } from "~/utils/navigation/packageMeta"
@@ -32,17 +32,6 @@ import CreditsCard from "./components/CreditsCard"
 import PluginIntroCard from "./components/PluginIntroCard"
 import PrivacyNotice from "./components/PrivacyNotice"
 import TechStackGrid from "./components/TechStackGrid"
-
-const getStoreLabel = (t: TFunction, storeId: ExtensionStoreId) => {
-  switch (storeId) {
-    case "chrome":
-      return t("about:stores.chrome")
-    case "edge":
-      return t("about:stores.edge")
-    case "firefox":
-      return t("about:stores.firefox")
-  }
-}
 
 /**
  * Options/About page: displays app metadata, links, features, tech stack, credits, and privacy notice.
@@ -54,13 +43,6 @@ export default function About() {
   // 从工具函数获取元数据
   const homepage = getDocsHomepageUrl(i18n.language)
   const feedbackDestinations = getFeedbackDestinationUrls(i18n.language)
-
-  // Store CTA: ask for a positive review on the current store, and provide download links for other stores.
-  const currentStoreId = detectExtensionStore()
-  const currentStoreName = getStoreLabel(t, currentStoreId)
-  const otherStoreIds = (
-    Object.keys(EXTENSION_STORE_LISTING_URLS) as ExtensionStoreId[]
-  ).filter((storeId) => storeId !== currentStoreId)
 
   // 技术栈版本动态化
   const techStack = [
@@ -186,41 +168,28 @@ export default function About() {
           </div>
         </section>
 
-        {/* 商店评分与下载 */}
+        {/* 个人增强版发布渠道 */}
         <section>
-          <Heading4 className="mb-4">{t("storesSection.title")}</Heading4>
+          <Heading4 className="mb-4">{t("personalReleases.title")}</Heading4>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <LinkCard
-              Icon={StarIcon}
-              title={t("storesSection.review.title")}
-              description={t("storesSection.review.description", {
-                store: currentStoreName,
-              })}
-              href={EXTENSION_STORE_LISTING_URLS[currentStoreId]}
-              buttonText={t("storesSection.review.button", {
-                store: currentStoreName,
-              })}
+              Icon={ArrowDownTrayIcon}
+              title={t("personalReleases.stable.title")}
+              description={t("personalReleases.stable.description")}
+              href={LATEST_RELEASE_URL}
+              buttonText={t("personalReleases.stable.button")}
               buttonVariant="default"
-              iconClass="text-yellow-500 dark:text-yellow-400"
+              iconClass="text-blue-600 dark:text-blue-400"
             />
-            {otherStoreIds.map((storeId) => {
-              const storeLabel = getStoreLabel(t, storeId)
-
-              return (
-                <LinkCard
-                  key={storeId}
-                  Icon={ArrowDownTrayIcon}
-                  title={storeLabel}
-                  description={t("storesSection.download.description", {
-                    store: storeLabel,
-                  })}
-                  href={EXTENSION_STORE_LISTING_URLS[storeId]}
-                  buttonText={t("storesSection.download.button")}
-                  buttonVariant="secondary"
-                  iconClass="text-blue-600 dark:text-blue-400"
-                />
-              )
-            })}
+            <LinkCard
+              Icon={ArrowDownTrayIcon}
+              title={t("personalReleases.nightly.title")}
+              description={t("personalReleases.nightly.description")}
+              href={NIGHTLY_RELEASE_URL}
+              buttonText={t("personalReleases.nightly.button")}
+              buttonVariant="secondary"
+              iconClass="text-indigo-600 dark:text-indigo-400"
+            />
           </div>
         </section>
 

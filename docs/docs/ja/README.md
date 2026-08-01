@@ -1,28 +1,24 @@
 ---
 home: true
 title: "ホーム"
-heroImage: "/512.png"
-heroText: "All API Hub - あなたの万能 AI 資産マネージャー"
-tagline: "オープンソースのブラウザ拡張機能。サードパーティ製AI集約中継ステーションと自社構築のNew APIを一元管理。アカウントの自動認識、モデル価格の比較、API/CLI互換性の検証、モデルとチャネルの同期をサポートし、クロスプラットフォームと暗号化されたWebDAVバックアップに対応。"
+heroImage: "../512.png"
+heroText: "All API Hub 個人拡張版 - AI 資産マネージャー"
+tagline: "qianbkk が保守する個人フォーク。中継サイトとセルフホスト環境のアカウント、残高、使用量、分散チェックイン、モデル価格、API 認証情報、公告を適法に管理し、更新・文書・フィードバックを個人リポジトリで独立運用します。"
 actions:
   - text: "利用開始"
     link: "./get-started.html"
     type: "primary"
     
-  - text: "Chrome ウェブストア"
-    link: "https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo"
+  - text: "個人拡張版 Stable"
+    link: "https://github.com/qianbkk/all-api-hub/releases/latest"
     type: "secondary"
 
-  - text: "Edge アドオン"
-    link: "https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa"
+  - text: "個人拡張版 Nightly"
+    link: "https://github.com/qianbkk/all-api-hub/releases/tag/nightly"
     type: "secondary"
 
-  - text: "FireFox アドオン"
-    link: "https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}"
-    type: "secondary"
-    
-  - text: "Safari インストール"
-    link: "./safari-install.html"
+  - text: "ソースを見る"
+    link: "https://github.com/qianbkk/all-api-hub"
     type: "secondary"
 
 features:
@@ -43,7 +39,7 @@ features:
   - title: "🛠️ 自社構築サイト連携"
     details: "New API、AxonHub、Claude Code Hub 等に深く対応。チャネル管理やモデル同期、リダイレクト設定が可能です。"
   - title: "🔒 プライバシーと安全な同期"
-    details: "ローカル保存を基本とし、暗号化 WebDAV 同期をサポート。Cloudflare のチャレンジにも自動的に対応して盾を越えます。"
+    details: "ローカル保存を基本とし、暗号化 WebDAV 同期をサポート。サイトの安全確認が必要な場合は、一時ページを開き、ユーザー本人が手動で確認を完了してから処理を続行できます。"
 
 footer: "AGPL-3.0 Licensed | Copyright 2025-present All API Hub"
 ---
@@ -92,16 +88,9 @@ AI の時代には、節約したり別のモデルを試したりするため�
 問題の相談や便利なサイトの共有をしたい場合は、コミュニティに参加してください：
 
 - [GitHub Discussions](https://github.com/qianbkk/all-api-hub/discussions)
-- [Discord コミュニティ](https://discord.gg/RmFXZ577ZQ)
-- [Telegram グループ](https://t.me/qixing_chat)
-- [QQ グループ](https://qm.qq.com/q/ebSCy31Phe)
-- **WeChat グループ**：下の QR コードをスキャンして中国語グループに参加してください。
-
-<img
-  src="../../../resources/wechat_group.png"
-  alt="All API Hub WeChat グループ QR コード"
-  style="width: min(280px, 100%);"
-/>
+- [個人拡張版リポジトリ](https://github.com/qianbkk/all-api-hub)
+- [個人拡張版 Issues](https://github.com/qianbkk/all-api-hub/issues)
+- 上流コミュニティのリンクは、この個人フォークの公式サポート窓口ではないため、このページでは上流グループを表示または案内しません。
 
 <a id="sponsors"></a>
 ## ❤️ 協賛スポンサー

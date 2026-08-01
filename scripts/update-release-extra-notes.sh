@@ -4,7 +4,7 @@ set -euo pipefail
 
 RELEASE_TAG="${1:-${RELEASE_TAG:-}}"
 REPOSITORY="${GH_REPO:-${GITHUB_REPOSITORY:-}}"
-DOCS_BASE_URL="${DOCS_BASE_URL:-https://all-api-hub.qixing1217.top}"
+DOCS_BASE_URL="${DOCS_BASE_URL:-https://qianbkk.github.io/all-api-hub}"
 
 if [ -z "$RELEASE_TAG" ]; then
   echo "RELEASE_TAG is required." >&2
@@ -36,12 +36,6 @@ const release = JSON.parse(process.env.RELEASE_JSON ?? "{}")
 const releaseTag = process.env.RELEASE_TAG ?? ""
 const docsBaseUrl = (process.env.DOCS_BASE_URL ?? "").replace(/\/+$/, "")
 const isNightly = releaseTag === "nightly"
-const chromeStoreUrl =
-  "https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo"
-const edgeStoreUrl =
-  "https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa"
-const firefoxStoreUrl =
-  "https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}"
 
 const assetNames = Array.isArray(release.assets)
   ? release.assets
@@ -60,11 +54,11 @@ const assetOrder = (name) => {
 
 const describeAsset = (name) => {
   if (/chrome\.zip$/i.test(name)) {
-    return "Chromium 内核浏览器手动安装包。普通用户请优先安装 Chrome 商店或 Edge 商店版本；仅在无法使用商店版、需要临时验证修复或调试时下载此文件。"
+    return "个人增强版 Chromium 手动安装包，适用于 Chrome、Edge、Brave、Vivaldi、Opera、Kiwi 等兼容浏览器；请先解压，再通过扩展管理页加载。"
   }
 
   if (/firefox\.zip$/i.test(name)) {
-    return "Firefox 构建包。普通用户优先使用 Firefox Add-ons 商店；这个附件更适合高级用户自行验证、调试或配合发布流程使用。"
+    return "个人增强版 Firefox 手动安装包；请按个人版安装文档使用，浏览器不会替你自动跟踪 GitHub Releases。"
   }
 
   if (/sources\.zip$/i.test(name)) {
@@ -87,22 +81,21 @@ const lines = [
   "## 附加说明",
   "",
   isNightly
-    ? "> 当前为 Nightly 预发布，基于 `main` 最新提交自动生成。大多数用户仍建议优先使用商店版；Nightly 仅适合提前验证修复或协助测试。"
-    : "> 当前为正式版 Stable。大多数用户建议优先使用商店版，以获得更简单的安装流程和自动更新；GitHub 附件主要作为无法使用商店版时的备选。",
+    ? "> 当前为个人增强版 Nightly 预发布，基于 `main` 最新提交自动生成，仅适合提前验证个人仓库中的修复或协助测试。"
+    : "> 当前为个人增强版 Stable 正式版。个人版只通过 qianbkk/all-api-hub Releases 提供安装包，不使用上游浏览器商店包作为发行渠道。",
   "",
-  "### 优先安装方式",
-  `- Chrome：优先使用 Chrome 商店，${chromeStoreUrl}`,
-  `- Edge：优先使用 Edge 商店，${edgeStoreUrl}`,
-  `- Firefox：优先使用 Firefox Add-ons，${firefoxStoreUrl}`,
-  `- Safari：暂无通用商店版，请按 Safari 安装指南手动安装，${docsBaseUrl}/safari-install.html`,
+  "### 安装渠道",
+  "- Chrome / Edge / Brave / Vivaldi / Opera / Kiwi：下载个人 Release 中的 `*-chrome.zip`，解压后通过扩展管理页加载。",
+  "- Firefox：下载个人 Release 中的 `*-firefox.zip`，并按个人版文档手动安装。",
+  `- Safari：下载 \`*-safari-xcode-bundle.zip\`，并按 Safari 安装指南操作，${docsBaseUrl}/safari-install.html`,
   "",
   "### 使用说明",
-  "- 大多数用户：Chrome / Edge / Firefox 优先从上方商店链接安装；商店版安装更直接，并会跟随浏览器自动更新。",
-  "- GitHub 附件：适合无法使用商店版、需要临时验证已发布修复、调试问题，或使用商店暂未覆盖的浏览器环境。",
-  "- 手动安装版通常不会自动更新；如果你通过 GitHub 附件安装，建议 Star / Watch 仓库，以便及时看到新版本发布通知。",
-  "- Chrome / Edge / Kiwi 等 Chromium 浏览器：如确需手动安装，下载 `*-chrome.zip`，先解压，再在扩展管理页选择“加载已解压的扩展程序”。",
-  "- Firefox：优先使用 Firefox Add-ons 商店；`*-firefox.zip` 与 `*-sources.zip` 更适合高级用户、自行验证或发布流程使用。",
-  "- Safari：请下载 `*-safari-xcode-bundle.zip`，解压后直接打开其中的 Xcode 工程；不要只下载 `*-safari.zip`。",
+  "- 上游 Chrome Web Store、Edge Add-ons 和 Firefox Add-ons 中的同名扩展不是个人增强版。",
+  "- Stable 与 Nightly 均需手动安装和手动更新；扩展内版本提示只比较 qianbkk/all-api-hub 的 Stable Release，不会静默替换扩展。",
+  "- 建议 Star / Watch 个人仓库，以便及时看到新版本发布通知。",
+  "- Chromium 浏览器：下载 `*-chrome.zip`，先解压，再在扩展管理页选择“加载已解压的扩展程序”。",
+  "- Firefox：`*-firefox.zip` 是个人版手动安装包；`*-sources.zip` 主要用于源码审查和发布流程。",
+  "- Safari：请下载 `*-safari-xcode-bundle.zip`，解压后打开其中的 Xcode 工程；不要只下载 `*-safari.zip`。",
   "",
   "### 文档链接",
   `- 快速上手：${docsBaseUrl}/get-started.html`,

@@ -14,35 +14,13 @@
 > This repository is a personal fork based on the [upstream project](https://github.com/qixing-jk/all-api-hub). `main` is the default development and release branch; `upstream-sync` only tracks upstream changes. See [the unified modification notes](./MODIFICATION_NOTES.md).
 
 <p align="center">
-<a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">
-  <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat">
-</a>
-<a href="https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa">
-  <img alt="Microsoft Edge" src="https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat">
-</a>
-<a href="https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}">
-  <img alt="Firefox Add-on" src="https://img.shields.io/amo/v/{bc73541a-133d-4b50-b261-36ea20df0d24}?label=Firefox&logo=firefoxbrowser&style=flat">
-</a>
+  [Latest personal-fork release](https://github.com/qianbkk/all-api-hub/releases/latest) · [Personal-fork documentation](https://qianbkk.github.io/all-api-hub/en/) · [Source](https://github.com/qianbkk/all-api-hub)
 </p>
 
 **[⚡ Quick Start](https://qianbkk.github.io/all-api-hub/en/get-started.html) | [🌐 Supported Sites](https://qianbkk.github.io/all-api-hub/en/supported-sites.html) | [🔌 Integrations](https://qianbkk.github.io/all-api-hub/en/supported-export-tools.html) | [📜 Changelog](https://qianbkk.github.io/all-api-hub/en/changelog.html)**
 
 <p align="center">
-  <a href="https://linux.do/t/topic/2395800">
-    <img alt="Linux.do discussion thread" src="https://img.shields.io/badge/Discussion-Linux.do-faa511?logo=linux&logoColor=white" />
-  </a>
-  <a href="./resources/wechat_group.png">
-    <img alt="WeChat Chinese group" src="https://img.shields.io/badge/WeChat-Chinese%20Group-green?logo=wechat&logoColor=white" />
-  </a>
-  <a href="https://qm.qq.com/q/ebSCy31Phe">
-    <img alt="QQ Chinese group" src="https://img.shields.io/badge/QQ-Chinese%20Group-12B7F5?logo=qq&logoColor=white" />
-  </a>
-  <a href="https://discord.gg/RmFXZ577ZQ">
-    <img alt="Discord multilingual community" src="https://img.shields.io/badge/Discord-Multilingual%20Community-5865F2?logo=discord&logoColor=white">
-  </a>
-  <a href="https://t.me/qixing_chat">
-    <img alt="Telegram multilingual group" src="https://img.shields.io/badge/Telegram-Multilingual%20Group-blue?logo=telegram&logoColor=white">
-  </a>
+  [Personal fork](https://github.com/qianbkk/all-api-hub) · [Issues](https://github.com/qianbkk/all-api-hub/issues) · [Upstream attribution](https://github.com/qixing-jk/all-api-hub)
 </p>
 
 </div>
@@ -91,35 +69,20 @@ But once you have multiple accounts, management quickly becomes painful:
 ## 🚀 Quick Installation
 
 > [!IMPORTANT]
-> **For most users, the store build is recommended.** It is easy to install and supports automatic updates.
+> **The personal enhancement is released only through this repository.** Upstream store listings are not the same build as this fork.
 
-| Channel | Install Link | Current Version | Users |
-|------|----------|----------|-------|
-| Chrome Web Store | [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome version](https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/lapnciffpekdengooeolaienkeoilfeo?label=Chrome%20Users)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) |
-| Edge Add-ons | [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge version](https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge Add-ons Users](https://img.shields.io/badge/dynamic/json?label=Edge%20Users&query=$.activeInstallCount&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/pcokpjaffghgipcgjhapgdpeddlhblaa)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) |
-| Firefox Add-ons | [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Firefox version](https://img.shields.io/amo/v/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox&logo=firefoxbrowser&style=flat)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Mozilla Add-on Users](https://img.shields.io/amo/users/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox%20Users)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) |
+| Channel | Link | Intended use |
+|---|---|---|
+| GitHub Stable | [Download the personal-fork Stable release](https://github.com/qianbkk/all-api-hub/releases/latest) | Daily use; install the package for your browser manually |
+| Nightly | [Download the personal-fork Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | Early validation; may be less stable |
+| Source build | [Read the personal-fork setup guide](https://qianbkk.github.io/all-api-hub/en/get-started.html) | Audit or build unreleased code yourself |
 
-<details>
-<summary>📦 Need manual installation or Nightly builds? (Click to expand)</summary>
-
-| Channel | Download Link | Best For |
-|------|----------|----------|
-| GitHub Stable | [Download Stable](https://github.com/qianbkk/all-api-hub/releases/latest) | When you cannot install the store build or need to temporarily install a published fix manually |
-| Nightly pre-release | [Download Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | When you want early access and are willing to help test; it may be less stable than the store build |
-
-GitHub Stable and Nightly are manual installation channels and do not auto-update. Star / Watch the repository to receive new version notifications. See the [installation and update guide](https://qianbkk.github.io/all-api-hub/en/extension-update-install.html) for more details.
-
-**Other environments:**
-- **Mobile browsers**: Supports mobile Edge, Firefox for Android, Kiwi, and more. See the [mobile browser guide](https://qianbkk.github.io/all-api-hub/en/faq.html#mobile-browser-support).
-- **QQ Browser / 360 Browser / similar**: See the [manual loading guide](https://qianbkk.github.io/all-api-hub/en/other-browser-install.html).
-- **Safari (Mac)**: Requires Xcode for compilation. See the [Safari installation guide](https://qianbkk.github.io/all-api-hub/en/safari-install.html).
-
-</details>
+Stable and Nightly are manual-install channels and do not receive browser-store auto-updates. In-app release checks track only `qianbkk/all-api-hub`.
 
 <a id="sponsors"></a>
 ## ❤️ Sponsors
 
-> [Want to appear here?](mailto:street-anime-olive@duck.com)
+> The sponsor information below is inherited from upstream history and does not imply separate endorsement or commercial representation by the personal-fork maintainer.
 
 <div>
   <p>
@@ -339,7 +302,7 @@ All API Hub is licensed under the GNU Affero General Public License v3.0 (AGPL-3
 
 Commercial licenses are available for organizations or individuals who need terms not provided by AGPL-3.0, including proprietary distribution, closed-source modifications, white-label redistribution, or other private commercial integration use cases.
 
-For commercial licensing, contact: <street-anime-olive@duck.com>
+This personal fork does not offer a separate commercial license. For commercial terms covering rights owned by the upstream authors, verify the current policy in the [upstream repository](https://github.com/qixing-jk/all-api-hub).
 
 Commercial licenses apply only to code and assets for which the All API Hub maintainers have the right to grant commercial terms. Third-party dependencies and historical MIT-licensed portions derived from [One API Hub](https://github.com/fxaxg/one-api-hub) remain subject to their own copyright and license notices. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
@@ -355,6 +318,7 @@ Commercial licenses apply only to code and assets for which the All API Hub main
 <a id="acknowledgements"></a>
 ## 🙏 Acknowledgements
 
+- Thanks to the [upstream project](https://github.com/qixing-jk/all-api-hub) and its contributors for the project foundation; original attribution and license notices are preserved
 - Thanks to [@AngleNaris](https://github.com/AngleNaris) for designing the project logo 🎨
 - Thanks to the [Linux.do community](https://linux.do) for feedback, testing, and visibility support, especially the continued discussion and suggestions in the [All API Hub thread on Linux.do](https://linux.do/t/topic/2395800)
 - [WXT](https://wxt.dev) - The modern browser extension development framework

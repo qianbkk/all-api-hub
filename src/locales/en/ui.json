@@ -1,7 +1,7 @@
 {
   "app": {
-    "description": "Manage AI relays and your accounts and balances in one place",
-    "name": "All API Hub"
+    "description": "Compliant management for relay and self-hosted account, balance, and API assets",
+    "name": "All API Hub Personal Enhancement"
   },
   "billing": {
     "notProvided": "Not provided",

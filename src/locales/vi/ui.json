@@ -1,7 +1,7 @@
 {
   "app": {
-    "description": "Quản lý tập trung tài khoản và số dư của các trạm trung chuyển bên thứ ba và trang web tự lưu trữ",
-    "name": "All API Hub"
+    "description": "Quản lý tuân thủ tài khoản, số dư và tài sản API relay và tự lưu trữ",
+    "name": "All API Hub Personal Enhancement"
   },
   "billing": {
     "notProvided": "Chưa cung cấp",

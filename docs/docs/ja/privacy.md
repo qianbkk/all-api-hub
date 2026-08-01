@@ -81,7 +81,7 @@ All API Hub は、PostHog を介してデフォルトで有効になっている
 ## オープンソースについて
 
 本拡張機能はオープンソースソフトウェアです。以下のURLでソースコードを確認できます：
-[https://github.com/qixing-jk/all-api-hub](https://github.com/qixing-jk/all-api-hub)
+[https://github.com/qianbkk/all-api-hub](https://github.com/qianbkk/all-api-hub)
 
 ## お問い合わせ
 

@@ -2,14 +2,13 @@
 
 This document explains how to install the All API Hub extension in browsers such as QQ Browser, 360 Secure Browser, 360 Speed Browser, Cheetah Browser, Brave, Vivaldi, and Opera.
 
-Most of these browsers are based on Chromium, but their available installation paths are not identical. When a browser store or Chrome Web Store installation works, use the store build first. Use the Chrome package from GitHub Releases only when the store path is unavailable, blocked by policy, or needed for temporary verification.
+Most of these browsers are based on Chromium, but their manual installation paths are not identical. The personal enhanced edition has no independent browser-store listing; obtain every browser package from a Stable or Nightly Release in `qianbkk/all-api-hub`.
 
 ## Differences at a Glance
 
-- **Chrome / Edge / Firefox users:** Prioritize using the official store versions for easier updates.
-- **Brave / Vivaldi users:** Try Chrome Web Store first. These browsers officially support Chrome Web Store extensions.
-- **Opera users:** Opera has its own Opera Add-ons store, but All API Hub is not currently listed there. Try Chrome Web Store first; if your Opera version or policy does not allow it, use the GitHub manual package.
-- **QQ Browser, 360 Series Browsers, Cheetah Browser, and similar users:** If the browser's built-in extension center does not offer All API Hub, use the GitHub Chrome package and install it with "Load unpacked extension."
+- **Chrome / Edge / Firefox users:** Download the matching browser package from the [Personal Stable Release](https://github.com/qianbkk/all-api-hub/releases/latest) and install it manually.
+- **Brave / Vivaldi / Opera users:** Download the personal-edition Chrome package and load its unpacked directory through the browser's extension management page.
+- **QQ Browser, 360 Series Browsers, Cheetah Browser, and similar users:** Use the same personal-edition Chrome package and install it with "Load unpacked extension."
 - **Safari users:** Installation is different and requires Xcode or a Safari-specific package. Please refer to the [Safari Extension Installation Guide](./safari-install.md).
 - **Mobile Browsers:** Support for extensions varies significantly across mobile browsers. For mobile usage instructions, please see [Mobile Browser Support in FAQ](./faq.md#mobile-browser-support).
 
@@ -19,28 +18,28 @@ Extensions loaded manually are typically not updated automatically. For future u
 
 ## Supported Browsers
 
-| Browser | Preferred installation | Fallback installation | Update method |
+| Browser | Personal-edition package | Loading entry | Update method |
 |---|---|---|---|
-| Brave | [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | GitHub Chrome package, loaded manually from `brave://extensions/` | Store builds update automatically; manual builds require re-download |
-| Vivaldi | [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | GitHub Chrome package, loaded manually from `vivaldi://extensions/` | Store builds update automatically; manual builds require re-download |
-| Opera | [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo); All API Hub is not currently listed in Opera Add-ons | GitHub Chrome package, loaded manually from `opera://extensions/` | Chrome Web Store builds are usually updated through browser / store mechanisms; manual builds require re-download |
-| QQ Browser | Use the built-in extension center first if it offers All API Hub | `qqbrowser://extensions`, or `chrome://extensions/` if unavailable, then enable Developer mode and load the unpacked directory | Depends on the installation source; manual builds require re-download |
-| 360 Secure Browser / 360 Speed Browser | Use the built-in extension / app center first if it offers All API Hub | `chrome://extensions/`, or Extensions / Plugin Management in the menu, then enable Developer mode and load the unpacked directory | Depends on the installation source; manual builds require re-download |
-| Cheetah Browser | Use the built-in extension center first if it offers All API Hub | `liebao://extensions/`, then enable Developer mode and load the unpacked directory | Depends on the installation source; manual builds require re-download |
-| Starry Wish / Percent / Cent Browser, etc. | If the browser supports Chrome Web Store, try the store first | Try `chrome://extensions/` and load the unpacked directory manually | Depends on the installation source; manual builds require re-download |
-| Mobile Kiwi / Edge, etc. | Depends on the browser's actual extension entry point | See [Mobile Browser Support in FAQ](./faq.md#mobile-browser-support) | Depends on browser support |
+| Brave | Chrome package from Personal Stable | `brave://extensions/` | Download and load the new directory |
+| Vivaldi | Chrome package from Personal Stable | `vivaldi://extensions/` | Download and load the new directory |
+| Opera | Chrome package from Personal Stable | `opera://extensions/` | Download and load the new directory |
+| QQ Browser | Chrome package from Personal Stable | `qqbrowser://extensions`, or `chrome://extensions/` if unavailable | Download and load the new directory |
+| 360 Secure Browser / 360 Speed Browser | Chrome package from Personal Stable | `chrome://extensions/` or Extensions / Plugin Management | Download and load the new directory |
+| Cheetah Browser | Chrome package from Personal Stable | `liebao://extensions/` | Download and load the new directory |
+| Starry Wish / Percent / Cent Browser, etc. | Chrome package from Personal Stable | Try `chrome://extensions/` first | Download and load the new directory |
+| Mobile Kiwi / Edge, etc. | Depends on whether the browser accepts external packages | See [Mobile Browser Support in FAQ](./faq.md#mobile-browser-support) | Depends on browser support |
 
-If a browser cannot use a store install and also lacks "Developer mode" or "Load unpacked extension," the current version may not support installing external extensions. In that case, switch to Chrome, Edge, Firefox, or try the full/desktop version of that browser.
+If a browser lacks "Developer mode" or "Load unpacked extension," it may not support installing the personal edition as an external extension. Use a desktop browser that supports manual loading instead.
 
-::: tip Store availability is separate from All API Hub listing status
-A browser can have its own extension store without All API Hub being listed there. For example, Opera has Opera Add-ons, but currently you should use Chrome Web Store or the GitHub manual package.
+::: warning Upstream store packages are not the personal edition
+Even when a browser supports Chrome Web Store, do not treat the similarly named upstream listing as the personal enhanced edition. This guide supports only packages downloaded from the personal repository Releases.
 :::
 
-## Preparing the GitHub Manual Package
+## Preparing the Personal Manual Package
 
-If you can install directly from Chrome Web Store, Edge Add-ons, or Firefox Add-ons, you do not need this section. These steps are only for browsers that need manual loading.
+The following steps apply to every Chromium-family browser that needs the personal enhanced edition.
 
-1. Open the [Latest Release](https://github.com/qixing-jk/all-api-hub/releases/latest).
+1. Open the [Latest Release](https://github.com/qianbkk/all-api-hub/releases/latest).
 2. Download the Chrome version package from the attachments:
 
 ```text
@@ -173,13 +172,7 @@ Enable `Developer mode` on the extension management page.
 
 ## Brave / Vivaldi / Opera Installation
 
-These browsers can usually use Chrome Web Store. First open the [All API Hub Chrome Web Store page](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) in the target browser and try installing from there.
-
-- Brave officially supports installing extensions from Chrome Web Store.
-- Vivaldi officially supports Chrome Web Store extensions. If the install button does not appear, check Vivaldi's Google Extensions / Web Store setting.
-- Opera has Opera Add-ons and also supports Chrome extensions. All API Hub is not currently listed in Opera Add-ons, so use Chrome Web Store first.
-
-If store installation fails, manually load the GitHub Chrome package from the extension management page:
+These browsers can load unpacked Chromium extensions. Download and extract the Chrome package from the [Personal Stable Release](https://github.com/qianbkk/all-api-hub/releases/latest), then open the appropriate extension management page:
 
 | Browser | Extension Management Page |
 |---|---|
@@ -194,9 +187,9 @@ Once on the extension management page, follow the [manual loading procedure](#de
 
 ## Updating the Extension
 
-Manually loaded versions do not update automatically. For the differences between store versions, GitHub Stable, and Nightly, read [Installation Channels and Updates](./extension-update-install.md) first. To update a manually loaded version, follow these steps:
+The manually loaded personal edition does not update automatically. For the differences between Stable and Nightly, read [Personal Edition Installation and Updates](./extension-update-install.md) first. Then follow these steps:
 
-1. Open the [Latest Release](https://github.com/qixing-jk/all-api-hub/releases/latest).
+1. Open the [Latest Release](https://github.com/qianbkk/all-api-hub/releases/latest).
 2. Download the new `all-api-hub-<version>-chrome.zip`.
 3. Extract it to the original fixed directory or to a new version-specific directory.
 4. Open the extension management page.
@@ -261,4 +254,4 @@ Some browsers do not support the sidebar capabilities of Chrome/Edge. In such ca
 
 ---
 
-If you encounter any issues, please report them in [GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues).
+If you encounter any issues, please report them in [GitHub Issues](https://github.com/qianbkk/all-api-hub/issues).

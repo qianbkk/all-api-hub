@@ -4,22 +4,24 @@ In just a few minutes, you can start your journey of intelligent AI asset manage
 
 ## 1. Installation
 
-For the best experience (including automatic updates), we **strongly recommend installing from each browser's official store**.
+The personal enhanced edition is published only through `qianbkk/all-api-hub`; upstream browser-store packages are not personal-edition distribution channels.
 
-| Channel | Download Link | Current Version | Users |
+| Channel | Intended use | Download | Update method |
 |---|---|---|---|
-| Chrome Store | [Chrome Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome version](https://img.shields.io/chrome-web-store/v/lapnciffpekdengooeolaienkeoilfeo?label=Chrome&logo=googlechrome&style=flat)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/lapnciffpekdengooeolaienkeoilfeo?label=Chrome%20Users)](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) |
-| Edge Store | [Edge Store](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge version](https://img.shields.io/badge/dynamic/json?label=Edge&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpcokpjaffghgipcgjhapgdpeddlhblaa&logo=microsoftedge&style=flat)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) | [![Edge Add-ons Users](https://img.shields.io/badge/dynamic/json?label=Edge%20Users&query=$.activeInstallCount&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/pcokpjaffghgipcgjhapgdpeddlhblaa)](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) |
-| Firefox Store | [Firefox Store](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Firefox version](https://img.shields.io/amo/v/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox&logo=firefoxbrowser&style=flat)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) | [![Mozilla Add-on Users](https://img.shields.io/amo/users/%7Bbc73541a-133d-4b50-b261-36ea20df0d24%7D?label=Firefox%20Users)](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) |
+| Stable | Recommended personal-edition release for daily use | [Download latest Stable](https://github.com/qianbkk/all-api-hub/releases/latest) | Download and reinstall manually |
+| Nightly | Preview personal-edition changes before Stable | [Download Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) | Download and reinstall manually; may be unstable |
+| Source build | Development, review, or custom builds | [Open the personal repository](https://github.com/qianbkk/all-api-hub) | Pull, build, and install it yourself |
+
+::: warning Installation source
+The similarly named Chrome, Edge, and Firefox store listings are published by the upstream project, not by this personal enhanced edition. To receive the features, branding, update source, and security policy documented here, install only a Release from the personal repository above. Manual personal-edition builds do not auto-update; Star / Watch the repository for release notifications.
+:::
 
 <details>
-<summary>📦 Manual Installation, Safari, or Mobile? (Click to expand)</summary>
+<summary>📦 Safari, another browser, or mobile? (Click to expand)</summary>
 
-- **GitHub Stable**: Use [GitHub Releases](https://github.com/qixing-jk/all-api-hub/releases) when you cannot install a store build or Chrome Web Store compatible build, or need to temporarily install a published fix manually. Manual installations do not auto-update like the store build. You can Star / Watch the repository to receive new version notifications.
-- **Nightly pre-release**: For early access and testing. It may be less stable than the store build. Nightly is also a manual installation channel and does not auto-update.
 - **Safari (Mac)**: Requires installation via Xcode. See the [Safari Installation Guide](./safari-install.md).
-- **QQ / 360 / Brave / Vivaldi / Opera, etc.**: Installation paths differ across Chromium browsers. Brave, Vivaldi, and Opera can usually try Chrome Web Store first; if a store path is unavailable, use manual loading. See the [Other Browser Installation Guide](./other-browser-install.md).
-- **Mobile**: Supports Edge mobile, Firefox Android, Kiwi, etc. See [Mobile FAQ](./faq.md#mobile-browser-support).
+- **QQ / 360 / Brave / Vivaldi / Opera, etc.**: Download the Chrome package from the personal Stable Release and load it manually. See the [Other Browser Installation Guide](./other-browser-install.md).
+- **Mobile**: Availability depends on whether the browser can load an external extension. See [Mobile FAQ](./faq.md#mobile-browser-support).
 
 </details>
 
@@ -56,7 +58,7 @@ If you are looking for stable, efficient, and highly compatible AI relay service
 - [Infistar.ai](https://infistar.ai/register?aff=ALLAPIHUB&ref_source=link): Every available model is verified through real calls, with load balancing across 10,000+ official API and account-pool supply routes, full-modal support for text, video, images, embeddings, and reranking, transparent pricing and usage, and prices from 10% of official rates.
 :::
 
-> **Shield Bypass Tip**: If the site has Cloudflare verification (5-second shield), the plugin will automatically pop up a window to assist with bypassing it. Once verified, it will continue the recognition process automatically.
+> **Manual verification tip**: If a site requires Cloudflare or another security check, a manual identification action can open a temporary page. Switch to that page and complete the verification yourself; the workflow continues after verification succeeds. The extension does not solve or bypass CAPTCHAs automatically.
 
 <a id="manual-addition"></a>
 ### 2.2 Manual Addition (Alternative)
@@ -108,7 +110,7 @@ After adding an account, you can "push" these configurations to other AI tools w
 - **[Bookmark Management](./bookmark-management.md)**: Centrally collect console links, documentation, recharge portals, and more.
 
 ### 🛡️ Stability & Security Protection
-- **[Cloudflare Bypass Assistant](./cloudflare-helper.md)**: Assist in passing verification to ensure uninterrupted refreshes and check-ins.
+- **[Manual Site Verification Relay](./cloudflare-helper.md)**: During a manual action, open a temporary page and let the user complete the site's verification before continuing.
 - **[WebDAV Sync & Encryption](./webdav-sync.md)**: Supports cross-device encrypted backups, ensuring data is never lost.
 
 ### 🔔 Notification Channels

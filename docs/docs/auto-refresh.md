@@ -13,7 +13,7 @@
 
 1. 至少已成功添加一个站点账号。
 2. 浏览器需保持扩展运行（移动端 Kiwi/Firefox 亦可，但需确保浏览器未被系统杀死）。
-3. 若站点存在 Cloudflare 防护，请先参考 [Cloudflare 过盾助手](./cloudflare-helper.md) 完成校验。
+3. 若站点存在 Cloudflare 防护，请先参考 [站点人工验证接力](./cloudflare-helper.md) 完成校验。
 
 ## 设置入口
 
@@ -41,13 +41,13 @@
 | 问题 | 解决方案 |
 |------|----------|
 | 定时刷新未触发 | 可能是浏览器被系统休眠，重新打开扩展或手动点击“立即刷新”；必要时尝试降低间隔。 |
-| 频繁触发 Cloudflare 限流 | 适当增大刷新间隔，并确保 [Cloudflare 过盾助手](./cloudflare-helper.md) 能正常弹窗校验。 |
+| 频繁触发 Cloudflare 限流 | 增大刷新间隔并减少并发；手动刷新需要验证时，使用 [站点人工验证接力](./cloudflare-helper.md) 并由本人完成验证。 |
 | 刷新失败且提示 401/403 | 登录状态已失效，重新在浏览器访问对应站点并刷新插件。 |
 | 多设备冲突 | 建议配合 [WebDAV 备份与自动同步](./webdav-sync.md) 统一账号数据，避免重复刷新同一站点。 |
 
 ## 相关文档
 
-- [Cloudflare 过盾助手](./cloudflare-helper.md)
+- [站点人工验证接力](./cloudflare-helper.md)
 - [自动签到](./auto-checkin.md)
 - [WebDAV 备份与自动同步](./webdav-sync.md)
 - [权限管理（可选权限）](./permissions.md)

@@ -3,33 +3,66 @@ import { sitemapPlugin } from "@vuepress/plugin-sitemap"
 import { defaultTheme } from "@vuepress/theme-default"
 import { defineUserConfig } from "vuepress"
 
-const sitemapHostname = process.env.DOCS_HOSTNAME ?? "https://all-api-hub.qixing1217.top"
+const docsBase = process.env.DOCS_BASE ?? "/all-api-hub/"
+const sitemapHostname =
+  process.env.DOCS_HOSTNAME ?? "https://qianbkk.github.io/all-api-hub"
 
 export default defineUserConfig({
-  base: "/",
+  base: docsBase,
 
   head: [
-    ["link", { rel: "icon", type: "image/png", sizes: "16x16", href: "/16.png" }],
-    ["link", { rel: "icon", type: "image/png", sizes: "32x32", href: "/32.png" }],
-    ["link", { rel: "icon", type: "image/png", sizes: "48x48", href: "/48.png" }],
-    ["link", { rel: "apple-touch-icon", sizes: "128x128", href: "/128.png" }],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: `${docsBase}16.png`,
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: `${docsBase}32.png`,
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "48x48",
+        href: `${docsBase}48.png`,
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        sizes: "128x128",
+        href: `${docsBase}128.png`,
+      },
+    ],
   ],
 
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'All API Hub - 你的全能 AI 资产管家',
-      description: '一个开源的浏览器插件，旨在优化管理New API等AI中转站账号的体验。用户可以轻松集中管理和查看账户余额、模型及密钥，并自动添加新站点',
+      title: 'All API Hub 个人增强版 - 你的全能 AI 资产管家',
+      description: 'qianbkk 维护的个人增强版：合规管理 New API 兼容中转站与自建实例的账号、余额、用量、签到、模型价格、API 凭据和公告。',
     },
     '/en/': {
       lang: 'en-US',
-      title: 'All API Hub',
-      description: 'An open-source browser extension to aggregate and manage all your API hub accounts, including balance, models, and keys, without the hassle of logging in',
+      title: 'All API Hub Personal Enhancement',
+      description: 'The qianbkk-maintained personal fork for compliant New API-compatible relay and self-hosted account, balance, usage, check-in, pricing, credential, and announcement management.',
     },
     '/ja/': {
       lang: 'ja-JP',
-      title: 'All API Hub',
-      description: 'API Hubアカウント（残高、モデル、キーを含む）を、ログインの手間なしに集約・管理するためのオープンソースブラウザ拡張機能',
+      title: 'All API Hub 個人拡張版',
+      description: 'qianbkk が保守する個人フォーク。New API 互換中継サイトとセルフホスト環境のアカウント、残高、使用量、チェックイン、価格、認証情報、公告を適法に管理します。',
     },
   },
 

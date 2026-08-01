@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest"
 
+import { LATEST_RELEASE_URL, NIGHTLY_RELEASE_URL } from "~/constants/about"
 import About from "~/features/About/About"
 import { getFeedbackDestinationUrls } from "~/utils/navigation/feedbackLinks"
 import { render, screen } from "~~/tests/test-utils/render"
@@ -53,5 +54,20 @@ describe("About", () => {
       communityLink.compareDocumentPosition(discussionLink) &
         Node.DOCUMENT_POSITION_FOLLOWING,
     ).toBeTruthy()
+  })
+
+  it("shows only personal stable and nightly release destinations", async () => {
+    render(<About />, { withReleaseUpdateStatusProvider: false })
+
+    expect(
+      await screen.findByRole("link", {
+        name: "about:personalReleases.stable.button",
+      }),
+    ).toHaveAttribute("href", LATEST_RELEASE_URL)
+    expect(
+      await screen.findByRole("link", {
+        name: "about:personalReleases.nightly.button",
+      }),
+    ).toHaveAttribute("href", NIGHTLY_RELEASE_URL)
   })
 })

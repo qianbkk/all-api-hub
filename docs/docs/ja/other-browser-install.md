@@ -2,14 +2,13 @@
 
 この記事では、QQブラウザ、360セーフブラウザ、360エクストリームブラウザ、チーターブラウザ、Brave、Vivaldi、OperaなどのブラウザにAll API Hub拡張機能をインストールする方法を説明します。
 
-これらのブラウザの多くは Chromium ベースですが、利用できるインストール方法は同じではありません。ブラウザストアまたは Chrome ウェブストアからインストールできる場合は、まずストア版を使ってください。ストア経路が使えない場合、組織ポリシーで制限されている場合、または一時的に GitHub 版を確認したい場合だけ、GitHub Releases の Chrome パッケージを手動読み込みします。
+これらのブラウザの多くは Chromium ベースですが、手動インストールの入口は同じではありません。個人強化版には独立したブラウザストア掲載がないため、すべてのブラウザ用パッケージを `qianbkk/all-api-hub` の Stable または Nightly Release から取得してください。
 
 ## まず違いを確認
 
-- Chrome / Edge / Firefoxユーザー：各ストア版を優先して使用してください。更新がより簡単です。
-- Brave / Vivaldi ユーザー：まず Chrome ウェブストアからのインストールを試してください。これらのブラウザは公式に Chrome ウェブストア拡張機能をサポートしています。
-- Opera ユーザー：Opera には Opera Add-ons がありますが、All API Hub は現在 Opera Add-ons には単独掲載されていません。まず Chrome ウェブストアを試し、Opera のバージョンやポリシーで利用できない場合に GitHub 手動パッケージを使ってください。
-- QQブラウザ、360系ブラウザ、チーターブラウザなどのユーザー：ブラウザ内蔵の拡張機能センターで All API Hub が見つからない場合は、GitHub の Chrome パッケージを使い、「展開された拡張機能を読み込む」でインストールします。
+- Chrome / Edge / Firefox ユーザー：[個人 Stable Release](https://github.com/qianbkk/all-api-hub/releases/latest) から対応するブラウザ用パッケージをダウンロードし、手動インストールします。
+- Brave / Vivaldi / Opera ユーザー：個人版の Chrome パッケージをダウンロードし、各ブラウザの拡張機能管理ページから解凍ディレクトリを読み込みます。
+- QQブラウザ、360系ブラウザ、チーターブラウザなどのユーザー：同じ個人版 Chrome パッケージを使い、「展開された拡張機能を読み込む」でインストールします。
 - Safariユーザー：インストール方法が異なります。XcodeまたはSafari専用パッケージで処理する必要があります。[Safari拡張機能インストールガイド](./safari-install.md)を確認してください。
 - モバイルブラウザ：ブラウザによって拡張機能のサポート状況が大きく異なります。モバイル版については、[FAQのモバイルブラウザサポート](./faq.md#mobile-browser-support)を確認してください。
 
@@ -19,28 +18,28 @@
 
 ## 対象ブラウザ
 
-| ブラウザ | 優先インストール方法 | 代替インストール方法 | 更新方法 |
+| ブラウザ | 個人版パッケージ | 読み込み入口 | 更新方法 |
 |---|---|---|---|
-| Brave | [Chrome ウェブストア](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | GitHub Chrome パッケージを `brave://extensions/` から手動読み込み | ストア版は自動更新。手動版は再ダウンロードが必要 |
-| Vivaldi | [Chrome ウェブストア](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) | GitHub Chrome パッケージを `vivaldi://extensions/` から手動読み込み | ストア版は自動更新。手動版は再ダウンロードが必要 |
-| Opera | [Chrome ウェブストア](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo)。All API Hub は現在 Opera Add-ons には掲載されていません | GitHub Chrome パッケージを `opera://extensions/` から手動読み込み | Chrome ウェブストア版は通常、ブラウザ / ストアの仕組みで更新されます。手動版は再ダウンロードが必要 |
-| QQブラウザ | 内蔵拡張機能センターで All API Hub が見つかる場合はそちらを優先 | `qqbrowser://extensions`、利用できない場合は `chrome://extensions/` で開発者モードを有効にして解凍ディレクトリを読み込み | インストール元による。手動版は再ダウンロードが必要 |
-| 360セーフブラウザ / 360エクストリームブラウザ | 内蔵拡張機能 / アプリセンターで All API Hub が見つかる場合はそちらを優先 | `chrome://extensions/`、またはメニュー内の拡張機能 / プラグイン管理で開発者モードを有効にして解凍ディレクトリを読み込み | インストール元による。手動版は再ダウンロードが必要 |
-| チーターブラウザ | 内蔵拡張機能センターで All API Hub が見つかる場合はそちらを優先 | `liebao://extensions/` で開発者モードを有効にして解凍ディレクトリを読み込み | インストール元による。手動版は再ダウンロードが必要 |
-| 星愿 / 百分 / Cent Browser など | Chrome ウェブストアに対応している場合は、まずストアを試す | `chrome://extensions/` から手動で解凍ディレクトリを読み込み | インストール元による。手動版は再ダウンロードが必要 |
-| モバイル版 Kiwi / Edge など | ブラウザの実際の拡張機能入口による | [FAQ のモバイルブラウザサポート](./faq.md#mobile-browser-support)を参照 | ブラウザの対応状況による |
+| Brave | 個人 Stable の Chrome パッケージ | `brave://extensions/` | 新版をダウンロードして新しいディレクトリを読み込み |
+| Vivaldi | 個人 Stable の Chrome パッケージ | `vivaldi://extensions/` | 新版をダウンロードして新しいディレクトリを読み込み |
+| Opera | 個人 Stable の Chrome パッケージ | `opera://extensions/` | 新版をダウンロードして新しいディレクトリを読み込み |
+| QQブラウザ | 個人 Stable の Chrome パッケージ | `qqbrowser://extensions`、利用できない場合は `chrome://extensions/` | 新版をダウンロードして新しいディレクトリを読み込み |
+| 360セーフブラウザ / 360エクストリームブラウザ | 個人 Stable の Chrome パッケージ | `chrome://extensions/` または拡張機能 / プラグイン管理 | 新版をダウンロードして新しいディレクトリを読み込み |
+| チーターブラウザ | 個人 Stable の Chrome パッケージ | `liebao://extensions/` | 新版をダウンロードして新しいディレクトリを読み込み |
+| 星愿 / 百分 / Cent Browser など | 個人 Stable の Chrome パッケージ | まず `chrome://extensions/` を試す | 新版をダウンロードして新しいディレクトリを読み込み |
+| モバイル版 Kiwi / Edge など | 外部パッケージを受け入れるかによる | [FAQ のモバイルブラウザサポート](./faq.md#mobile-browser-support)を参照 | ブラウザの対応状況による |
 
-ブラウザがストアインストールに対応しておらず、「開発者モード」または「展開された拡張機能を読み込む」もない場合、現在のバージョンでは外部拡張機能のインストールがサポートされていない可能性があります。この場合は Chrome、Edge、Firefox に切り替えるか、対応するブラウザのフルバージョン / デスクトップ版を試してください。
+ブラウザに「開発者モード」または「展開された拡張機能を読み込む」がない場合、個人版を外部拡張機能としてインストールできない可能性があります。手動読み込みに対応するデスクトップブラウザを使用してください。
 
-::: tip ストアの有無と All API Hub の掲載状況は別です
-ブラウザに独自の拡張機能ストアがあっても、All API Hub がそのストアに掲載されているとは限りません。たとえば Opera には Opera Add-ons がありますが、現在は Chrome ウェブストアまたは GitHub 手動パッケージを使ってください。
+::: warning アップストリームのストアパッケージは個人版ではありません
+ブラウザが Chrome ウェブストアに対応していても、同名のアップストリーム掲載を個人強化版と混同しないでください。このガイドは個人リポジトリ Release からダウンロードしたパッケージのみを対象とします。
 :::
 
-## GitHub 手動インストールパッケージの準備
+## 個人版手動インストールパッケージの準備
 
-Chrome ウェブストア、Edge Add-ons、Firefox Add-ons から直接インストールできる場合、この手順は不要です。以下は手動読み込みが必要なブラウザ向けです。
+以下の手順は、個人強化版をインストールするすべての Chromium 系ブラウザに適用されます。
 
-1. [最新リリースバージョン](https://github.com/qixing-jk/all-api-hub/releases/latest)を開きます。
+1. [最新リリースバージョン](https://github.com/qianbkk/all-api-hub/releases/latest)を開きます。
 2. 添付ファイルからChrome版の圧縮ファイルをダウンロードします：
 
 ```text
@@ -173,13 +172,7 @@ liebao://extensions/
 
 ## Brave / Vivaldi / Opera のインストール
 
-これらのブラウザは通常 Chrome ウェブストアを利用できます。まず対象ブラウザで [All API Hub の Chrome ウェブストアページ](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) を開き、インストールを試してください。
-
-- Brave は公式に Chrome ウェブストアからの拡張機能インストールをサポートしています。
-- Vivaldi は公式に Chrome ウェブストア拡張機能をサポートしています。インストールボタンが表示されない場合は、Vivaldi の Google Extensions / Web Store 関連設定を確認してください。
-- Opera には Opera Add-ons があり、Chrome 拡張機能にも対応しています。All API Hub は現在 Opera Add-ons には単独掲載されていないため、まず Chrome ウェブストアを使ってください。
-
-ストアインストールに失敗した場合は、以下の拡張機能管理ページから GitHub Chrome パッケージを手動読み込みします：
+これらのブラウザは Chromium 拡張機能ディレクトリを読み込めます。[個人 Stable Release](https://github.com/qianbkk/all-api-hub/releases/latest) から Chrome パッケージをダウンロードして解凍し、以下の拡張機能管理ページを開いてください：
 
 | ブラウザ | 拡張機能管理ページ |
 |---|---|
@@ -194,9 +187,9 @@ liebao://extensions/
 
 ## 拡張機能の更新
 
-手動で読み込んだバージョンは自動更新されません。ストア版、GitHub Stable、Nightly の違いについては、先に [インストール方法と更新について](./extension-update-install.md) を確認してください。手動で読み込んだバージョンを更新する場合は、以下の手順に従ってください：
+手動で読み込んだ個人版は自動更新されません。Stable と Nightly の違いについては、先に [個人版のインストール方法と更新](./extension-update-install.md) を確認してください。その後、以下の手順で更新します：
 
-1. [最新リリースバージョン](https://github.com/qixing-jk/all-api-hub/releases/latest)を開きます。
+1. [最新リリースバージョン](https://github.com/qianbkk/all-api-hub/releases/latest)を開きます。
 2. 新しい `all-api-hub-<version>-chrome.zip` をダウンロードします。
 3. 元の固定ディレクトリに解凍するか、新しいバージョンディレクトリに解凍します。
 4. 拡張機能管理ページを開きます。
@@ -261,4 +254,4 @@ Firefoxの`.xpi` / Firefoxパッケージや、SafariのXcodeバンドルはダ�
 
 ---
 
-問題がある場合は、[GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues) でフィードバックしてください。
+問題がある場合は、[GitHub Issues](https://github.com/qianbkk/all-api-hub/issues) でフィードバックしてください。

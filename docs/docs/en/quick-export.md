@@ -43,7 +43,7 @@
 
 | Issue | Solution |
 |------|----------|
-| Self-hosted Sites prompt 401/403 | Confirm that the backend credentials have not expired and that the configuration has been re-saved in the plugin; if necessary, refer to [Cloudflare Bypass Helper](./cloudflare-helper.md). |
+| Self-hosted Sites prompt 401/403 | Confirm that the backend credentials have not expired and that the configuration has been re-saved in the plugin; if necessary, refer to [Manual Site Verification Relay](./cloudflare-helper.md). |
 | CherryStudio unresponsive | Check if the desktop client is installed and if the browser is allowed to launch the `cherrystudio://` protocol. |
 | CC Switch import failed | Paste the generated JSON into the official import dialog. If prompted for missing fields, please update CC Switch to the latest version. |
 | Model list is empty | The site has not yet returned model data. You can first refresh the model list within the plugin or perform New API Model Synchronization. |
@@ -52,5 +52,5 @@
 
 -   [Self-Hosted Site Management](./self-hosted-site-management.md)
 -   [Managed Site Model Synchronization](./managed-site-model-sync.md)
--   [Cloudflare Bypass Helper](./cloudflare-helper.md)
+-   [Manual Site Verification Relay](./cloudflare-helper.md)
 -   [CLIProxyAPI Integration](./cliproxyapi-integration.md)

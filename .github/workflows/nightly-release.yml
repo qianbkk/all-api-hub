@@ -319,7 +319,7 @@ jobs:
           SAFARI_PROJECT_DIR: ${{ runner.temp }}/all-api-hub-nightly-safari-project
           SAFARI_ZIP_TARGET_NAME: all-api-hub-nightly-safari.zip
           SAFARI_APP_NAME: ${{ vars.SAFARI_APP_NAME || 'All API Hub' }}
-          SAFARI_BUNDLE_IDENTIFIER: ${{ vars.SAFARI_BUNDLE_IDENTIFIER || 'io.github.qixingjk.allapihub' }}
+          SAFARI_BUNDLE_IDENTIFIER: ${{ vars.SAFARI_BUNDLE_IDENTIFIER || 'io.github.qianbkk.allapihub' }}
 
       - name: Upload Safari nightly assets
         working-directory: source

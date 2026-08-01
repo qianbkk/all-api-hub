@@ -1,6 +1,6 @@
 import { Storage } from "@plasmohq/storage"
 
-import { EXTENSION_STORE_IDS } from "~/constants/extensionStores"
+import { UPSTREAM_CHROMIUM_STORE_IDS } from "~/constants/extensionStores"
 import { STORAGE_KEYS, STORAGE_LOCKS } from "~/services/core/storageKeys"
 import { withExtensionStorageWriteLock } from "~/services/core/storageWriteLock"
 import { createRuntimeMessageFailure } from "~/services/runtimeMessaging/result"
@@ -324,7 +324,7 @@ async function detectInstallEligibility(): Promise<DetectInstallEligibilityResul
     }
   }
 
-  if (isKnownChromiumStoreBuild()) {
+  if (isKnownUpstreamChromiumStoreBuild()) {
     return { eligible: true, reason: RELEASE_UPDATE_REASONS.StoreBuild }
   }
 
@@ -387,15 +387,17 @@ function getRuntimeBaseUrl(): string {
 }
 
 /**
- * Check whether the current Chromium runtime ID matches a known store build.
+ * Check whether the runtime ID matches an upstream Chromium store build.
+ * These IDs are compatibility markers only, not personal-edition release
+ * destinations; release comparisons still use qianbkk/all-api-hub.
  */
-function isKnownChromiumStoreBuild(): boolean {
+function isKnownUpstreamChromiumStoreBuild(): boolean {
   const runtimeId = getRuntimeId()
   if (typeof runtimeId !== "string" || !runtimeId) {
     return false
   }
 
-  return Object.values(EXTENSION_STORE_IDS).includes(runtimeId)
+  return Object.values(UPSTREAM_CHROMIUM_STORE_IDS).includes(runtimeId)
 }
 
 /**

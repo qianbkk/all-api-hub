@@ -12,7 +12,7 @@ After adding a PackyCode account, you can view balances, manage API keys, check 
 
 ## 1. What All API Hub Does
 
-**All API Hub** ([open source on GitHub](https://github.com/qixing-jk/all-api-hub)) is a browser extension for AI API users who need to manage multiple accounts, sites, and client configurations. For PackyCode users, it brings PackyCode account status, API keys, model pricing, and export actions into one workflow.
+**All API Hub** ([open source on GitHub](https://github.com/qianbkk/all-api-hub)) is a browser extension for AI API users who need to manage multiple accounts, sites, and client configurations. For PackyCode users, it brings PackyCode account status, API keys, model pricing, and export actions into one workflow.
 
 When used with PackyCode, it helps with:
 
@@ -28,20 +28,15 @@ PackyCode provides the model API, and All API Hub helps organize the account, ke
 
 ## 2. Install All API Hub
 
-For automatic updates and the most stable experience, install from the official store for your browser when possible.
+The personal enhanced edition is published only through `qianbkk/all-api-hub`:
 
-### Desktop Browsers
-
-- **Chrome**: [Chrome Web Store](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo)
-- **Edge**: [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa)
-- **Firefox**: [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24})
-
-### Other Environments
-
-- **QQ / 360 / Brave / Vivaldi / Opera, etc.**: Brave, Vivaldi, and Opera can usually try Chrome Web Store first; QQ Browser, 360 Browser, Cheetah Browser, and similar browsers can use manual Chromium loading when no usable store path is available. See the [Other Browser Installation Guide](../other-browser-install.md).
+- **Daily use**: download the matching package from [Personal Stable](https://github.com/qianbkk/all-api-hub/releases/latest).
+- **Early testing**: use [Personal Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly), which may be unstable.
+- **QQ / 360 / Brave / Vivaldi / Opera, etc.**: download the Chrome package from Personal Stable and load it manually. See the [Other Browser Installation Guide](../other-browser-install.md).
 - **Safari on Mac**: see the [Safari installation guide](../safari-install.md).
 - **Mobile browsers**: see the [mobile browser FAQ](../faq.md#mobile-browser-support).
-- **Fallback option**: if your browser cannot use a store build or Chrome Web Store compatible build, and the guide above does not work, download the Stable package from [GitHub Releases](https://github.com/qixing-jk/all-api-hub/releases/latest). Manually installed builds do not update automatically.
+
+> The similarly named Chrome, Edge, and Firefox store listings are upstream releases, not the personal enhanced edition documented here. Personal-edition packages require manual updates.
 
 ---
 
@@ -164,5 +159,5 @@ A: They work together. The PackyCode console remains the source for account, rec
 ## Links
 
 - [PackyCode](https://www.packyapi.com/register?aff=all-api-hub)
-- [All API Hub GitHub repository](https://github.com/qixing-jk/all-api-hub)
-- [All API Hub documentation](https://all-api-hub.qixing1217.top/en/)
+- [All API Hub GitHub repository](https://github.com/qianbkk/all-api-hub)
+- [All API Hub documentation](https://qianbkk.github.io/all-api-hub/en/)

@@ -85,4 +85,4 @@ In the **Settings → Automatic Check-in** panel:
 -   [Auto-detection Troubleshooting Guide](./auto-detect.md)
 -   [Auto-refresh and Real-time Data](./auto-refresh.md)
 -   [WebDAV Backup and Automatic Synchronization](./webdav-sync.md)
--   [Cloudflare Bypass Helper](./cloudflare-helper.md)
+-   [Manual Site Verification Relay](./cloudflare-helper.md)

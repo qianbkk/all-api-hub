@@ -1,11 +1,11 @@
 # 更新日志
 
-本页记录面向普通用户的主要更新点（功能变化 / 体验优化 / 问题修复）。如需查看完整历史版本与更详细的技术变更，请访问 [GitHub Releases](https://github.com/qixing-jk/all-api-hub/releases)。
+本页记录面向普通用户的主要更新点（功能变化 / 体验优化 / 问题修复）。如需查看完整历史版本与更详细的技术变更，请访问 [GitHub Releases](https://github.com/qianbkk/all-api-hub/releases)。
 
 ::: tip 新用户先读
 - **怎么确认你当前的版本**：打开扩展弹窗，标题栏会显示版本号；也可以在设置页查看。
 - **如何不再自动打开本页**：可在「设置 → 通用 → 更新日志」控制是否“更新后自动打开更新日志”。
-- **排查异常**：可在「设置 → 通用 → 日志」开启控制台日志，并附上复现步骤到 [Issues](https://github.com/qixing-jk/all-api-hub/issues)。
+- **排查异常**：可在「设置 → 通用 → 日志」开启控制台日志，并附上复现步骤到 [Issues](https://github.com/qianbkk/all-api-hub/issues)。
 :::
 
 ## 3.53.0

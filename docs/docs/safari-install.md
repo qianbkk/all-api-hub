@@ -24,7 +24,7 @@
 
 Safari 附件会上传到最新版本 Release 页面：
 
-- [最新版本 Release](https://github.com/qixing-jk/all-api-hub/releases/latest)
+- [最新版本 Release](https://github.com/qianbkk/all-api-hub/releases/latest)
 
 #### 1. 打开对应版本的 Release 页面
 
@@ -77,7 +77,7 @@ all-api-hub-3.29.0-safari-xcode-bundle.zip
 
 ```bash
 # 克隆或下载项目源码
-git clone https://github.com/qixing-jk/all-api-hub.git
+git clone https://github.com/qianbkk/all-api-hub.git
 cd all-api-hub
 
 # 安装依赖
@@ -101,7 +101,7 @@ xcrun safari-web-extension-converter .output/safari-mv2/
 xcrun safari-web-extension-converter .output/safari-mv2/ \
   --project-location /path/to/all-api-hub-safari-project \
   --app-name "All API Hub" \
-  --bundle-identifier "io.github.qixingjk.allapihub"
+  --bundle-identifier "io.github.qianbkk.allapihub"
 ```
 
 这一步会生成一个 Xcode 工程，用来承载 Safari 扩展。
@@ -209,4 +209,4 @@ Safari 扩展需要打包成 macOS 应用才能安装和分发，这与 Chrome�
 
 ---
 
-如有问题，请在 [GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues) 中反馈。
+如有问题，请在 [GitHub Issues](https://github.com/qianbkk/all-api-hub/issues) 中反馈。

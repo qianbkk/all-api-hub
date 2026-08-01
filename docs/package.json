@@ -1,6 +1,6 @@
 {
   "name": "all-api-hub-docs",
-  "description": "A VuePress project",
+  "description": "All API Hub 个人增强版的多语言使用文档",
   "version": "0.0.1",
   "license": "AGPL-3.0",
   "type": "module",

@@ -95,7 +95,7 @@ All API Hub 支持多种添加账号的方式，以适配不同类型的站点�
 
 - **401 Unauthorized**: 登录失效或 Access Token 已过期。
 - **429 Too Many Requests**: 触发了站点频率限制，插件会自动排队重试。
-- **403 Forbidden**: 通常表示触发了 Cloudflare 防护，请参考 [Cloudflare 过盾助手](./cloudflare-helper.md)。
+- **403 Forbidden**: 通常表示触发了 Cloudflare 防护，请参考 [站点人工验证接力](./cloudflare-helper.md)。
 
 你可以点击卡片上的健康状态图标查看详细的错误信息。更多常见错误处理请参考 [常见问题](./faq.md)。
 

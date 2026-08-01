@@ -1,9 +1,9 @@
 {
   "manifest_name": {
-    "message": "All API Hub - あなたの万能 AI 資産マネージャー"
+    "message": "All API Hub 個人拡張版 - AI 資産マネージャー"
   },
   "manifest_description": {
-    "message": "残高 / 使用量、自動チェックイン、主要クライアント向けキーのワンクリック書き出し、ページ内 API テスト、チャネル / モデル同期とリダイレクト"
+    "message": "中継アカウント、残高、使用量、チェックイン、モデル価格、API 認証情報、公告を適法に管理し、更新と文書は qianbkk 個人版のみを追跡"
   },
   "manifest_commands_sidebar_action": {
     "message": "サイドバーで All API Hub を開く"

@@ -9,7 +9,7 @@
     },
     "community": {
       "button": "Abrir centro de la comunidad",
-      "description": "Consulta el código QR de WeChat, el grupo de QQ, la comunidad multilingüe de Discord, el grupo de Telegram y otros canales para preguntas, conversaciones de configuración y solución de problemas."
+      "description": "Consulta la guía de soporte de la edición personal y usa Issues o Discussions de qianbkk/all-api-hub para preguntas, configuraciones y solución de problemas."
     },
     "discussion": {
       "button": "Abrir debates",
@@ -30,7 +30,20 @@
   "homepage": "Página principal del proyecto",
   "homepageDesc": "Ver documentación detallada, guías de usuario y más información",
   "implementedFeatures": "Funciones implementadas",
-  "intro": "All API Hub es una extensión de navegador para administrar sitios relay de terceros compatibles con New API y tu propia instancia de New API. Centraliza el monitoreo de cuentas y saldos, el ordenamiento inteligente y la detección de sitios, y ofrece automatizaciones como actualización automática y omisión de firewall con ventana temporal. Para New API autohospedado, también ofrece administración de canales y sincronización de lista de modelos, además de integrarse con CLIProxyAPI, respaldo WebDAV y herramientas de importación/exportación.",
+  "intro": "All API Hub Personal Enhancement is the qianbkk-maintained personal fork for compliant relay-account management. It centralizes accounts, balances, usage, model prices and credentials, staggers same-site check-ins, classifies announcements locally, supports encrypted WebDAV backup, and requires visible user handoff for security challenges instead of bypassing them. Updates, announcements, documentation and feedback use qianbkk/all-api-hub.",
+  "personalReleases": {
+    "nightly": {
+      "button": "Download Nightly",
+      "description": "Validate the latest personal-repository changes early; it may be less stable.",
+      "title": "Personal-fork Nightly"
+    },
+    "stable": {
+      "button": "Download Stable",
+      "description": "Download the published personal enhancement only from qianbkk/all-api-hub.",
+      "title": "Personal-fork Stable"
+    },
+    "title": "Personal-fork downloads"
+  },
   "privacyText": "Los datos sensibles, como cuentas, claves de API, cookies, saldos, contenido de solicitudes y entradas del usuario, permanecen locales de forma predeterminada. Los análisis anónimos opcionales del producto se usan solo para priorizar correcciones de problemas comunes, mejorar los flujos principales y la compatibilidad, y reducir fricciones innecesarias; no recopilan esos datos sensibles.",
   "privacyTitle": "Protección de privacidad",
   "projectLinks": "Enlaces del proyecto",
@@ -40,23 +53,6 @@
     "title": "Actualizaciones de versión"
   },
   "starRepo": "Darle estrella",
-  "stores": {
-    "chrome": "Chrome Web Store",
-    "edge": "Microsoft Edge Add-ons",
-    "firefox": "Firefox Add-ons"
-  },
-  "storesSection": {
-    "download": {
-      "button": "Abrir tienda",
-      "description": "Descargar desde {{store}}."
-    },
-    "review": {
-      "button": "Calificar en {{store}}",
-      "description": "Si All API Hub te ayuda, una reseña positiva en {{store}} ayuda mucho.",
-      "title": "Dejar una reseña positiva"
-    },
-    "title": "Calificar y descargar"
-  },
   "techStack": {
     "radix": "Primitivos de UI accesibles",
     "react": "Biblioteca de interfaz de usuario",
@@ -65,7 +61,7 @@
     "typescript": "JavaScript con seguridad de tipos",
     "wxt": "Framework de desarrollo de extensiones de navegador"
   },
-  "thanksDesc": "Gracias a todos los desarrolladores que han contribuido a la comunidad open source; el desarrollo de este plugin se beneficia de estos excelentes proyectos y herramientas open source",
+  "thanksDesc": "Maintained by qianbkk and built on upstream All API Hub and its contributors. Original attribution, licenses and third-party notices are preserved.",
   "title": "Acerca de",
   "upcomingFeatures": "Próximas funciones",
   "version": "Versión:",

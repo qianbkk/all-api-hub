@@ -1,11 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Community Groups / 社区交流群
-    url: https://all-api-hub.qixing1217.top/#community
-    about: Join the WeChat group, multilingual Discord community, or Telegram group for discussion / 加入微信群、多语言 Discord 社区或 Telegram 群参与讨论
-  - name: GitHub Discussions / GitHub 讨论区
-    url: https://github.com/qixing-jk/all-api-hub/discussions
-    about: Ask questions and discuss ideas with the community / 向社区提问和讨论想法
-  - name: Documentation / 文档
-    url: https://all-api-hub.qixing1217.top/
-    about: Read the documentation to learn more about the project / 阅读文档以了解有关项目的更多信息
+  - name: Personal Fork Documentation / 个人版文档
+    url: https://qianbkk.github.io/all-api-hub/
+    about: Read the personal fork documentation before reporting a problem / 反馈问题前请先查阅个人增强版文档
+  - name: Personal Fork Repository / 个人版仓库
+    url: https://github.com/qianbkk/all-api-hub
+    about: Check source code, releases, and current project status / 查看源码、发布版本与当前项目状态

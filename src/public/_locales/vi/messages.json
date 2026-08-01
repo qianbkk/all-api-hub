@@ -1,9 +1,9 @@
 {
   "manifest_name": {
-    "message": "All API Hub - Trình quản lý tài sản AI tất cả trong một"
+    "message": "All API Hub Personal Enhancement - Quản lý tài sản AI"
   },
   "manifest_description": {
-    "message": "Quản lý số dư/mức sử dụng, tự động điểm danh, xuất key một lần nhập cho các client phổ biến, kiểm tra API ngay trong trang, đồng bộ và chuyển hướng kênh/mô hình"
+    "message": "Quản lý tuân thủ tài khoản relay, số dư, mức dùng, điểm danh, giá, thông tin API và thông báo; cập nhật và tài liệu chỉ theo bản qianbkk"
   },
   "manifest_commands_sidebar_action": {
     "message": "Mở All API Hub trong thanh bên"

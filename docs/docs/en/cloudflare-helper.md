@@ -1,38 +1,51 @@
-# Cloudflare Shield Bypass Assistant
+# Manual Site Verification Relay
 
-> Applies to aggregated relay stations with Cloudflare's 5-second shield (or stricter Bot Fight Mode) enabled, ensuring the plugin can both identify account information and automatically retry requests when they are restricted.
+> Use this when Cloudflare, Turnstile, or another site check requires user interaction. The personal edition only opens an isolated temporary page and resumes the original action after verification. It does not solve CAPTCHAs, spoof device signals, or automatically bypass site security controls.
 
-## Feature Overview
+## Overview
 
-- **Automatic Detection**: Automatically triggers the shield bypass process when the page title contains `Just a moment`, `#cf-content` exists, or the API returns status codes like 401/403/429.
-- **Temporary Window**: Opens a temporary tab in the background with the same origin as the target domain, reusing browser cookies, and returns to the original page after completing Cloudflare's JS/human challenge.
-- **Request Degradation**: When a regular `fetch` fails, the request is replayed by the temporary window carrying cookies, avoiding infinite retries caused by cross-origin/missing credentials.
-- **Manual Fallback**: If Cloudflare determines that user interaction is required, a window will automatically pop up, prompting the user to complete verification within 20 seconds.
+- **Open a temporary page on demand**: A user-initiated action such as manual identification or manual refresh can open the target site in a tab or temporary window when verification is required.
+- **The user completes verification**: For sliders, image selection, Turnstile, or other human checks, switch to the temporary page and follow the site's instructions yourself.
+- **Resume after verification**: After the site accepts the current browser session, the extension can continue the original identification or refresh workflow.
+- **Safe defaults**: Temporary verification pages are disabled for background automation by default, and automatic refresh does not use them by default. Popup, side-panel, and settings-page entry points can be controlled separately.
+- **Site-level rate limiting**: Batch refresh and check-in operations continue to use site-level rate limits and bounded staggering.
 
-## Usage Steps
+## Steps
 
-1. **Log in to the target site**, add an account in the plugin → fill in the site address → click "Auto Identify".
-2. If a Cloudflare prompt appears, the browser will automatically pop up a window; simply keep the window in the foreground and wait for automatic verification or click as prompted.
-3. After successful verification, the plugin will automatically return to the identification process and continue to read data such as Access Token, balance, and model list.
-4. If rate limiting is triggered during the API request phase (common in CC Switch/CherryStudio export or New API synchronization), the system will automatically enable the temporary window to resend, no additional action is required.
+1. Sign in to the target site, then run "Auto Identify" or a manual refresh in the extension.
+2. If site verification is required, use the prompt to open a temporary page.
+3. Switch to that page and complete the site's verification yourself. Do not use CAPTCHA-solving, answer-proxying, or automatic-click tools.
+4. Return to the extension after verification. The original action should continue; if it does not, retry once manually.
+5. If verification repeats, stop retrying, increase the refresh interval, and contact the site about account or access restrictions.
 
-## Notes
+## Opening mode
 
-- **IP Quality**: If verification fails continuously, you need to change your network or temporarily relax protection on the site side; the default timeout is 20 seconds.
-- **Pop-up Permissions**: Please allow the browser to pop up windows, otherwise the plugin cannot create temporary tabs.
-- **Repeated Challenges**: If 429 is frequently triggered, you can lower the rate or enable a model whitelist in Self-Hosted Site Management to reduce invalid requests.
+Under **Settings → Data Refresh**, choose how temporary verification pages open:
 
-## Common Issues
+- **Tab in the current window**: Adds an inactive tab to the existing window to reduce interruptions.
+- **Separate temporary window**: Provides a more isolated browsing context but may bring the browser to the foreground.
 
-| Scenario | Solution |
-|------|----------|
-| Pop-up closes immediately | Check if the browser's address bar on the right is blocking pop-ups; allow it and re-identify. |
-| Stuck on "Just a moment" | Manually complete the CAPTCHA in the pop-up window; if it still fails, change your IP. |
-| API export still reports 403 | Manually click "Export Again"; the backend will reuse the cookie that just passed the shield bypass; if it fails, check if the target site restricts administrator Tokens. |
-| No pop-up but identification fails | The site may have removed Cloudflare, but the API returns 401 (credentials invalid); please log in to the site again and refresh the plugin data. |
+In both modes, the user must complete verification manually.
 
-## Related Documents
+## Safety notes
 
-- [Quick Site Export](./quick-export.md)
-- [Self-Hosted Site Management](./self-hosted-site-management.md)
+- No IP rotation, device-fingerprint spoofing, or CAPTCHA solving is performed.
+- The extension cannot guarantee that a site will accept the session; site risk controls, account state, and network conditions remain under the site's control.
+- Optional Cookie and Web Request permissions are used only after user authorization and only when the selected workflow needs them. They can be revoked at any time.
+- If the browser blocks the temporary page, check extension permissions and popup settings instead of retrying rapidly.
+
+## Troubleshooting
+
+| Scenario | What to do |
+| --- | --- |
+| The temporary page does not open | Check whether the browser blocked popups and whether you granted the relevant optional permissions. |
+| The page remains on "Just a moment" | Wait for the site check; if an interactive check appears, complete it yourself. Stop and try later if it does not progress. |
+| 401/403 remains after verification | Sign in again, confirm that the account or token is valid, and retry manually. |
+| An automated task does not open a verification page | This is the personal edition's safe default: background automation does not initiate manual verification relay. |
+| 429 occurs repeatedly | Increase the refresh interval, reduce concurrent or batch operations, and follow the site's limits. |
+
+## Related documentation
+
+- [Automatic Refresh and Real-time Data](./auto-refresh.md)
+- [Automatic Check-in](./auto-checkin.md)
 - [Permission Management (Optional Permissions)](./permissions.md)

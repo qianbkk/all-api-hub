@@ -86,7 +86,7 @@ All API Hub 可通过 PostHog 收集默认开启的匿名产品统计。这类�
 ## 开源说明
 
 本扩展为开源软件，您可以在以下地址查看源代码：
-[https://github.com/qixing-jk/all-api-hub](https://github.com/qixing-jk/all-api-hub)
+[https://github.com/qianbkk/all-api-hub](https://github.com/qianbkk/all-api-hub)
 
 
 ## 联系方式

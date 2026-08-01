@@ -69,4 +69,4 @@
 
 - [自动刷新与实时数据](./auto-refresh.md)
 - [自动签到](./auto-checkin.md)
-- [Cloudflare 过盾助手](./cloudflare-helper.md)
+- [站点人工验证接力](./cloudflare-helper.md)

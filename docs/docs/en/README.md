@@ -1,28 +1,24 @@
 ---
 home: true
 title: "Homepage"
-heroImage: "/512.png"
-heroText: "All API Hub - Your All-in-One AI Asset Manager"
-tagline: "Open-source browser extension to unify the management of third-party AI aggregation relays and self-built New APIs: automatically identify accounts, compare model prices, verify API/CLI compatibility, synchronize models and channels, and support cross-platform and encrypted WebDAV backups."
+heroImage: "../512.png"
+heroText: "All API Hub Personal Enhancement - AI Asset Manager"
+tagline: "The qianbkk-maintained personal fork for compliant relay and self-hosted account management, including balances, usage, staggered check-ins, model pricing, API credentials, and announcements, with independent updates, docs, and feedback."
 actions:
   - text: "Get Started"
     link: "./get-started.html"
     type: "primary"
 
-  - text: "Chrome Store"
-    link: "https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo"
+  - text: "Personal-fork Stable"
+    link: "https://github.com/qianbkk/all-api-hub/releases/latest"
     type: "secondary"
 
-  - text: "Edge Store"
-    link: "https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa"
+  - text: "Personal-fork Nightly"
+    link: "https://github.com/qianbkk/all-api-hub/releases/tag/nightly"
     type: "secondary"
 
-  - text: "FireFox Store"
-    link: "https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}"
-    type: "secondary"
-    
-  - text: "Safari Install"
-    link: "./safari-install.html"
+  - text: "View Source"
+    link: "https://github.com/qianbkk/all-api-hub"
     type: "secondary"
 
 features:
@@ -43,7 +39,7 @@ features:
   - title: "🛠️ Self-hosted Site Linkage"
     details: "Deeply adapted for New API, AxonHub, Claude Code Hub, and more, enabling channel management and model sync."
   - title: "🔒 Privacy & Secure Sync"
-    details: "Local-first storage with encrypted WebDAV sync. Includes a Cloudflare assistant to handle bot challenges automatically."
+    details: "Local-first storage with encrypted WebDAV sync. When a site requires security verification, the extension can open a temporary page for the user to complete it manually before continuing."
 
 footer: "AGPL-3.0 Licensed | Copyright 2025-present All API Hub"
 ---
@@ -92,16 +88,9 @@ No matter which architecture you use, there is a good chance we support it:
 Have questions or want to share useful sites? Join the community:
 
 - [GitHub Discussions](https://github.com/qianbkk/all-api-hub/discussions)
-- [Discord Community](https://discord.gg/RmFXZ577ZQ)
-- [Telegram Group](https://t.me/qixing_chat)
-- [QQ Group](https://qm.qq.com/q/ebSCy31Phe)
-- **WeChat Group**: Scan the QR code below to join the Chinese group.
-
-<img
-  src="../../../resources/wechat_group.png"
-  alt="All API Hub WeChat Group QR Code"
-  style="width: min(280px, 100%);"
-/>
+- [Personal-fork repository](https://github.com/qianbkk/all-api-hub)
+- [Personal-fork Issues](https://github.com/qianbkk/all-api-hub/issues)
+- Upstream community links are not official support channels for this personal fork, so this page does not display or direct users to upstream groups.
 
 <a id="sponsors"></a>
 ## ❤️ Sponsors

@@ -43,7 +43,7 @@
 
 | 问题 | 处理方式 |
 |------|----------|
-| 自建托管站点提示 401/403 | 确认后台凭据未过期，并已在插件中重新保存配置；必要时参考 [Cloudflare 过盾助手](./cloudflare-helper.md)。 |
+| 自建托管站点提示 401/403 | 确认后台凭据未过期，并已在插件中重新保存配置；必要时参考 [站点人工验证接力](./cloudflare-helper.md)。 |
 | CherryStudio 无响应 | 检查是否已安装桌面端并允许浏览器唤起 `cherrystudio://` 协议。 |
 | CC Switch 导入失败 | 将生成的 JSON 粘贴到官方导入对话框，若提示字段缺失，请更新 CC Switch 至最新版本。 |
 | 模型列表为空 | 站点尚未返回模型数据，可先在插件内刷新模型列表或执行 New API 模型同步。 |
@@ -52,5 +52,5 @@
 
 - [自建站点管理](./self-hosted-site-management.md)
 - [自建站点模型同步](./managed-site-model-sync.md)
-- [Cloudflare 过盾助手](./cloudflare-helper.md)
+- [站点人工验证接力](./cloudflare-helper.md)
 - [CLIProxyAPI 集成](./cliproxyapi-integration.md)

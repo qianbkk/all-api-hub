@@ -187,14 +187,15 @@
 
 - `git diff --check`：通过，无空白错误。
 - Prettier 全项目检查：通过。
-- i18next CLI 真实提取和 `extract --dry-run --ci --quiet`：通过，六种语言资源已按提取器确定性排序。
+- i18next CLI 键提取与 `extract --dry-run --ci --quiet`：通过；七套 About 语言资源按提取器确定性顺序整理，CI 干跑显示 `No files were updated`。
 - i18n 命名空间、静态翻译键和西班牙语资源一致性：3 项测试通过。
-- 远端失败的安全默认值相关测试：2 个文件、26 项测试通过。
-- 公告分类器和公告卡片：2 个文件、7 项测试通过。
-- 更新日志和文档链接：2 个文件、28 项测试通过；连同上面两项远端失败测试，首轮定向验证共 54 项通过。
-- 新增功能与签到调度定向测试：3 个测试文件、151 项测试全部通过。
-- 远端上一轮 TypeScript、ESLint、Knip 和两次扩展构建已通过；本地全项目 TypeScript、ESLint、Knip 受之前中断安装和并行测试资源争用影响，出现无诊断退出或配置解析异常，不将其误记为源码失败，最终以重新推送后的 GitHub Actions 干净环境结果为准。
-- 本地并行 Vitest coverage 在资源争用下出现大量统一 15 秒超时，和远端原始失败模式不同，已停止该失真运行；远端将按两个独立分片重新完整验证。
+- TypeScript `tsc --noEmit`：通过；此前 3 个 React 类型错误确认来自隔离副本 `.wxt/types/imports.d.ts` 的陈旧绝对路径，重新指向隔离源码后错误消失。
+- ESLint 全项目检查：通过。
+- Knip 未使用代码检查：通过；已删除 `src/constants/about.ts` 中未使用的 `RELEASES_URL` 和 `UPSTREAM_REPO_URL` 导出。
+- Prettier 全项目检查：通过。
+- 安全默认值、签到错峰、调度、公告分类、更新源、About 等 11 个关键测试文件共 247 项测试通过；About 个人 Stable / Nightly 目标测试另行复跑 2 项通过。
+- 文档脚本测试 10 项通过，129 份 Markdown 链接检查 0 警告。
+- 本地并行 Vitest coverage 曾在资源争用下出现大量统一 15 秒超时，和远端原始失败模式不同，已停止该失真运行；远端仍按两个独立分片进行完整验证。
 
 文档发布地址保持为 `https://qianbkk.github.io/all-api-hub/`。部署已改用 GitHub Pages 官方 Actions Artifact 流程，不再创建或依赖 `gh-pages` 分支；更新日志的原始数据回退也只读取 `main`。本轮修复了安全默认值调整造成的两项过期单元测试期望、个人仓库 Release API 的三项 E2E 拦截地址，以及动态翻译键导致的 i18n 提取差异。nightly 在配置 `PAT_TOKEN` 时更新标签和 Release；Fork 未配置该可选 Secret 时仍完成构建与校验，并明确安全跳过发布写入。
 
@@ -222,3 +223,23 @@
 2. `4fec675d` 新增巴西葡萄牙语（`pt-BR`）完整界面资源、语言切换、日期自然语言输入和相应测试。该功能与个人品牌及安全边界无冲突，已手工移植到 `main`。
 
 本次仍未引入自动保护绕过逻辑；个人版的 `enabled: false`、`useForAutoRefresh: false` 和用户可见人工验证原则保持不变。
+
+## 9. 个人版品牌、链接与发行渠道复检（2026-08-01）
+
+本轮对所有用户可见入口进行了独立性审查，覆盖 README、About、Manifest 本地化名称、应用简介、VuePress 首页与 SEO、安装文档、FAQ、合作站点教程、Issue 模板、Safari Bundle ID 和 GitHub Actions。
+
+主要修正：
+
+1. README 中的仓库、Releases、文档、Issues 和安装渠道统一指向 `qianbkk/all-api-hub`；上游链接只用于许可证、作者归属和历史技术引用。
+2. About 页面移除上游 Chrome、Edge、Firefox 商店下载卡片，改为个人 Stable 与 Nightly Release。
+3. 九套浏览器 Manifest 本地化名称和简介、七套应用 UI / About 语言资源统一标识个人增强版，并说明更新、公告、文档和反馈追踪个人仓库。
+4. 中英日安装、FAQ、其他浏览器指南和 12 份合作站点教程不再推荐或链接上游商店包；个人版仅通过 Stable、Nightly 和源码构建分发，手动安装不会自动更新。
+5. 删除已无用户界面用途的上游商店页面 URL；保留的 Chrome / Edge 扩展 ID 已重命名为 `UPSTREAM_CHROMIUM_STORE_IDS`，仅作为识别上游商店安装来源的兼容标记，不是个人版发布目标。
+6. 普通用户文档中的旧上游文档域名和普通仓库入口已清理；`docs/superpowers` 的历史设计稿保留原始地址，以维持历史技术上下文。
+7. Issue 模板、文档 Issue tracker、CI 发布配置和 Safari Bundle ID 已切换到个人仓库命名空间。
+8. `scripts/update-release-extra-notes.sh` 已删除旧文档域名、上游商店 URL 和“优先商店版”说明；Stable / Nightly Release 附加说明只描述个人仓库的手动安装与更新边界。
+9. `scripts/prepare-safari-release-assets.sh` 与发布工作流默认 Safari Bundle ID 均改为 `io.github.qianbkk.allapihub`。
+10. 浏览器商店提交任务新增 `publish_browser_stores` 显式开关，默认关闭；仅手动触发且个人商店凭据完整时运行，缺少可选 Secrets 时安全跳过，不影响个人 Release 构建。
+11. VuePress 生产构建使用 `/all-api-hub/` 基路径；主题 Logo 保持根相对资源路径，由 VuePress 只添加一次 base，避免生成 `/all-api-hub/all-api-hub/512.png`。
+
+发行边界：Chrome Web Store、Edge Add-ons 和 Firefox Add-ons 中的同名扩展仍属于上游发行版，不代表个人增强版。个人版用户应只从 `https://github.com/qianbkk/all-api-hub/releases` 获取安装包。

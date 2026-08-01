@@ -24,7 +24,7 @@
 
 Safari 添付ファイルは、最新バージョンの Release ページにアップロードされます。
 
-- [最新バージョン Release](https://github.com/qixing-jk/all-api-hub/releases/latest)
+- [最新バージョン Release](https://github.com/qianbkk/all-api-hub/releases/latest)
 
 #### 1. 対応バージョンの Release ページを開く
 
@@ -77,7 +77,7 @@ all-api-hub-3.29.0-safari-xcode-bundle.zip
 
 ```bash
 # プロジェクトのソースコードをクローンまたはダウンロード
-git clone https://github.com/qixing-jk/all-api-hub.git
+git clone https://github.com/qianbkk/all-api-hub.git
 cd all-api-hub
 
 # 依存関係をインストール
@@ -101,7 +101,7 @@ xcrun safari-web-extension-converter .output/safari-mv2/
 xcrun safari-web-extension-converter .output/safari-mv2/ \
   --project-location /path/to/all-api-hub-safari-project \
   --app-name "All API Hub" \
-  --bundle-identifier "io.github.qixingjk.allapihub"
+  --bundle-identifier "io.github.qianbkk.allapihub"
 ```
 
 この手順により、Safari 拡張機能を格納するための Xcode プロジェクトが生成されます。
@@ -209,4 +209,4 @@ Safari 拡張機能は、macOS アプリケーションとしてパッケージ�
 
 ---
 
-問題がある場合は、[GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues) でフィードバックしてください。
+問題がある場合は、[GitHub Issues](https://github.com/qianbkk/all-api-hub/issues) でフィードバックしてください。

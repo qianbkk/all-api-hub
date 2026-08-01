@@ -1,9 +1,9 @@
 {
   "manifest_name": {
-    "message": "All API Hub - 你的全能 AI 資產管家"
+    "message": "All API Hub 個人增強版 - 你的全能 AI 資產管家"
   },
   "manifest_description": {
-    "message": "一站式管理 New API 相容中轉站帳號：餘額/用量看板、自動簽到、金鑰一鍵匯出到常用應用、網頁內 API 可用性測試、渠道與模型同步/重新導向"
+    "message": "合規管理中轉站帳號、餘額、用量、簽到、模型價格、API 憑據與公告；更新與文件僅追蹤 qianbkk 個人版"
   },
   "manifest_commands_sidebar_action": {
     "message": "在側邊欄中開啟 All API Hub"

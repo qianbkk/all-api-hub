@@ -115,26 +115,24 @@ Sub2APIサイトの一般的な特徴は以下の通りです。コンソール�
 
 ### 機能の問題やバグに遭遇した場合はどうすればよいですか？
 
-1. **Issueの確認**：[GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues) にアクセスして、同じ問題がないか検索してください。
-2. **最新バージョンの使用**：
-   - 多くのユーザーには、ストア版を使い、ブラウザの自動更新を待つことをお勧めします。
-   - 修正がまだストアに反映されていない場合、またはストア版をインストールできない場合は、GitHub Releases から一時的に手動インストールできます。
-   - GitHub Stable、Nightly、main ブランチの開発版は一時的な確認やテスト協力向けです。手動インストール版は自動更新されません。新しいバージョンの通知を受け取るには、リポジトリを Star / Watch してください。各インストール方法の違いは、[インストール方法と更新について](./extension-update-install.md) を確認してください。
+1. **Issueの確認**：[GitHub Issues](https://github.com/qianbkk/all-api-hub/issues) にアクセスして、同じ問題がないか検索してください。
+2. **最新の個人版を使用**：
+   - 日常利用には [個人版の最新 Stable](https://github.com/qianbkk/all-api-hub/releases/latest) をダウンロードしてください。
+   - 修正を先行確認する場合は [Nightly](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) を利用できますが、不安定な場合があります。
+   - 個人版は手動インストールで、ブラウザストア経由の自動更新はありません。リポジトリを Star / Watch して公開通知を受け取り、詳細は [インストール方法と更新について](./extension-update-install.md) を確認してください。
 
 ### 最新バージョンを入手するにはどうすればよいですか？
 
-プラグインは複数のプラットフォームでリリースされています。通常は利用中のブラウザに合う公式ストア版を選んでください。
+個人強化版は `qianbkk/all-api-hub` からのみ公開されます。
 
-| プラットフォーム | 更新速度 | バージョン入手 |
-|------|---------------|---------|
-| **Chrome Web Store** | 審査後に自動更新 | [インストールはこちら](https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo) |
-| **Edge Add-ons** | 審査後に自動更新 | [インストールはこちら](https://microsoftedge.microsoft.com/addons/detail/pcokpjaffghgipcgjhapgdpeddlhblaa) |
-| **Firefox Add-ons** | ⚡ 速い（数時間で審査） | [インストールはこちら](https://addons.mozilla.org/firefox/addon/{bc73541a-133d-4b50-b261-36ea20df0d24}) |
-| **GitHub Stable** | 公開済みバージョンを最速で入手、手動インストールが必要 | [ダウンロードはこちら](https://github.com/qixing-jk/all-api-hub/releases/latest) |
-| **Nightly プレリリース** | 開発中の変更を最速で試せるが、不安定な場合あり | [ダウンロードはこちら](https://github.com/qixing-jk/all-api-hub/releases/tag/nightly) |
+| チャネル | 用途 | ダウンロード |
+|---|---|---|
+| **個人 Stable** | 日常利用に推奨 | [ダウンロード](https://github.com/qianbkk/all-api-hub/releases/latest) |
+| **個人 Nightly** | 先行テスト。不安定な場合あり | [ダウンロード](https://github.com/qianbkk/all-api-hub/releases/tag/nightly) |
+| **ソースビルド** | 開発と監査 | [リポジトリ](https://github.com/qianbkk/all-api-hub) |
 
-::: tip 推奨
-Chrome、Edge、Firefox ユーザーは対応するストア版を優先してください。Brave、Vivaldi、Opera ユーザーは通常、まず Chrome ウェブストアを試せます。新しいバージョンがあるか確認したい場合、ストア版が GitHub Releases より遅れる理由を知りたい場合、または GitHub パッケージを手動インストールしたい場合は、[インストール方法と更新について](./extension-update-install.md) を確認してください。GitHub Releases は、修正がまだストアに反映されていない場合、ストア版や Chrome ウェブストア互換版をインストールできない場合、または QQ ブラウザ、360 系ブラウザ、チーターブラウザなど手動読み込みが必要なブラウザを使う場合に限って利用するのがお勧めです。これらの手動インストール版は自動更新されません。新しいバージョンの通知を受け取るにはリポジトリを Star / Watch し、対象ブラウザについては [その他のブラウザへのインストールガイド](./other-browser-install.md) を参照してください。
+::: warning アップストリームのストア版
+Chrome、Edge、Firefox ストアにある同名拡張機能はアップストリーム版であり、この個人強化版ではありません。個人版のブランド、更新元、強化機能を利用するには、個人リポジトリの Release を使い、[インストール方法と更新について](./extension-update-install.md) に従って手動更新してください。
 :::
 
 ## ⚙️ 機能使用に関する問題
@@ -294,8 +292,8 @@ QQブラウザ、360系ブラウザ、チーターブラウザ、Brave、Vivaldi
 
 ### モバイルデバイスでの使用に関する推奨事項
 
-1. **自動リフレッシュの無効化**：モバイルデバイスのリソースは限られているため、自動リフレッシュ機能を無効にし、手動リフレッシュに切り替えることをお勧めします。また、過盾アシスタント（anti-bot helper）により、リフレッシュ時に一時的なタブが作成され、日常の使用体験に影響を与える可能性があります。
-2. **過盾アシスタントの設定調整**：サイトで過盾が頻繁にトリガーされる場合は、「設定」→「過盾アシスタント」でトリガー条件を調整してください。例えば、トリガー閾値を上げるか、一部のトリガー条件を無効にして、過盾ポップアップの頻度を減らします。
+1. **自動リフレッシュの無効化**：モバイルデバイスのリソースは限られているため、自動リフレッシュを無効にし、手動更新へ切り替えることをお勧めします。
+2. **必要なときだけ手動確認リレーを使う**：手動更新でサイト確認が頻繁に必要になる場合は、「設定 → データ更新」でタブ方式を選ぶと中断を減らせます。バックグラウンド自動処理は既定で確認ページを開きません。
 3. **WebDAV同期の設定**：PCとスマートフォン間でデータを同期します。
 
 ## 🛠️ ツールと開発者向け設定
@@ -366,7 +364,7 @@ Pull Requestを歓迎します。
 3. コードをコミットします。
 4. Pull Requestを送信します。
 
-詳細は：[CONTRIBUTING.md](https://github.com/qixing-jk/all-api-hub/blob/main/CONTRIBUTING.md) を参照してください。
+詳細は：[CONTRIBUTING.md](https://github.com/qianbkk/all-api-hub/blob/main/CONTRIBUTING.md) を参照してください。
 
 ---
 
@@ -374,10 +372,10 @@ Pull Requestを歓迎します。
 
 - [使い方ガイド](./get-started.md)
 - [その他のブラウザへのインストールガイド](./other-browser-install.md)
-- [GitHubリポジトリ](https://github.com/qixing-jk/all-api-hub)
-- [問題報告](https://github.com/qixing-jk/all-api-hub/issues)
+- [GitHubリポジトリ](https://github.com/qianbkk/all-api-hub)
+- [問題報告](https://github.com/qianbkk/all-api-hub/issues)
 - [更新ログ](./changelog.md)
 
 ::: tip 回答が見つかりませんか？
-上記の内容で問題が解決しない場合は、[GitHub Issues](https://github.com/qixing-jk/all-api-hub/issues) で質問してください。
+上記の内容で問題が解決しない場合は、[GitHub Issues](https://github.com/qianbkk/all-api-hub/issues) で質問してください。
 :::

@@ -81,7 +81,7 @@ Your continued use of this extension after a policy update signifies your agreem
 ## Open Source Information
 
 This extension is open-source software. You can view the source code at:
-[https://github.com/qixing-jk/all-api-hub](https://github.com/qixing-jk/all-api-hub)
+[https://github.com/qianbkk/all-api-hub](https://github.com/qianbkk/all-api-hub)
 
 ## Contact Us
 
