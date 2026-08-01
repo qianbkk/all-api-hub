@@ -3,7 +3,7 @@ name: Test
 on:
   push:
     branches:
-      - personal-main
+      - main
     paths:
       - "src/**"
       - "public/**"

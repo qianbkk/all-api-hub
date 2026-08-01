@@ -39,6 +39,18 @@
     "siteType": "Site type",
     "unread": "Unread"
   },
+  "insights": {
+    "confidence": {
+      "high": "High-confidence local match",
+      "medium": "Possible local match"
+    },
+    "types": {
+      "maintenance": "Maintenance",
+      "model_launch": "New model",
+      "pricing_change": "Pricing change",
+      "promotion": "Promotion"
+    }
+  },
   "loading": "Loading announcements...",
   "messages": {
     "checkCompleted": "Announcement check completed",
@@ -68,17 +80,5 @@
     "total": "Total",
     "unread": "Unread"
   },
-  "title": "Site Announcements",
-  "insights": {
-    "confidence": {
-      "high": "High-confidence local match",
-      "medium": "Possible local match"
-    },
-    "types": {
-      "model_launch": "New model",
-      "promotion": "Promotion",
-      "pricing_change": "Pricing change",
-      "maintenance": "Maintenance"
-    }
-  }
+  "title": "Site Announcements"
 }

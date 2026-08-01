@@ -8,7 +8,7 @@
 
 **All API Hub personal enhancement: compliant management of New API-compatible relay accounts, balances, usage, model prices, check-ins, API credentials, and announcements**
 
-> This repository is a personal fork based on the [upstream project](https://github.com/qixing-jk/all-api-hub). `personal-main` is the default development and release branch; `upstream-sync` only tracks upstream changes. See [the unified modification notes](./MODIFICATION_NOTES.md).
+> This repository is a personal fork based on the [upstream project](https://github.com/qixing-jk/all-api-hub). `main` is the default development and release branch; `upstream-sync` only tracks upstream changes. See [the unified modification notes](./MODIFICATION_NOTES.md).
 
 <p align="center">
 <a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">

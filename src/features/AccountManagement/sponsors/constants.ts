@@ -1,7 +1,7 @@
 export const SPONSOR_CATALOG_SCHEMA_VERSION = 5
 
 export const SPONSOR_REMOTE_CATALOG_V5_URL =
-  "https://raw.githubusercontent.com/qianbkk/all-api-hub/personal-main/public/sponsor-catalog.v5.json"
+  "https://raw.githubusercontent.com/qianbkk/all-api-hub/main/public/sponsor-catalog.v5.json"
 
 export const SPONSOR_LOCALE_FALLBACKS = ["zh-CN", "en"] as const
 

@@ -1536,7 +1536,7 @@ test("checks latest release metadata when its MV3 alarm fires for an eligible in
   let githubReleaseRequests = 0
 
   await context.route(
-    "https://api.github.com/repos/qixing-jk/all-api-hub/releases/latest",
+    "https://api.github.com/repos/qianbkk/all-api-hub/releases/latest",
     (route) => {
       githubReleaseRequests += 1
       return route.fulfill({
@@ -1545,7 +1545,7 @@ test("checks latest release metadata when its MV3 alarm fires for an eligible in
         body: JSON.stringify({
           tag_name: "v9.9.9",
           html_url:
-            "https://github.com/qixing-jk/all-api-hub/releases/tag/v9.9.9",
+            "https://github.com/qianbkk/all-api-hub/releases/tag/v9.9.9",
         }),
       })
     },

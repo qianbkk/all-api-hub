@@ -70,6 +70,30 @@ export function SiteAnnouncementCard({
   const sourceUrl = getAnnouncementSourceUrl(record)
   const detailsRegionId = `site-announcement-content-${record.id}`
 
+  const getInsightTypeLabel = (type: SiteAnnouncementInsight["type"]) => {
+    switch (type) {
+      case SITE_ANNOUNCEMENT_INSIGHT_TYPES.ModelLaunch:
+        return t("insights.types.model_launch")
+      case SITE_ANNOUNCEMENT_INSIGHT_TYPES.Promotion:
+        return t("insights.types.promotion")
+      case SITE_ANNOUNCEMENT_INSIGHT_TYPES.PricingChange:
+        return t("insights.types.pricing_change")
+      case SITE_ANNOUNCEMENT_INSIGHT_TYPES.Maintenance:
+        return t("insights.types.maintenance")
+    }
+  }
+
+  const getInsightConfidenceLabel = (
+    confidence: SiteAnnouncementInsight["confidence"],
+  ) => {
+    switch (confidence) {
+      case "high":
+        return t("insights.confidence.high")
+      case "medium":
+        return t("insights.confidence.medium")
+    }
+  }
+
   const handleToggle = () => {
     onToggleExpanded(record)
   }
@@ -127,9 +151,9 @@ export function SiteAnnouncementCard({
                           key={insight.type}
                           variant={insightBadgeVariants[insight.type]}
                           size="sm"
-                          title={t(`insights.confidence.${insight.confidence}`)}
+                          title={getInsightConfidenceLabel(insight.confidence)}
                         >
-                          {t(`insights.types.${insight.type}`)}
+                          {getInsightTypeLabel(insight.type)}
                         </Badge>
                       ))}
                       {!record.read && (

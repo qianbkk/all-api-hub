@@ -3,7 +3,7 @@ name: nightly-release
 on:
   push:
     branches:
-      - personal-main
+      - main
     paths:
       - "src/**"
       - "src/public/**"
@@ -23,7 +23,7 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: "Examples: v3.30.0 (tag), personal-main or a feature branch, a1b2c3d or full commit SHA. Leave empty to use the latest default-branch commit."
+        description: "Examples: v3.30.0 (tag), main or a feature branch, a1b2c3d or full commit SHA. Leave empty to use the latest default-branch commit."
         required: false
         default: ""
 
@@ -52,7 +52,7 @@ jobs:
         env:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
-          BRANCH="${DEFAULT_BRANCH:-personal-main}"
+          BRANCH="${DEFAULT_BRANCH:-main}"
           git fetch origin "$BRANCH" --tags --force
 
       - name: Determine target ref
@@ -61,7 +61,7 @@ jobs:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           MANUAL_REF: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.ref || '' }}
         run: |
-          BRANCH="${DEFAULT_BRANCH:-personal-main}"
+          BRANCH="${DEFAULT_BRANCH:-main}"
           CHECKOUT_REF="$MANUAL_REF"
 
           if [ -z "$CHECKOUT_REF" ]; then

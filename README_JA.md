@@ -8,7 +8,7 @@
 
 **All API Hub 個人拡張版：New API 互換中継サイトの残高、使用量、モデル価格、自動チェックイン、API 認証情報、通知を適法に一元管理**
 
-> 本リポジトリは [上流プロジェクト](https://github.com/qixing-jk/all-api-hub) を基にした個人フォークです。`personal-main` は開発・リリース用の既定ブランチで、`upstream-sync` は上流追跡専用です。詳細は [統合変更ノート](./MODIFICATION_NOTES.md) を参照してください。
+> 本リポジトリは [上流プロジェクト](https://github.com/qixing-jk/all-api-hub) を基にした個人フォークです。`main` は開発・リリース用の既定ブランチで、`upstream-sync` は上流追跡専用です。詳細は [統合変更ノート](./MODIFICATION_NOTES.md) を参照してください。
 
 <p align="center">
 <a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">

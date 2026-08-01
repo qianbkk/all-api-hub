@@ -19,7 +19,7 @@ jobs:
       - name: Checkout personal repository
         uses: actions/checkout@v5
         with:
-          ref: personal-main
+          ref: main
           fetch-depth: 0
 
       - name: Mirror upstream main to upstream-sync

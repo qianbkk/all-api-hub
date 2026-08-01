@@ -19,9 +19,9 @@ import {
 import { waitForExtensionRoot } from "~~/e2e/utils/lazyLoading"
 
 const GITHUB_LATEST_RELEASE_API_URL =
-  "https://api.github.com/repos/qixing-jk/all-api-hub/releases/latest"
+  "https://api.github.com/repos/qianbkk/all-api-hub/releases/latest"
 const LATEST_RELEASE_URL =
-  "https://github.com/qixing-jk/all-api-hub/releases/tag/v9.9.9"
+  "https://github.com/qianbkk/all-api-hub/releases/tag/v9.9.9"
 
 async function readReleaseUpdateStatus(
   serviceWorker: Worker,

@@ -3,7 +3,7 @@ name: release-please
 on:
   push:
     branches:
-      - personal-main
+      - main
   workflow_dispatch:
 
 permissions:

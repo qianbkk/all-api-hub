@@ -7,11 +7,11 @@ on:
     inputs:
       # ref 示例：
       # - v3.30.0（tag）
-      # - personal-main / feat/safari-support（branch）
+      # - main / feat/safari-support（branch）
       # - a1b2c3d 或完整 40 位 commit SHA
       # - latest（默认分支最新 commit）
       ref:
-        description: "Examples: v3.30.0 (tag), personal-main or a feature branch, a1b2c3d or full commit SHA, latest (default branch HEAD). Leave empty to auto-detect the latest semver tag."
+        description: "Examples: v3.30.0 (tag), main or a feature branch, a1b2c3d or full commit SHA, latest (default branch HEAD). Leave empty to auto-detect the latest semver tag."
         required: false
         default: ""
       dry_run:
@@ -67,7 +67,7 @@ jobs:
           # - release 事件或显式输入的已存在 tag => 允许作为 release 目标
           # - 未提供 ref 时只自动选择 stable semver tag
           # - branch / commit / latest => 仅作为构建来源，可继续用于手动商店提交
-          BRANCH="${DEFAULT_BRANCH:-personal-main}"
+          BRANCH="${DEFAULT_BRANCH:-main}"
           STABLE_TAG_REGEX='^v[0-9]+\.[0-9]+\.[0-9]+$'
           CHECKOUT_REF=""
           RELEASE_TAG=""

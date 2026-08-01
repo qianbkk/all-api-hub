@@ -4,34 +4,36 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - personal-main
-    paths: # <<<<<< 新增：路径过滤
-      - "docs/docs/**" # 匹配 /docs/docs/ 目录下所有文档内容和配置 (包括 .vuepress/、config.js 等)
-      - "docs/package.json" # 匹配 /docs/package.json 文件 (因为依赖定义在这里)
-      - "docs/pnpm-lock.yaml" # 匹配 /docs/pnpm-lock.yaml 文件 (因为依赖版本锁定在这里)
-      - "resources/wechat_group.png" # 文档首页直接引用的微信群二维码，更新时也需要重新部署 Pages
+      - main
+    paths:
+      - "docs/docs/**"
+      - "docs/package.json"
+      - "docs/pnpm-lock.yaml"
+      - "resources/wechat_group.png"
+      - ".github/workflows/deploy-docs.yml"
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy-gh-pages:
+  deploy-pages:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     defaults:
       run:
-        working-directory: docs # 所有 run 命令将在此目录下执行
+        working-directory: docs
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-          # 如果你的文档需要 Git 子模块，取消注释下一行
-          # submodules: true
 
       - name: 安装 pnpm
         uses: pnpm/action-setup@v5
@@ -46,25 +48,22 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: docs/pnpm-lock.yaml
 
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: 安装依赖
         run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
-          # 因为 working-directory 是 docs，所以这里执行的是 docs/package.json 中的 docs:build
-          # 且构建输出在 /docs/docs/.vuepress/dist (相对于仓库根目录)
-          # 或者在当前工作目录 /docs 内的 docs/.vuepress/dist
-          pnpm run docs:build
-          # 创建 .nojekyll 文件，防止 GitHub Pages 尝试解析 Jekyll
-          # 该文件将位于 /docs/docs/.vuepress/dist/.nojekyll
-          > docs/.vuepress/dist/.nojekyll
+        run: pnpm run docs:build
 
-      - name: 部署文档
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: 上传 Pages 构建产物
+        uses: actions/upload-pages-artifact@v4
         with:
-          branch: gh-pages # 部署到的目标分支
-          # 指定要部署的文件夹。相对于 GitHub 仓库根目录。
-          # 您的 VitePress 文档内容在 /docs/docs/ 下，构建输出通常在 /docs/docs/.vuepress/dist
-          folder: docs/docs/.vuepress/dist
+          path: docs/docs/.vuepress/dist
+
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

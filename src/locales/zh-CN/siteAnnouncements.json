@@ -39,6 +39,18 @@
     "siteType": "站点类型",
     "unread": "未读"
   },
+  "insights": {
+    "confidence": {
+      "high": "高置信度本地识别",
+      "medium": "可能的本地识别结果"
+    },
+    "types": {
+      "maintenance": "维护故障",
+      "model_launch": "模型上新",
+      "pricing_change": "价格/倍率调整",
+      "promotion": "特价优惠"
+    }
+  },
   "loading": "正在加载公告...",
   "messages": {
     "checkCompleted": "公告检查已完成",
@@ -65,17 +77,5 @@
     "total": "公告总数",
     "unread": "未读公告"
   },
-  "title": "网站公告",
-  "insights": {
-    "confidence": {
-      "high": "高置信度本地识别",
-      "medium": "可能的本地识别结果"
-    },
-    "types": {
-      "model_launch": "模型上新",
-      "promotion": "特价优惠",
-      "pricing_change": "价格/倍率调整",
-      "maintenance": "维护故障"
-    }
-  }
+  "title": "网站公告"
 }

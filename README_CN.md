@@ -8,7 +8,7 @@
 
 **All API Hub 个人增强版：合规管理 New API 兼容中转站账号的余额/用量、模型价格、自动签到、API 凭据与公告**
 
-> 本仓库是基于 [上游项目](https://github.com/qixing-jk/all-api-hub) 的个人魔改版。`personal-main` 是本仓库的默认开发与发布分支，`upstream-sync` 仅用于追踪上游更新；详见 [统一改造文档](./MODIFICATION_NOTES.md)。
+> 本仓库是基于 [上游项目](https://github.com/qixing-jk/all-api-hub) 的个人魔改版。`main` 是本仓库的默认开发与发布分支，`upstream-sync` 仅用于追踪上游更新；详见 [统一改造文档](./MODIFICATION_NOTES.md)。
 
 <p align="center">
 <a href="https://chromewebstore.google.com/detail/lapnciffpekdengooeolaienkeoilfeo">

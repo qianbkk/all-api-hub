@@ -1197,10 +1197,20 @@ describe("typed runtime messaging setup", () => {
       return {
         ...actual,
         userPreferences: {
-          getPreferences: vi.fn().mockResolvedValue(actual.DEFAULT_PREFERENCES),
-          getPreferencesStrict: vi
-            .fn()
-            .mockResolvedValue(actual.DEFAULT_PREFERENCES),
+          getPreferences: vi.fn().mockResolvedValue({
+            ...actual.DEFAULT_PREFERENCES,
+            tempWindowFallback: {
+              ...actual.DEFAULT_PREFERENCES.tempWindowFallback,
+              enabled: true,
+            },
+          }),
+          getPreferencesStrict: vi.fn().mockResolvedValue({
+            ...actual.DEFAULT_PREFERENCES,
+            tempWindowFallback: {
+              ...actual.DEFAULT_PREFERENCES.tempWindowFallback,
+              enabled: true,
+            },
+          }),
         },
       }
     })
