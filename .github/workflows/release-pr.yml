@@ -13,6 +13,7 @@ permissions:
 
 jobs:
   release:
+    if: ${{ secrets.PAT_TOKEN != '' }}
     runs-on: ubuntu-latest
     steps:
       # Checkout 当前仓库代码
