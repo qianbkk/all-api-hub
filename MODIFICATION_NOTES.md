@@ -196,7 +196,7 @@
 - 远端上一轮 TypeScript、ESLint、Knip 和两次扩展构建已通过；本地全项目 TypeScript、ESLint、Knip 受之前中断安装和并行测试资源争用影响，出现无诊断退出或配置解析异常，不将其误记为源码失败，最终以重新推送后的 GitHub Actions 干净环境结果为准。
 - 本地并行 Vitest coverage 在资源争用下出现大量统一 15 秒超时，和远端原始失败模式不同，已停止该失真运行；远端将按两个独立分片重新完整验证。
 
-文档发布地址保持为 `https://qianbkk.github.io/all-api-hub/`。部署已改用 GitHub Pages 官方 Actions Artifact 流程，不再创建或依赖 `gh-pages` 分支；更新日志的原始数据回退也只读取 `main`。本轮修复了安全默认值调整造成的两项过期单元测试期望、个人仓库 Release API 的三项 E2E 拦截地址，以及动态翻译键导致的 i18n 提取差异。
+文档发布地址保持为 `https://qianbkk.github.io/all-api-hub/`。部署已改用 GitHub Pages 官方 Actions Artifact 流程，不再创建或依赖 `gh-pages` 分支；更新日志的原始数据回退也只读取 `main`。本轮修复了安全默认值调整造成的两项过期单元测试期望、个人仓库 Release API 的三项 E2E 拦截地址，以及动态翻译键导致的 i18n 提取差异。nightly 在配置 `PAT_TOKEN` 时更新标签和 Release；Fork 未配置该可选 Secret 时仍完成构建与校验，并明确安全跳过发布写入。
 
 ## 8. 最新上游审查（2026-08-01）
 

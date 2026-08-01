@@ -37,11 +37,24 @@ permissions:
 jobs:
   nightly:
     runs-on: ubuntu-latest
+    env:
+      NIGHTLY_RELEASE_TOKEN: ${{ secrets.PAT_TOKEN }}
     outputs:
       commit_ref: ${{ steps.commit.outputs.ref }}
       package_version: ${{ steps.package.outputs.package-version }}
+      publish_enabled: ${{ steps.release-token.outputs.enabled }}
 
     steps:
+      - name: Check nightly publishing token
+        id: release-token
+        run: |
+          if [ -n "$NIGHTLY_RELEASE_TOKEN" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "PAT_TOKEN is not configured; build validation will run, but nightly tag and release publishing will be skipped."
+          fi
+
       - name: Checkout code
         uses: actions/checkout@v5
         with:
@@ -232,16 +245,21 @@ jobs:
           } >> "$RUNNER_TEMP/nightly-notes.md"
 
       - name: Move nightly tag
+        if: ${{ steps.release-token.outputs.enabled == 'true' }}
         working-directory: source
+        env:
+          GH_TOKEN: ${{ env.NIGHTLY_RELEASE_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
           git tag -f nightly "${{ steps.commit.outputs.ref }}"
           git push --force origin refs/tags/nightly
 
       - name: Create or update nightly release
+        if: ${{ steps.release-token.outputs.enabled == 'true' }}
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ env.NIGHTLY_RELEASE_TOKEN }}
         run: |
           if gh release view nightly > /dev/null 2>&1; then
             gh release edit nightly \
@@ -259,20 +277,22 @@ jobs:
           fi
 
       - name: Upload nightly assets
+        if: ${{ steps.release-token.outputs.enabled == 'true' }}
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ env.NIGHTLY_RELEASE_TOKEN }}
         run: gh release upload nightly source/.output/nightly/*.zip --clobber
 
       - name: Append nightly release usage notes
+        if: ${{ steps.release-token.outputs.enabled == 'true' }}
         working-directory: source
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ env.NIGHTLY_RELEASE_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: bash scripts/update-release-extra-notes.sh nightly
 
   safari-nightly-assets:
     needs: nightly
-    if: ${{ needs.nightly.outputs.commit_ref != '' }}
+    if: ${{ needs.nightly.outputs.publish_enabled == 'true' && needs.nightly.outputs.commit_ref != '' }}
     runs-on: macos-latest
 
     steps:
