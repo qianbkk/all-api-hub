@@ -13,16 +13,22 @@ permissions:
 
 jobs:
   release:
-    if: ${{ secrets.PAT_TOKEN != '' }}
     runs-on: ubuntu-latest
+    env:
+      RELEASE_PLEASE_TOKEN: ${{ secrets.PAT_TOKEN }}
     steps:
       # Checkout 当前仓库代码
       - uses: actions/checkout@v5
         with:
           persist-credentials: false
 
+      - name: Explain skipped release automation
+        if: env.RELEASE_PLEASE_TOKEN == ''
+        run: echo "PAT_TOKEN is not configured; release automation is disabled for this fork."
+
       # 使用 release-please 管理版本号和 release PR (fix problem:https://github.com/googleapis/release-please/issues/2265
       - uses: gvillo/release-please-action@93642002875a0df65de8abeeeabcaeacb7c735f4
+        if: env.RELEASE_PLEASE_TOKEN != ''
         id: release
         with:
           # 不使用 GITHUB_TOKEN ，从而可以触发其它的Actions

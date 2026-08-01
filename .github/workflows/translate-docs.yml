@@ -27,6 +27,8 @@ permissions:
 jobs:
   translate:
     runs-on: ubuntu-latest
+    env:
+      HAS_TRANSLATION_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
       - name: Checkout repository
@@ -137,7 +139,7 @@ jobs:
       - name: Translate documents
         if: >-
           steps.changed-files.outputs.has_translate_files == 'true' &&
-          secrets.OPENAI_API_KEY != ''
+          env.HAS_TRANSLATION_API_KEY != ''
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
@@ -156,7 +158,7 @@ jobs:
       - name: Explain skipped automatic translation
         if: >-
           steps.changed-files.outputs.has_translate_files == 'true' &&
-          secrets.OPENAI_API_KEY == ''
+          env.HAS_TRANSLATION_API_KEY == ''
         run: echo "OPENAI_API_KEY is not configured; keeping manually maintained translations."
 
       - name: Setup pnpm for docs check
