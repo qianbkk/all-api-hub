@@ -50,6 +50,8 @@ jobs:
 
       - name: 配置 GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: 安装依赖
         run: pnpm install --frozen-lockfile --prefer-offline
