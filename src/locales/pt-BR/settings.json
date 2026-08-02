@@ -21,9 +21,9 @@
   "appearanceLanguage": {
     "language": "Idioma",
     "languageDesc": "Escolha seu idioma preferido",
-    "onboardingHelper": "Atualize o texto de integração imediatamente e mantenha esse idioma para páginas de configurações posteriores.",
+    "onboardingHelper": "O guia e as páginas de configurações seguintes usarão o idioma escolhido.",
     "onboardingLabel": "Escolha seu idioma",
-    "onboardingLanguageRequest": "Não encontra seu idioma? Diga-nos o que adicionar",
+    "onboardingLanguageRequest": "Não encontra seu idioma? Solicite suporte ao idioma",
     "switcher": {
       "currentLanguage": "Idioma da interface atual: {{language}}",
       "groupLabel": "Seletor de idioma da interface",
@@ -235,6 +235,21 @@
     "claudeCodeHub": "Claude Code Hub",
     "description": "Selecione a plataforma agregadora de APIs que deseja gerenciar. Isso determina qual configuração será usada no gerenciamento de canais e na sincronização de modelos.",
     "doneHub": "Done Hub",
+    "gatewayGuidance": {
+      "actions": {
+        "importAccountKeys": "Adicionar canal com chave de conta",
+        "importApiKeys": "Adicionar canal com chave API",
+        "viewChannels": "Ver canais importados"
+      },
+      "configComplete": {
+        "description": "A configuração básica conecta apenas o backend de administração do gateway. Para permitir que clientes externos chamem modelos por meio deste gateway de IA auto-hospedado como um AI API unificado, importe chaves de conta ou chaves API como canais de gateway.",
+        "title": "Próximo: importar chaves utilizáveis"
+      },
+      "unconfigured": {
+        "description": "Configure seu gateway de IA auto-hospedado e, em seguida, importe chaves de conta ou chaves API como canais de gateway para que várias chaves possam ser usadas por meio de um AI API.",
+        "title": "Configure seu gateway de IA auto-hospedado"
+      }
+    },
     "newApi": "New API",
     "octopus": "Octopus",
     "siteTypeDesc": "Escolha a plataforma usada para gerenciamento de canais e sincronização de modelos",
@@ -325,36 +340,36 @@
       "refresh": "Atualizar status",
       "remove": "Revogar"
     },
-    "description": "Conceda esses recursos opcionais somente quando você precisar que o All API Hub manipule cookies, cabeçalhos ou fluxos de desvio de janela temporária para você.",
-    "helper": "Depois de ativada, a extensão simplesmente anexa os cookies e cabeçalhos de sessão existentes em segundo plano. Você pode desativar qualquer permissão posteriormente sem afetar os recursos principais.",
+    "description": "Conceda permissões opcionais conforme necessário para atualizar dados de contas, usar ferramentas auxiliares, receber notificações e importar sites.",
+    "helper": "Cada permissão é usada apenas pelo recurso correspondente e pode ser revogada a qualquer momento. Recursos sem permissão podem ficar limitados, enquanto os demais continuam funcionando.",
     "items": {
       "bookmarks": {
-        "description": "Ler os favoritos do navegador somente ao importar sites de contas a partir de URLs salvas nos favoritos.",
+        "description": "Lê URLs salvas somente quando você escolhe importar sites dos favoritos do navegador.",
         "title": "Favoritos do navegador"
       },
       "clipboardRead": {
-        "description": "Permitir que o assistente de resgate detecte códigos de resgate copiados, solicitando assim o resgate automático dos códigos.",
+        "description": "Depois que você copia um conteúdo relacionado, ajuda o assistente de resgate ou o teste de AI API a reconhecer códigos de resgate e dados de API.",
         "title": "Leitura da área de transferência"
       },
       "cookies": {
-        "description": "Permite que o All API Hub leia os cookies necessários das contas conectadas para adicionar cabeçalhos de autenticação quando preciso.",
-        "title": "Cookies"
+        "description": "Lê apenas os cookies necessários do site correspondente ao verificar a sessão ou atualizar os dados da conta.",
+        "title": "Acesso a cookies"
       },
       "declarativeNetRequestWithHostAccess": {
-        "description": "Permitir a aplicação de regras de cabeçalho de solicitação pressionando Tab durante a proteção temporária da janela, anexando os cookies corretos para diferentes contas e evitando anomalias de dados em múltiplas contas.",
-        "title": "Solicitação de rede declarativa"
+        "description": "Aplica em uma janela temporária os dados de solicitação necessários para a conta atual e evita misturar dados entre contas.",
+        "title": "Regras de solicitações de rede"
       },
       "notifications": {
         "description": "Permitir que tarefas agendadas em segundo plano enviem notificações do sistema após serem concluídas.",
         "title": "Notificações do sistema"
       },
       "webRequest": {
-        "description": "Permite que a extensão observe solicitações de saída somente quando o desvio da janela temporária ou a atualização automática precisar adicionar os cabeçalhos necessários.",
-        "title": "Solicitação da Web"
+        "description": "Identifica solicitações que precisam de dados da conta somente durante a verificação em janela temporária ou a atualização automática.",
+        "title": "Acesso a solicitações de rede"
       },
       "webRequestBlocking": {
-        "description": "Permite modificação síncrona para que os cookies possam ser anexados antes que uma solicitação saia do navegador, mantendo os fluxos de desvio de firewall confiáveis.",
-        "title": "Bloqueio de solicitação da Web"
+        "description": "Adiciona o cookie necessário da conta atual antes do envio de uma solicitação para concluir a verificação em janela temporária.",
+        "title": "Modificar solicitações de rede"
       }
     },
     "messages": {
@@ -366,33 +381,35 @@
     "status": {
       "checking": "Verificando…",
       "denied": "Não concedido",
-      "granted": "Concedido"
+      "granted": "Concedido",
+      "unavailable": "Indisponível"
     },
     "statusCaption": "O status da permissão é sincronizado com o navegador. Clique em atualizar se você alterou as permissões fora desta página.",
     "title": "Permissões"
   },
   "permissionsOnboarding": {
     "actions": {
-      "allowAll": "Permitir permissões recomendadas",
-      "maybeLater": "Talvez mais tarde"
+      "allowAll": "Permitir todas as permissões recomendadas",
+      "maybeLater": "Agora não"
     },
-    "analyticsDisclosure": "A extensão inclui análises anônimas e opcionais do produto que nos ajudam a priorizar correções de problemas comuns, melhorar os principais fluxos de trabalho e a compatibilidade e reduzir atritos desnecessários. Elas não coletam chaves de API, cookies, URLs de contas, saldos, conteúdo de solicitações nem dados inseridos pelo usuário.",
-    "intro": "Como um projeto de código aberto, solicitamos apenas as permissões opcionais mínimas necessárias para ativar fluxos de trabalho avançados. Você permanece no controle total.",
-    "openSourceBadge": "Código aberto e voltado para a comunidade",
-    "permissionListDescription": "Essas permissões são necessárias para fluxos de desvio de firewall para que os trabalhos de atualização de dados continuem funcionando em sites protegidos.",
-    "permissionListTitle": "O que essas permissões fazem",
+    "analyticsDisclosure": "As estatísticas anônimas servem apenas para nos ajudar a encontrar problemas e melhorar a experiência. Você pode desativá-las a qualquer momento; elas nunca incluem informações da sua conta, credenciais ou o conteúdo que você envia ou insere.",
+    "intro": "O código está aberto para que qualquer pessoa possa revisá-lo. Você decide se deseja ativar permissões e estatísticas anônimas.",
+    "openSourceBadge": "Código aberto, transparente e feito pela comunidade",
+    "permissionListDescription": "Alguns recursos precisam de permissões adicionais. Veja para que serve cada permissão, conceda apenas as necessárias e revogue quando quiser.",
+    "permissionListTitle": "Escolha as permissões opcionais",
     "project": {
-      "cta": "Acesse o repositório para acompanhar versões, enviar problemas ou participar do desenvolvimento.",
-      "label": "Projeto",
-      "starCta": "Dê uma estrela ao projeto no GitHub para apoiá-lo!"
+      "cta": "Visite o GitHub para explorar o código e as novidades. Você também pode relatar problemas ou compartilhar ideias.",
+      "getStartedCta": "Abrir guia de início",
+      "label": "Código-fonte",
+      "starCta": "All API Hub está sendo útil? Dê uma estrela no GitHub para apoiar o projeto"
     },
     "reason": {
-      "newPermissions": "Adicionamos novas permissões opcionais para oferecer suporte a recursos recentes. Revise e confirme para manter tudo funcionando."
+      "newPermissions": "Novos recursos precisam de permissões opcionais adicionais. Veja para que serve cada uma e conceda apenas as que precisar."
     },
-    "subtitle": "Esta extensão de código aberto precisa de algumas permissões opcionais para ativar recursos como o bypass por janela temporária e outros fluxos de trabalho avançados.",
+    "subtitle": "Escolha seu idioma e ative apenas as permissões opcionais de que precisa. Você pode alterar essas opções depois.",
     "title": "Boas-vindas ao All API Hub",
     "toasts": {
-      "error": "A solicitação de permissão foi rejeitada",
+      "error": "Nem todas as permissões recomendadas foram concedidas",
       "success": "Todas as permissões recomendadas concedidas"
     }
   },
@@ -414,30 +431,70 @@
     "refreshIntervalInvalid": "Insira um intervalo de atualização válido (pelo menos {{minSeconds}} segundos).",
     "refreshOnOpen": "Atualização automática ao abrir a extensão",
     "refreshOnOpenDesc": "Atualizar automaticamente os dados das contas ao abrir o pop-up da extensão",
-    "shieldAutoRefresh": "Atualização automática",
-    "shieldContextsDesc": "Escolha quais páginas da extensão e ações de atualização podem usar este recurso. Quando o acesso de tarefas automáticas está desativado, as ações manuais ainda seguem estas configurações.",
-    "shieldContextsTitle": "Onde pode ser usado",
+    "shieldAutomaticFeatureAccountRefresh": "Atualização da conta",
+    "shieldAutomaticFeatureBalanceHistory": "Histórico de saldo",
+    "shieldAutomaticFeatureCheckin": "Check-in",
+    "shieldAutomaticFeatureKeyManagement": "Gerenciamento de chaves",
+    "shieldAutomaticFeatureLdohSiteLookup": "Pesquisa de site",
+    "shieldAutomaticFeatureManagedSiteChannels": "Canais de sites gerenciados",
+    "shieldAutomaticFeatureManagedSiteModelSync": "Sincronização de modelo de site gerenciado",
+    "shieldAutomaticFeatureRedemptionAssist": "Assistente de resgate",
+    "shieldAutomaticFeaturesDesc": "Escolha quais recursos automáticos podem abrir uma página de verificação temporária. Essas escolhas não ativam ou desativam o recurso do produto e não afetam as ações que você mesmo inicia.",
+    "shieldAutomaticFeaturesTitle": "Recursos automáticos",
     "shieldDescriptionTempWindowOnly": "Quando um site solicita verificação, a extensão pode abrir temporariamente uma guia ou janela. A operação continua após a verificação ser bem-sucedida.",
     "shieldDescriptionWithCookieInterceptor": "No Firefox, a extensão pode abrir uma página temporária para verificação do site e continuar com o estado de login verificado. Isso requer as permissões Cookies, Solicitação da Web e Bloqueio de Solicitação da Web.",
+    "shieldDevFocusDuring": "Durante: {{transition}}",
+    "shieldDevFocusEnd": "Fim: {{state}}",
+    "shieldDevFocusStart": "Início: {{state}}",
+    "shieldDevFocusStateFocused": "Navegador em primeiro plano",
+    "shieldDevFocusStateUnfocused": "Navegador em segundo plano",
+    "shieldDevFocusStateUnknown": "Não foi possível determinar",
+    "shieldDevFocusTitle": "Detecção desta execução",
+    "shieldDevFocusTransitionBackgrounded": "O navegador foi para segundo plano",
+    "shieldDevFocusTransitionForegrounded": "O navegador voltou ao primeiro plano",
+    "shieldDevFocusTransitionMixed": "O navegador alternou entre primeiro e segundo plano",
+    "shieldDevFocusTransitionRemainedFocused": "O navegador permaneceu em primeiro plano",
+    "shieldDevFocusTransitionRemainedUnfocused": "O navegador permaneceu em segundo plano",
+    "shieldDevFocusTransitionUnknown": "Não foi possível determinar",
+    "shieldDevTriggerCancel": "Cancelar",
+    "shieldDevTriggerCountdown_one": "Aciona em {{count}} segundo",
+    "shieldDevTriggerCountdown_many": "Aciona em {{count}} segundos",
+    "shieldDevTriggerCountdown_other": "Aciona em {{count}} segundos",
+    "shieldDevTriggerDelayLabel": "Atraso (segundos)",
+    "shieldDevTriggerDescription": "Após um atraso, simule um comportamento automático existente e solicite o URL especificado através da assistência de verificação do site. Disponível apenas no modo de desenvolvimento.",
+    "shieldDevTriggerFailureFallback": "A solicitação falhou. Verifique os logs de extensão para obter detalhes.",
+    "shieldDevTriggerInvalidDelay": "Insira um número inteiro de 0 a {{maxSeconds}} segundos.",
+    "shieldDevTriggerInvalidUrl": "Insira uma URL HTTP ou HTTPS válida.",
+    "shieldDevTriggerPresetAccountRefreshScheduled": "Atualização agendada da conta",
+    "shieldDevTriggerPresetBalanceHistoryScheduled": "Histórico de saldo programado",
+    "shieldDevTriggerPresetCheckinScheduled": "Check-in agendado",
+    "shieldDevTriggerPresetKeyManagementRecovery": "Recuperação de gerenciamento de chaves",
+    "shieldDevTriggerPresetLabel": "Comportamento a simular",
+    "shieldDevTriggerPresetLdohSiteLookupRecovery": "Recuperação de pesquisa de site",
+    "shieldDevTriggerPresetRedemptionAssistRecovery": "Recuperação de resgate",
+    "shieldDevTriggerRunning": "Acionando...",
+    "shieldDevTriggerStart": "Disparo após atraso",
+    "shieldDevTriggerSuccess": "Solicitação concluída (HTTP {{status}})",
+    "shieldDevTriggerTitle": "Teste de desenvolvimento",
+    "shieldDevTriggerUrlLabel": "URL de destino",
     "shieldEnabled": "Permitir que tarefas automáticas abram páginas temporárias",
     "shieldEnabledDescTempWindowOnly": "Quando ativados, a atualização automática, o check-in e tarefas semelhantes podem abrir uma página temporária quando a verificação do site for necessária. Quando desativado, as ações que você mesmo inicia ainda podem usar esse recurso de acordo com as configurações abaixo.",
     "shieldEnabledDescWithCookieInterceptor": "Quando ativados, a atualização automática, o check-in e tarefas semelhantes podem abrir uma página temporária quando a verificação do site for necessária. Quando desativado, as ações que você mesmo inicia ainda podem usar esse recurso de acordo com as configurações abaixo.",
-    "shieldManualRefresh": "Atualização manual",
+    "shieldMethodAuto": "Automático",
     "shieldMethodComposite": "Uma única janela compartilhada",
-    "shieldMethodDesc": "Escolha onde as páginas de verificação serão exibidas. Por padrão, elas são abertas na janela do navegador que você já está usando, sem criar uma janela extra.",
+    "shieldMethodDesc": "Escolha como as páginas temporárias são abertas quando um site exige verificação.",
+    "shieldMethodHintAuto": "Alterna automaticamente de acordo com o estado do navegador: enquanto você usa o navegador, as páginas de verificação ficam em uma janela compartilhada para não se misturarem às suas guias habituais; quando o navegador está em segundo plano, elas usam uma guia inativa para evitar trazer a janela para o primeiro plano.",
     "shieldMethodHintComposite": "Melhor quando você deseja manter as páginas de verificação separadas da navegação diária. As páginas ficam juntas em uma janela separada; o navegador pode vir para o primeiro plano quando a janela for aberta pela primeira vez.",
     "shieldMethodHintTab": "Melhor quando você não deseja que a verificação interrompa o que você está fazendo. A página é aberta como uma guia inativa na janela atual do navegador, sem abrir outra janela ou colocar o navegador em primeiro plano.",
     "shieldMethodHintWindow": "Melhor quando você deseja que cada verificação use sua própria janela. Cada uma é aberta separadamente; verificações consecutivas podem criar várias janelas e colocar repetidamente o navegador em primeiro plano.",
+    "shieldMethodRecommended": "Recomendado",
     "shieldMethodTab": "Guia na janela atual",
     "shieldMethodTitle": "Método de abertura",
     "shieldMethodWindow": "Uma nova janela a cada vez",
-    "shieldOptions": "Página de configurações",
     "shieldPermissionAction": "Abrir guia Permissões",
     "shieldPermissionWarningDesc": "Firefox precisa dessas três permissões para ler cookies criados durante a verificação do site e preservar o estado de login para solicitações subsequentes.",
     "shieldPermissionWarningTitle": "São necessárias permissões para cookies, solicitações da Web e bloqueio de solicitações da Web",
-    "shieldPopup": "Pop-up da extensão",
     "shieldPopupFirefoxNote": "No Firefox, iniciar esse recurso a partir do pop-up de extensão fecharia o pop-up, portanto, esse ponto de entrada não estará disponível. Use o painel lateral ou a página de configurações.",
-    "shieldSidepanel": "Painel lateral",
     "shieldTitle": "Assistência para verificação de site",
     "title": "Atualizar configurações"
   },
