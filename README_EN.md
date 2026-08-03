@@ -229,7 +229,7 @@ Stable and Nightly are manual-install channels and do not receive browser-store 
 <a id="quick-start"></a>
 ## 🧑‍🚀 30-Second Quick Start
 
-1. **Install the extension**: Use one of the store links above.
+1. **Install the extension**: Download the matching package from the personal Stable or Nightly Release above and install it manually.
 2. **Sign in to your site**: Open your usual AI relay site in the browser and log in.
 3. **Run auto detection**: Click the extension icon -> `Add Account` -> enter the site URL -> click `Auto Detect`.
 4. **Start using it**: Check balances, configure auto check-in, or export the account to your AI client.

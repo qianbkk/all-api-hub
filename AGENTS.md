@@ -4,7 +4,7 @@
 
 ### Issue tracker
 
-Issues and PRDs for this repo live in GitHub Issues for `qixing-jk/all-api-hub`. See `docs/agents/issue-tracker.md`.
+Issues and PRDs for this personal edition live in GitHub Issues for `qianbkk/all-api-hub`. Upstream-originated references may still point to `qixing-jk/all-api-hub`. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
