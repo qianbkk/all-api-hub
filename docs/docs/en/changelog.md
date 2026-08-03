@@ -8,6 +8,17 @@ This page records major updates for general users (feature changes / experience 
 - **Troubleshooting**: You can enable console logs in "Settings → General → Logs" and report reproduction steps to [Issues](https://github.com/qianbkk/all-api-hub/issues).
 :::
 
+## 3.53.1 First Personal Enhancement Stable Release
+
+- **Independent distribution:** Update checks, documentation, feedback, and Stable / Nightly packages are provided by `qianbkk/all-api-hub`; upstream browser-store packages are not a distribution channel for this edition.
+- **Compliant staggered check-ins:** Additional accounts on the same site wait a random 30–300 seconds in sequence to reduce burst traffic. No IP rotation, fingerprint spoofing, or security-challenge bypass is used.
+- **Visible verification handoff:** Automatic background security-challenge handling is disabled by default. When verification is required, a visible tab lets the user complete it manually.
+- **Local announcement insights:** Model launches, promotions, pricing or multiplier changes, and maintenance incidents are classified locally without sending announcement content to an external model.
+- **Personal data features:** Multi-site accounts, balances and usage, model pricing, API credentials, announcement management, and encrypted WebDAV backup remain available.
+- **Quality fix:** Updated the Side Panel E2E assertion for the personal-edition brand; both default and DNR-required remote E2E jobs pass.
+
+> This project remains licensed under AGPL-3.0 and retains original-author attribution and third-party licenses. Upstream naming appears only where required for source and license attribution; it does not indicate upstream distribution or support for this personal edition.
+
 ## 3.53.0
 - **New Features:**
   - Invitation Links: You can now copy invitation links directly from an individual account menu or batch selection on supported sites. Clear reasons are shown if a site has not enabled invitations or if retrieval fails, and already retrieved links are preserved during batch copying.

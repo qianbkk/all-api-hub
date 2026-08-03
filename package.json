@@ -3,7 +3,7 @@
   "displayName": "All API Hub 个人增强版 - 你的全能 AI 资产管家",
   "private": true,
   "type": "module",
-  "version": "3.53.0",
+  "version": "3.53.1",
   "description": "All API Hub 个人增强版：合规管理中转站账号、余额、签到、模型价格、密钥与公告。",
   "repository": "https://github.com/qianbkk/all-api-hub",
   "homepage": "https://qianbkk.github.io/all-api-hub/",
