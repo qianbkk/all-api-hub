@@ -97,7 +97,55 @@
 
 ## 4. 新增功能
 
-### 4.1 同站多账号签到错峰
+### 4.0 上游同步（2026-08-11）
+
+- 上游 `upstream-sync` 已同步至 v3.55.0（`b962ddd5c`）。
+- 吸收提交：`#1275` 签到文案、`#1236` 自动功能策略、`#1239` 开发触发器与优先后台标签页、`#1243` 自动验证打开模式（按浏览器焦点状态选择临时窗口/合成上下文/标签页打开验证页）。
+- 吸收后默认值保持个人版安全边界：`tempWindowFallback.enabled=false`、`automaticFeatureBypass` 全 false、`tempContextMode=Tab`（上游默认 Auto/开启，已被本版覆盖）。用户可在「基本设置 → 刷新/签到」中手动开启。
+- 德语（#1264）未同步（自用为主）；OpenRouter/Sub2API 等新功能未吸收（与签到/多账号无关）。
+
+### 4.1 多账号防检测（opt-in，默认关闭）
+
+**代码结构**
+
+- `src/services/preferences/userPreferences.ts`：`AntiDetectionPreferences`（`enabled`、`checkinSpreadMinutes`）。
+- `src/services/antiDetection/identityMask.ts`：按账号稳定选择 Accept-Language。
+- `src/services/apiTransport/request.ts`：请求头注入点。
+- `src/services/checkin/autoCheckin/accountStagger.ts`、`scheduler.ts`：长窗口随机错峰。
+- `src/features/BasicSettings/components/tabs/CheckinRedeem/AutoCheckinSettings.tsx`：设置开关。
+
+**实现逻辑**
+
+1. 开关默认关闭，行为与旧版完全一致（30–300 秒紧凑错峰）。
+2. 开启后：同站首个账号立即签到，后续账号在可配置窗口（默认 60 分钟）内独立随机分布，避免多账号呈"连续批量"模式。
+3. 开启后：不同账号的请求携带不同的 Accept-Language（按 userId 稳定哈希到变体池）。
+
+**已知边界（诚实说明）**
+
+- Chromium 禁止扩展（JS/DNR）改写 `User-Agent`/`Sec-CH-UA`，同一浏览器配置下所有账号 UA 仍相同；真正的 IP/UA 隔离需配合独立浏览器配置 + 每配置代理（见研究报告）。
+- 本功能只做行为/请求头分散，不伪造指纹、不轮换 IP、不绕过验证。
+
+### 4.2 验证码辅助（opt-in，默认关闭，尽力而为）
+
+**代码结构**
+
+- `src/services/preferences/userPreferences.ts`：`CaptchaAssistPreferences`（`enabled`）。
+- `src/entrypoints/content/captchaAssist/`：`sliderDetection.ts`（滑块容器识别）、`gapAnalysis.ts`（Canvas 像素缺口识别）、`dragSimulation.ts`（人类轨迹拖拽）、`index.ts`（调度/冷却）。
+- `src/entrypoints/content/index.ts`：content 侧开关接线。
+
+**实现逻辑**
+
+1. 开关默认关闭，完全人工验证。
+2. 开启后：content 脚本监控页面中的滑块验证（通用启发式选择器），识别缺口位置（背景图像素列梯度分析），用类人轨迹拖拽（随机种子、加速减速、抖动）。
+3. 置信度不足、跨域 Canvas 无法读取、或拖拽失败时**保持原样**，用户仍在可见标签页（由 protection-bypass 流程打开）人工完成。
+4. 最多尝试 2 次/60 秒冷却，不无限重试。
+
+**边界**
+
+- 仅针对简单滑块（自研/通用 DOM 结构）；极验等 iframe 内验证码不在当前版本范围内（失败即人工）。
+- 不做点选/文字验证码自动识别（复杂度与误判风险高，保持人工）。
+
+### 4.3 同站多账号签到错峰
 
 **代码结构**
 

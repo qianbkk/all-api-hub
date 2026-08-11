@@ -25,6 +25,9 @@ export type ContentFeaturePreferenceSource = {
       removalPatterns?: string[]
     }
   }
+  captchaAssist?: {
+    enabled?: boolean
+  }
 }
 
 export type ContentFeaturePreferences = {
@@ -34,6 +37,7 @@ export type ContentFeaturePreferences = {
   webAiApiCheckEnhancedDetectionEnabled: boolean
   webAiApiCheckContextMenuEnabled: boolean
   webAiApiCheckKeyCleanupPatterns: string[]
+  captchaAssistEnabled: boolean
 }
 
 export const DEFAULT_REDEMPTION_ASSIST_PREFERENCES: RedemptionAssistPreferences =
@@ -88,6 +92,7 @@ export const DEFAULT_CONTENT_FEATURE_PREFERENCES: ContentFeaturePreferences = {
     DEFAULT_WEB_AI_API_CHECK_PREFERENCES.contextMenu.enabled,
   webAiApiCheckKeyCleanupPatterns:
     DEFAULT_WEB_AI_API_CHECK_PREFERENCES.keyCleanup.removalPatterns,
+  captchaAssistEnabled: false,
 }
 
 /**
@@ -128,5 +133,7 @@ export function resolveContentFeaturePreferences(
     webAiApiCheckKeyCleanupPatterns:
       source.webAiApiCheck?.keyCleanup?.removalPatterns ??
       DEFAULT_WEB_AI_API_CHECK_PREFERENCES.keyCleanup.removalPatterns,
+    captchaAssistEnabled:
+      source.captchaAssist?.enabled ?? false,
   }
 }

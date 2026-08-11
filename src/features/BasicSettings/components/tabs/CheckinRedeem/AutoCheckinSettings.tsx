@@ -52,11 +52,17 @@ export default function AutoCheckinSettings() {
   const {
     preferences: userPrefs,
     updateAutoCheckin,
+    updateAntiDetection,
+    updateCaptchaAssist,
     resetAutoCheckinConfig,
   } = useUserPreferencesContext()
   const [isSaving, setIsSaving] = useState(false)
 
   const preferences = userPrefs?.autoCheckin ?? DEFAULT_PREFERENCES.autoCheckin!
+  const antiDetection =
+    userPrefs?.antiDetection ?? DEFAULT_PREFERENCES.antiDetection
+  const captchaAssist =
+    userPrefs?.captchaAssist ?? DEFAULT_PREFERENCES.captchaAssist
   const retryPreferences = preferences.retryStrategy ?? {
     enabled: false,
     intervalMinutes: 30,
@@ -348,6 +354,68 @@ export default function AutoCheckinSettings() {
               }
             />
           )}
+
+          {/* Anti-detection stagger (opt-in) */}
+          <CardItem
+            id="auto-checkin-anti-detection"
+            title={t("autoCheckin:settings.antiDetectionTitle")}
+            description={t("autoCheckin:settings.antiDetectionDesc")}
+            rightContent={
+              <Switch
+                checked={antiDetection?.enabled ?? false}
+                onChange={(checked) =>
+                  void updateAntiDetection({ enabled: checked })
+                }
+                disabled={isSaving}
+              />
+            }
+          />
+
+          {antiDetection?.enabled && (
+            <CardItem
+              id="auto-checkin-anti-detection-spread"
+              title={t("autoCheckin:settings.antiDetectionSpreadTitle")}
+              description={t("autoCheckin:settings.antiDetectionSpreadDesc")}
+              rightContent={
+                <Input
+                  type="number"
+                  min={5}
+                  max={1440}
+                  value={antiDetection.checkinSpreadMinutes}
+                  onChange={(e) => {
+                    const value = Number(e.target.value)
+                    if (Number.isNaN(value) || value < 5) {
+                      toast.error(
+                        t("autoCheckin:messages.error.invalidNumber"),
+                      )
+                      return
+                    }
+                    void updateAntiDetection({
+                      checkinSpreadMinutes: Math.min(1440, value),
+                    })
+                  }}
+                  disabled={isSaving}
+                  className="w-32"
+                />
+              }
+            />
+          )}
+
+          {/* CAPTCHA assist (opt-in, best effort) */}
+          <CardItem
+            id="auto-checkin-captcha-assist"
+            title={t("autoCheckin:settings.captchaAssistTitle")}
+            description={t("autoCheckin:settings.captchaAssistDesc")}
+            rightContent={
+              <Switch
+                checked={captchaAssist?.enabled ?? false}
+                onChange={(checked) =>
+                  void updateCaptchaAssist({ enabled: checked })
+                }
+                disabled={isSaving}
+              />
+            }
+          />
 
           {/* Retry Strategy */}
           <CardItem

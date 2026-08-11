@@ -155,7 +155,13 @@
     "windowEnd": "时间窗口结束",
     "windowEndDesc": "允许每日自动签到开始的最晚本地时间。",
     "windowStart": "时间窗口开始",
-    "windowStartDesc": "允许每日自动签到开始的最早本地时间。"
+    "windowStartDesc": "允许每日自动签到开始的最早本地时间。",
+    "antiDetectionTitle": "多账号防检测错峰",
+    "antiDetectionDesc": "开启后，同一站点的多个账号会在更长的随机时间窗口内分散签到，并为不同账号使用不同的 Accept-Language 请求头，降低被判定为同一用户的风险。注意：Chromium 浏览器无法修改 User-Agent，IP/UA 的真正隔离需配合独立浏览器配置。",
+    "antiDetectionSpreadTitle": "错峰窗口（分钟）",
+    "antiDetectionSpreadDesc": "同站首个账号立即签到，后续账号在窗口内随机分布（默认 60 分钟）。",
+    "captchaAssistTitle": "验证码辅助（尽力而为）",
+    "captchaAssistDesc": "开启后，content 脚本会尝试自动完成简单的滑块验证（缺口识别 + 类人拖拽）。识别置信度不足或失败的验证码保持原样，仍需在可见标签页中人工完成。"
   },
   "skipReasons": {
     "account_disabled": "账号已禁用",

@@ -66,6 +66,10 @@ import type {
 } from "~/types"
 import { DEFAULT_ACCOUNT_AUTO_REFRESH } from "~/types/accountAutoRefresh"
 import type { AutoCheckinPreferences } from "~/types/autoCheckin"
+import type {
+  AntiDetectionPreferences,
+  CaptchaAssistPreferences,
+} from "~/services/preferences/userPreferences"
 import {
   DEFAULT_AXON_HUB_CONFIG,
   type AxonHubConfig,
@@ -431,6 +435,12 @@ interface UserPreferencesContextType {
   updateLoggingLevel: (level: LogLevel) => PreferenceWritePromise
   updateAutoCheckin: (
     updates: Partial<AutoCheckinPreferences>,
+  ) => PreferenceWritePromise
+  updateAntiDetection: (
+    updates: Partial<AntiDetectionPreferences>,
+  ) => PreferenceWritePromise
+  updateCaptchaAssist: (
+    updates: Partial<CaptchaAssistPreferences>,
   ) => PreferenceWritePromise
   updateBalanceHistory: (
     updates: Partial<BalanceHistoryPreferences>,
@@ -1254,6 +1264,32 @@ export const UserPreferencesProvider = ({
     [applySuccessfulPreferenceWrite],
   )
 
+  const updateAntiDetection = useCallback(
+    async (updates: Partial<AntiDetectionPreferences>) => {
+      const preferenceUpdates = {
+        antiDetection: updates,
+      }
+      const result =
+        await userPreferences.savePreferencesWithResult(preferenceUpdates)
+      applySuccessfulPreferenceWrite(result, preferenceUpdates)
+      return result
+    },
+    [applySuccessfulPreferenceWrite],
+  )
+
+  const updateCaptchaAssist = useCallback(
+    async (updates: Partial<CaptchaAssistPreferences>) => {
+      const preferenceUpdates = {
+        captchaAssist: updates,
+      }
+      const result =
+        await userPreferences.savePreferencesWithResult(preferenceUpdates)
+      applySuccessfulPreferenceWrite(result, preferenceUpdates)
+      return result
+    },
+    [applySuccessfulPreferenceWrite],
+  )
+
   const updateBalanceHistory = useCallback(
     async (updates: Partial<BalanceHistoryPreferences>) => {
       const preferenceUpdates = {
@@ -1928,6 +1964,8 @@ export const UserPreferencesProvider = ({
     updateLoggingConsoleEnabled,
     updateLoggingLevel,
     updateAutoCheckin,
+    updateAntiDetection,
+    updateCaptchaAssist,
     updateBalanceHistory,
     updateNewApiModelSync,
     updateModelRedirect,

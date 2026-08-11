@@ -29,6 +29,7 @@ import {
   API_TRANSPORT_FETCH_CONTEXT_KINDS,
   summarizeApiTransportFetchContext,
 } from "~/services/apiTransport/type"
+import { resolveAccountAcceptLanguage } from "~/services/antiDetection/identityMask"
 import { AuthTypeEnum } from "~/types"
 import type { TempWindowResponseType } from "~/types/tempWindowFetch"
 import { sendTabMessageWithRetry } from "~/utils/browser/browserApi"
@@ -246,6 +247,15 @@ const createRequestHeaders = async (
       headers[COOKIE_AUTH_HEADER_NAME] === AUTH_MODE.COOKIE_AUTH_MODE
     if (hasCookieInterceptorHeader) {
       headers[COOKIE_SESSION_OVERRIDE_HEADER_NAME] = auth.cookie
+    }
+  }
+
+  // Anti-detection (opt-in): vary Accept-Language per account so several
+  // accounts on the same site do not share an identical request profile.
+  if (!("Accept-Language" in headers)) {
+    const acceptLanguage = await resolveAccountAcceptLanguage(auth.userId)
+    if (acceptLanguage) {
+      headers["Accept-Language"] = acceptLanguage
     }
   }
 

@@ -1092,7 +1092,23 @@ class AutoCheckinScheduler {
       successful: boolean
     }>
   > {
-    const sameOriginDelays = buildSameOriginCheckinDelays(params.accounts)
+    // Anti-detection (opt-in): widen same-site spread to an independent random
+    // window per account so multi-account batches do not look like a single
+    // automated run. Default remains the compact 30-300s stagger.
+    let spreadWindowMs: number | undefined
+    try {
+      const prefs = await userPreferences.getPreferences()
+      if (prefs.antiDetection?.enabled) {
+        const minutes = prefs.antiDetection.checkinSpreadMinutes ?? 60
+        spreadWindowMs = Math.max(1, minutes) * 60_000
+      }
+    } catch {
+      spreadWindowMs = undefined
+    }
+
+    const sameOriginDelays = buildSameOriginCheckinDelays(params.accounts, {
+      spreadWindowMs,
+    })
 
     return Promise.all(
       params.accounts.map(async (account) => {

@@ -155,7 +155,13 @@
     "windowEnd": "時間帯の終了",
     "windowEndDesc": "デイリーチェックインを開始できる最も遅いローカル時刻です。",
     "windowStart": "時間帯の開始",
-    "windowStartDesc": "デイリーチェックインを開始できる最も早いローカル時刻です。"
+    "windowStartDesc": "デイリーチェックインを開始できる最も早いローカル時刻です。",
+    "antiDetectionTitle": "Multi-account anti-detection stagger",
+    "antiDetectionDesc": "When enabled, accounts on the same site check in across a wider random window and use distinct Accept-Language headers per account, reducing the chance they are attributed to one user. Note: Chromium cannot rewrite User-Agent from an extension; real UA/IP isolation needs separate browser profiles.",
+    "antiDetectionSpreadTitle": "Spread window (minutes)",
+    "antiDetectionSpreadDesc": "The first account of a site starts immediately; later accounts are randomized inside this window (default 60 minutes).",
+    "captchaAssistTitle": "CAPTCHA assist (best effort)",
+    "captchaAssistDesc": "When enabled, content scripts try to auto-complete simple slider CAPTCHAs (gap detection + human-like drag). Anything not confidently recognized is left untouched for manual completion in the visible tab."
   },
   "skipReasons": {
     "account_disabled": "アカウントは無効です",

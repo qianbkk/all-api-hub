@@ -58,15 +58,20 @@ describe("userPreferences", () => {
       expect(DEFAULT_PREFERENCES.tempWindowFallbackReminder?.dismissed).toBe(
         false,
       )
+      // Personal fork keeps the conservative Tab default (automatic bypass is
+      // opt-in, not the default).
       expect(DEFAULT_PREFERENCES.tempWindowFallback?.tempContextMode).toBe(
-        TEMP_CONTEXT_PREFERENCE_MODES.Auto,
+        TEMP_CONTEXT_MODES.Tab,
       )
+      expect(DEFAULT_PREFERENCES.tempWindowFallback?.enabled).toBe(false)
+      expect(DEFAULT_PREFERENCES.antiDetection?.enabled).toBe(false)
+      expect(DEFAULT_PREFERENCES.captchaAssist?.enabled).toBe(false)
     })
 
-    it("creates new preference snapshots with the automatic context-mode preference", () => {
+    it("creates new preference snapshots with the conservative context-mode preference", () => {
       expect(
         createDefaultPreferences(1).tempWindowFallback?.tempContextMode,
-      ).toBe(TEMP_CONTEXT_PREFERENCE_MODES.Auto)
+      ).toBe(TEMP_CONTEXT_MODES.Tab)
     })
 
     it("has valid accountAutoRefresh config", () => {

@@ -157,7 +157,13 @@
     "windowEnd": "Time window end",
     "windowEndDesc": "The latest local time when the daily check-in can start.",
     "windowStart": "Time window start",
-    "windowStartDesc": "The earliest local time when the daily check-in can start."
+    "windowStartDesc": "The earliest local time when the daily check-in can start.",
+    "antiDetectionTitle": "Multi-account anti-detection stagger",
+    "antiDetectionDesc": "When enabled, accounts on the same site check in across a wider random window and use distinct Accept-Language headers per account, reducing the chance they are attributed to one user. Note: Chromium cannot rewrite User-Agent from an extension; real UA/IP isolation needs separate browser profiles.",
+    "antiDetectionSpreadTitle": "Spread window (minutes)",
+    "antiDetectionSpreadDesc": "The first account of a site starts immediately; later accounts are randomized inside this window (default 60 minutes).",
+    "captchaAssistTitle": "CAPTCHA assist (best effort)",
+    "captchaAssistDesc": "When enabled, content scripts try to auto-complete simple slider CAPTCHAs (gap detection + human-like drag). Anything not confidently recognized is left untouched for manual completion in the visible tab."
   },
   "skipReasons": {
     "account_disabled": "Account is disabled",

@@ -4,6 +4,7 @@ import { Storage } from "@plasmohq/storage"
 
 import { setupRedemptionAssistContent } from "~/entrypoints/content/redemptionAssist"
 import { setupWebAiApiCheckContent } from "~/entrypoints/content/webAiApiCheck"
+import { setupCaptchaAssistContent } from "~/entrypoints/content/captchaAssist"
 import { USER_PREFERENCES_STORAGE_KEYS } from "~/services/core/storageKeys"
 import {
   DEFAULT_CONTENT_FEATURE_PREFERENCES,
@@ -53,6 +54,7 @@ function areContentFeaturePreferencesEqual(
       right.webAiApiCheckEnhancedDetectionEnabled &&
     left.webAiApiCheckContextMenuEnabled ===
       right.webAiApiCheckContextMenuEnabled &&
+    left.captchaAssistEnabled === right.captchaAssistEnabled &&
     areStringArraysEqual(
       left.webAiApiCheckKeyCleanupPatterns,
       right.webAiApiCheckKeyCleanupPatterns,
@@ -113,6 +115,7 @@ function setupContentFeatureControllers() {
   let currentPreferences: ContentFeaturePreferences | null = null
   let cleanupRedemptionAssist = () => {}
   let cleanupWebAiApiCheck = () => {}
+  let cleanupCaptchaAssist = () => {}
   let disposed = false
   let applyRun = 0
 
@@ -132,6 +135,7 @@ function setupContentFeatureControllers() {
 
     cleanupRedemptionAssist()
     cleanupWebAiApiCheck()
+    cleanupCaptchaAssist()
 
     cleanupRedemptionAssist = setupRedemptionAssistContent({
       enableDetection: nextPreferences.redemptionAssistDetectionEnabled,
@@ -141,6 +145,9 @@ function setupContentFeatureControllers() {
       enableDetection: nextPreferences.webAiApiCheckDetectionEnabled,
       enableContextMenu: nextPreferences.webAiApiCheckContextMenuEnabled,
       apiKeyCleanupPatterns: nextPreferences.webAiApiCheckKeyCleanupPatterns,
+    })
+    cleanupCaptchaAssist = setupCaptchaAssistContent({
+      enabled: nextPreferences.captchaAssistEnabled,
     })
     currentPreferences = nextPreferences
   }
@@ -168,5 +175,6 @@ function setupContentFeatureControllers() {
     cleanupStorageChanged()
     cleanupRedemptionAssist()
     cleanupWebAiApiCheck()
+    cleanupCaptchaAssist()
   }
 }

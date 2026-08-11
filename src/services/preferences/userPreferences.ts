@@ -2,6 +2,7 @@ import { Storage } from "@plasmohq/storage"
 
 import { DATA_TYPE_BALANCE, DATA_TYPE_CASHFLOW } from "~/constants"
 import { SITE_TYPES, type ManagedSiteType } from "~/constants/siteType"
+import { TEMP_CONTEXT_MODES } from "~/constants/tempContextMode"
 import {
   STORAGE_LOCKS,
   USER_PREFERENCES_STORAGE_KEYS,
@@ -210,6 +211,38 @@ export interface WebAiApiCheckPreferences {
 }
 
 // 用户偏好设置类型定义
+export interface AntiDetectionPreferences {
+  /**
+   * Master switch. When disabled (default), check-in behaves exactly as before:
+   * compact 30-300s same-origin stagger, no per-account header variation.
+   */
+  enabled: boolean
+  /**
+   * Same-site check-in spread window in minutes. When enabled, subsequent
+   * accounts of the same origin start at random offsets inside this window
+   * instead of the compact sequence. Default 60 minutes.
+   */
+  checkinSpreadMinutes: number
+}
+
+export const DEFAULT_ANTI_DETECTION_PREFERENCES: AntiDetectionPreferences = {
+  enabled: false,
+  checkinSpreadMinutes: 60,
+}
+
+export interface CaptchaAssistPreferences {
+  /**
+   * Master switch. When disabled (default), no automatic CAPTCHA solving is
+   * attempted; verification stays fully manual.
+   */
+  enabled: boolean
+}
+
+export const DEFAULT_CAPTCHA_ASSIST_PREFERENCES: CaptchaAssistPreferences = {
+  enabled: false,
+}
+
+// 用户偏好设置类型定义
 export interface UserPreferences {
   themeMode: ThemeMode
   /**
@@ -303,6 +336,30 @@ export interface UserPreferences {
 
   // 自动刷新相关配置
   accountAutoRefresh: AccountAutoRefresh
+
+  /**
+   * Anti-detection preferences for multi-account check-in.
+   *
+   * When enabled, same-site accounts are staggered over a wider random window
+   * (instead of the compact 30-300s sequence) and request headers such as
+   * Accept-Language are varied per account to reduce the chance that several
+   * accounts on the same site are attributed to one user.
+   *
+   * Opt-in only; disabled by default in this fork.
+   */
+  antiDetection?: AntiDetectionPreferences
+
+  /**
+   * Best-effort CAPTCHA assistance for check-in/refresh flows.
+   *
+   * When enabled, content scripts try to solve simple slider CAPTCHAs
+   * automatically (gap detection + human-like drag). Anything that cannot be
+   * confidently solved is left untouched for manual completion in the visible
+   * tab opened by the protection-bypass flow.
+   *
+   * Opt-in only; disabled by default in this fork.
+   */
+  captchaAssist?: CaptchaAssistPreferences
 
   // Usage history sync + analytics
   usageHistory?: UsageHistoryPreferences
@@ -560,6 +617,8 @@ export const DEFAULT_PREFERENCES: UserPreferences = {
   autoFillCurrentSiteUrlOnAccountAdd: false,
   warnOnDuplicateAccountAdd: true,
   accountAutoRefresh: DEFAULT_ACCOUNT_AUTO_REFRESH,
+  antiDetection: DEFAULT_ANTI_DETECTION_PREFERENCES,
+  captchaAssist: DEFAULT_CAPTCHA_ASSIST_PREFERENCES,
   usageHistory: DEFAULT_USAGE_HISTORY_PREFERENCES,
   balanceHistory: DEFAULT_BALANCE_HISTORY_PREFERENCES,
   showHealthStatus: true, // 默认显示健康状态
